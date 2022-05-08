@@ -1,0 +1,2782 @@
+ <!DOCTYPE HTML>
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-in" xmlns:schema="http://schema.org/" class="com" lang="en-in" geo="IN">
+<head>
+<link rel="dns-prefetch" href="https://i-invdn-com.investing.com" />
+<link rel="dns-prefetch" href="https://a-invdn-com.investing.com" />
+<script>
+        window.dataLayerGTMParams = window.dataLayerGTMParams || [];
+        dataLayerGTMParams.push({"client_name":"legacy-desktop"});
+    </script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayerGTMParams','GTM-PGT3R3D');</script>
+
+<script type="text/javascript">
+    function OptanonWrapper() { }
+
+    // temp for checks
+    </script>
+<style>
+	.ot-floating-button {
+		z-index:12 !important;
+	}
+</style>
+<script type="text/javascript">
+        window.helpers = {
+            'getCookie': function (k){var v="; "+document.cookie;var p=v.split("; "+k+"=");if(p.length===2)return p.pop().split(";").shift();else return null},
+            'setCookie': function (k,v,d){var e='';if(typeof d!=='undefined'){var n=new Date;n.setTime(n.getTime()+864e5*d);e+=';expires="';e+=n.toGMTString();e+='"';}document.cookie=k+'='+v+';path=/' + e},
+            'delCookie': function (k){document.cookie=k+'=;path=/;expires=-1'},
+            'isNumber': function (n){return !isNaN(n)&&typeof n!==undefined&&n!==null&&n!==''},
+            'removeClass': function (e,c){if(document.documentElement.classList){e.classList.remove(c);}else{var r=new RegExp('(^|\\s)'+c+'(\\s|$)', 'g');e.className=e.className.replace(r, c)}},
+            'addClass': function (e,c){if(document.documentElement.classList){e.classList.add(c);}else{if(e.className.indexOf(c)<0){if((e.className!==''&&e.className.charAt[e.className.length-1]===' ')||e.className===''){e.className+=c}else{e.className+=' '+c}}}},
+            'hasClass': function (e,c){if(document.documentElement.classList){e.classList.contains(c);}else{return e.className.indexOf(c)>=0}},
+        };
+    </script>
+<link rel="preconnect" href="https://securepubads.g.doubleclick.net">
+<script>
+    window.isGDPR   = 0;
+    window.isCCPA 	= 0;
+
+    const loadGpt = () => {
+		let gptScript = document.createElement( 'script' );
+		gptScript.onload = function () {
+			console.log('gpt loaded');
+		};
+		gptScript.async = true;
+		gptScript.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+		document.head.appendChild(gptScript);
+    }
+
+    if( window.isGDPR ){
+        const consentSetInterval = setInterval(() => {
+            if( typeof window.__tcfapi !== 'undefined' )
+            {
+                clearInterval(consentSetInterval);
+                window.__tcfapi( 'addEventListener', 2, function( tcData,listenerSuccess )
+                {
+					if(listenerSuccess) {
+						if( tcData && (tcData.eventStatus === 'tcloaded' || tcData.eventStatus === 'useractioncomplete') ) {
+
+														var hasDeviceStorageAndAccessConsent = tcData.purpose.consents[1] || false;
+							// Google Requires Consent for Purpose 1
+							if (hasDeviceStorageAndAccessConsent) {
+								// GLOBAL VENDOR LIST - https://iabeurope.eu/vendor-list-tcf-v2-0/
+								// CHECK FOR GOOGLE ADVERTISING PRODUCTS CONSENT. (IAB Vendor ID 755)
+								var hasGoogleAdvertisingProductsConsent = tcData.vendor.consents[755] || false;
+								// Check if the user gave Google Advertising Products consent (iab vendor 755)
+								if(hasGoogleAdvertisingProductsConsent) {
+									console.log("gpt loaded gdpr-ccpa")
+									loadGpt();
+								}
+							}
+													}
+					}
+                })
+            }
+
+        }, 50);
+
+    } else {
+        loadGpt();
+    }
+
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+    var allKeyValue = {"Section":"portfolio","Sub_Section":"","Charts_Page":"no","Page_URL":"\/portfolio\/?portfolioID=NDA1ZmUzYTVkMmtvZDU1Mw%3D%3D","Domain":"in.investing.com","smd":"63f4e4f381a21f89729a17271670fa7c-1643211524","protected_media":"0","pm":null,"Adsfree_conversion_score":"2","Crypto_Instrument":"No","user_has_watchlist":"1","udid":"63f4e4f381a21f89729a17271670fa7c","edition_id":"56","Traffic_Type":"OG","User_ID":"202981552","reg_days":"1402","already_l":"0","b1":"0","b2":"0","b3":"0","b4":"0","redesign":"0","User_type":"Logged_in","prebid_page":"0"};
+    var googletagGA = window.helpers.getCookie('_ga');
+
+    if (googletagGA) {
+        allKeyValue.CID = googletagGA.substr(6);
+    }
+
+    // todo: change the screen width logic and move it from here to separate task
+    var screenWidthForAds= screen.width || 1366,
+        screenWidthValue,
+        adBreakPoints = [1336,1440,1920];
+
+    if (screenWidthForAds < adBreakPoints[0]){ screenWidthValue = 'small' }
+    else if (screenWidthForAds >= adBreakPoints[0] && screenWidthForAds <= adBreakPoints[1]) {
+        screenWidthValue = 'medium'
+    }
+    else if (screenWidthForAds > adBreakPoints[1]) {
+        screenWidthValue = 'big'
+    }
+
+    allKeyValue.screen_width = screenWidthValue;
+</script>
+<script src="https://i-invdn-com.investing.com/js/jquery-6.4.9.04.min.js"></script>
+<script src="https://i-invdn-com.investing.com/js/n/toolset-1.20.min.js"></script>
+<script type="text/javascript">
+        window.googletag = window.googletag || {};
+        window.googletag.cmd = window.googletag.cmd || [];
+
+        window.loadSideBlockAd3 = function () {
+            googletag.cmd.push(function () {
+                _.defineSlot({"platform":"desktop","sizes":[[300,250],[300,600]],"adSlotDivID":"div-gpt-ad-1370187203350-sb3","adUnitDivAttributes":{"advertisementText":"Advertisement"},"print":true,"preBid":false,"excludedSections":["ccpa"],"defineSlot":"\/6938\/FP_IN_site\/FP_IN_Sideblock_3_viewable"});
+                googletag.display('div-gpt-ad-1370187203350-sb3');
+
+				                _addAdvertisementText('div-gpt-ad-1370187203350-sb3', 'Advertisement');
+				            });
+
+            scrollng_ad('scrollingRightBox', 'footerWrapper');
+        };
+
+        window.a892ffe2982c = {
+			defineSlots: function () {
+
+				_.attachEvents();
+				_.each( allKeyValue, function (val, key) { _.setTargeting(key, val) });
+				_.each({"Billboard_Default":{"platform":"desktop","sizes":[[970,250],[970,90],[728,90]],"adSlotDivID":"div-gpt-ad-1441189641022-6","print":true,"preBid":true,"adUnitDivAttributes":{"advertisementText":"Advertisement","resize":"1","style":"height:276px;"},"collapseDiv":[true],"excludedSections":["ccpa","webinars"],"overrideRules":[{"conditions":{"relevantSections":["FX","indices","equities","etfs","Commodities","funds","ratesbonds","Crypto","certificates"]},"rewrite":{"adUnitDivAttributes":{"closeButton":"1","advertisementText":"Advertisement","resize":"1"}}},{"conditions":{"relevantSites":[68,72,71,10,2]},"rewrite":{"sizes":[[970,250]],"adUnitDivAttributes":[]}}],"defineSlot":"\/6938\/FP_IN_site\/FP_IN_Billboard_Default"},"TNB_Right_Rail_1":{"platform":"desktop","sizes":["fluid"],"adSlotDivID":"div-gpt-ad-1587967538923-0","collapseDiv":[true,true],"adUnitDivAttributes":{"style":"width:300px;height:85px;"},"print":true,"preBid":false,"excludedSections":["ccpa","webinars"],"overrideRules":[{"conditions":{"relevantSites":[1]},"rewrite":{"excludedSections":["ccpa","webinars","Homepage"]}}],"defineSlot":"\/6938\/FP_IN_site\/FP_IN_TNB_Right_Rail_1"},"Video_Crypto":{"platform":"desktop","sizes":[[1,1]],"adSlotDivID":"div-gpt-ad-1636619409266-0","collapseDiv":[true],"adUnitDivAttributes":{"style":"width:660px;height:230px;"},"relevantSites":[5,7,8,10,11,13,18,30,31,32,36,37,49,50,52,53,54,55,56,58,62,68,70,71,72,73,2,3,1,51,4,9],"print":true,"preBid":false,"defineSlot":"\/6938\/FP_IN_site\/FP_IN_Video_Crypto"},"TNB_Instrument":{"platform":"desktop","sizes":["fluid"],"adSlotDivID":"div-gpt-ad-1541684394813-0","relevantSections":["indices","equities","Commodities","etfs","FX","funds","ratesbonds","Calendar","technical","Crypto","portfolio","markets","Homepage"],"collapseDiv":[true,true],"adUnitDivAttributes":{"style":""},"print":true,"preBid":false,"overrideRules":[{"conditions":{"relevantSites":[1]},"rewrite":{"relevantSections":["indices","equities","Commodities","etfs","FX","funds","ratesbonds","Calendar","technical","Crypto","portfolio","markets"]}}],"defineSlot":"\/6938\/FP_IN_site\/FP_IN_TNB_Instrument"}}, _.defineSlot);
+			},
+            isPrebid: false
+		}
+
+        window.googletag.cmd.push(function () {
+
+                window.a892ffe2982c.defineSlots();
+            //if is not gdpr compliant - get personal ads
+            if (!window.isGDPR || (window.isGDPR && getCookie('CMP_CONSENT') === '1')) {
+                window.googletag.pubads().setRequestNonPersonalizedAds(0);
+            }
+
+            // ADX ccpa (optout - 1YYN) restricted data processing
+            if( window.isCCPA && getCookie('usprivacy') === '1YYN')
+            {
+                console.log('CCPA privacy restrict data processing');
+                window.googletag.pubads().setPrivacySettings({
+                    'restrictDataProcessing': true
+                });
+            }
+            window.googletag.pubads().enableSingleRequest();
+            window.googletag.enableServices();
+        })
+
+        function _addAdvertisementText(elementKey, text) {
+            let dfpElement = document.getElementById(elementKey);
+            if (dfpElement) {
+                let advertisementDiv = _.createAdvertisementPrefix(text);
+                dfpElement.parentElement.prepend(advertisementDiv);
+            }
+        }
+    </script>
+<script src="https://i-invdn-com.investing.com/js/protectedMedia.js"></script>
+<script src="https://i-invdn-com.investing.com/js/logger-1.02.min.js"></script>
+<title>Portfolio & Watchlist - Investing.com India
+
+</title>
+<script>
+
+/**
+ * Protected Media Score politics:
+ * 1. fraudScore means: fraud [2 - clean - 100 fraud]
+ * 2. suspScore means: suspicious [2 - clean - 100 suspicious]
+ * 3. se means means: load by search engine or ad crawler (for Google Publishers recommended to not block this
+ * so Google can score your page for quality
+ *
+ * JIRA: ADTECH-625
+ */
+const PM_COOKIE_NAME       = "protectedMedia";
+const PM_SCORE_COOKIE_NAME = "pms";
+const protectedMediaCookie = getCookie(PM_COOKIE_NAME);
+const pmScoreCookie        = getCookie(PM_SCORE_COOKIE_NAME);
+window.fraud = 0;
+if(protectedMediaCookie === "" || pmScoreCookie === "") { // only hit once per user
+	PMScore({
+			callback: function(result) {
+		if(result.status.indexOf("timeout") !== -1) {
+			console.log("timeout: " + JSON.stringify(result));
+		}
+		else { // success PM call
+			if(result.status.indexOf("se") !== -1 && result.se !== 0) {
+				// Load by Search engine or ad crawler (for Google Publishers, recommended to not block this so Google
+				// can score your page for quality
+				console.log("google bot / ad crawler detected");
+				return;
+			}
+			// mark the PM score to user (first time)
+            if(protectedMediaCookie === "") {
+                setCookie(PM_COOKIE_NAME, result.fraudScore ,365, "/");
+            }
+            if(pmScoreCookie === "") {
+                setCookie(PM_SCORE_COOKIE_NAME, JSON.stringify({'f':result.fraudScore, 's':result.suspScore}),30, "/");
+            }
+
+			if (result.fraudScore > 70) { // result.suspScore > 70
+				console.log("fraud: " + JSON.stringify(result));
+			}
+			else {
+				console.log("clean: " + JSON.stringify(result));
+			}
+		}
+	},
+			mode: "rt",
+			timeout: 4000,
+		})
+	}
+else { // user or bot already tagged by protected media (used for second load only)
+	if(protectedMediaCookie > 70) {
+		window.fraud = 1;
+	}
+}
+</script>
+<link rel="canonical" href="https://in.investing.com/portfolio/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@investing_ind" />
+<meta name="twitter:title" content="Portfolio &amp; Watchlist - Investing.com India
+
+" />
+<meta name="twitter:description" content="Monitor your financial instruments and holdings with Investing.com portfolios. Track multiple and unlimited portfolios and watchlists - on any device." />
+<meta name="twitter:image" content="https://i-invdn-com.investing.com/redesign/images/seo/investing_300X300.png" />
+<meta property="og:title" content="Portfolio &amp; Watchlist - Investing.com India
+
+" />
+<meta property="og:description" content="Monitor your financial instruments and holdings with Investing.com portfolios. Track multiple and unlimited portfolios and watchlists - on any device." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://in.investing.com/portfolio/?portfolioID=NDA1ZmUzYTVkMmtvZDU1Mw%3D%3D" />
+<meta property="og:image" content="https://i-invdn-com.investing.com/redesign/images/seo/investing_300X300.png" />
+<meta property="og:site_name" content="Investing.com India" />
+<meta property="og:locale" content="en_IN" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="https://i-invdn-com.investing.com/logos/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="en-in">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.in.investing.com/portfolio/?portfolioID=NDA1ZmUzYTVkMmtvZDU1Mw=="> <meta name="description" content="Monitor your financial instruments and holdings with Investing.com portfolios. Track multiple and unlimited portfolios and watchlists - on any device.">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="baidu_ssp_verify" content="867e13c8aeefe44c96c098634fb27ffe"> <link rel="next" href="https://in.investing.com/2">
+<meta name="google-site-verification" content="DTRxWXB3vjNUsTCPICWo9yzZmIllylXYkRevEXo7szg">
+
+<link rel="stylesheet" href="https://i-invdn-com.investing.com/css/mainOldMin_v3b.css" type="text/css">
+<link rel="stylesheet" href="https://i-invdn-com.investing.com/css/newMainCssMin_v78e.css" type="text/css">
+<link href="https://i-invdn-com.investing.com/css/printContent_v10.css" media="print" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript">
+        var domainId = "56";
+        window.CDN_URL = "https://i-invdn-com.investing.com";
+    </script>
+<script>
+            (function() {
+                var po = document.createElement('script');
+                po.type = 'text/javascript';
+                po.async = true;
+                po.defer = true;
+                po.src = 'https://apis.google.com/js/platform.js?onload=loadAfterGApiReady';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(po, s);
+            })();
+
+            function loadAfterGApiReady() {
+                gapi.load('auth2', function () {
+                    auth2 = gapi.auth2.init({
+                        'client_id' : '606447380154-9825jtap5as2sm0f868m536j6v8ptgo7.apps.googleusercontent.com',
+                        'cookiepolicy' : 'single_host_origin',
+                        'requestvisibleactions' : 'http://schemas.google.com/AddActivity',
+                        'apppackagename' : 'com.fusionmedia.investing',
+                        'scope' : 'email'
+                    });
+
+                    if (window.isSignupPage) {
+                        window.btnEventList.push('customBtn2');
+                    }
+                    window.renderButtons && window.renderButtons();
+                });
+            }
+
+        </script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/n/notifications-1.02.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/lazysizes.min.js" async></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/n/utils-0.16.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/main-1.17.311.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/columnsSettings-1.22.min.js"></script>
+
+<!--[if (gte IE 6)&(lte IE 7)]>
+<script src="https://i-invdn-com.investing.com/js/jquery.pseudo-1.1.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+        window.login_url = '/members-admin/login';
+		        window.close_word = 'Close';
+        window.lightbox_image = 'Image';
+        window.lightbox_from = 'from';
+		        var FP = {
+            global  : {
+                _defaultDomain  : 'in.investing.com',
+                _textAlign      : 'left'
+            }
+        };
+        var userType;
+        var userSupportedType ;
+    </script>
+
+
+<script type="text/javascript">
+        /* Modernizr 2.0.6 (Custom Build) | MIT & BSD
+		 * Build: http://www.modernizr.com/download/#-csstransitions-iepp-cssclasses-testprop-testallprops-domprefixes
+		 */
+        window.Modernizr=function(a,b,c){function A(a,b){var c=a.charAt(0).toUpperCase()+a.substr(1),d=(a+" "+n.join(c+" ")+c).split(" ");return z(d,b)}function z(a,b){for(var d in a)if(k[a[d]]!==c)return b=="pfx"?a[d]:!0;return!1}function y(a,b){return!!~(""+a).indexOf(b)}function x(a,b){return typeof a===b}function w(a,b){return v(prefixes.join(a+";")+(b||""))}function v(a){k.cssText=a}var d="2.0.6",e={},f=!0,g=b.documentElement,h=b.head||b.getElementsByTagName("head")[0],i="modernizr",j=b.createElement(i),k=j.style,l,m=Object.prototype.toString,n="Webkit Moz O ms Khtml".split(" "),o={},p={},q={},r=[],s,t={}.hasOwnProperty,u;!x(t,c)&&!x(t.call,c)?u=function(a,b){return t.call(a,b)}:u=function(a,b){return b in a&&x(a.constructor.prototype[b],c)},o.csstransitions=function(){return A("transitionProperty")};for(var B in o)u(o,B)&&(s=B.toLowerCase(),e[s]=o[B](),r.push((e[s]?"":"no-")+s));v(""),j=l=null,a.attachEvent&&function(){var a=b.createElement("div");a.innerHTML="<elem></elem>";return a.childNodes.length!==1}()&&function(a,b){function s(a){var b=-1;while(++b<g)a.createElement(f[b])}a.iepp=a.iepp||{};var d=a.iepp,e=d.html5elements||"abbr|article|aside|audio|canvas|datalist|details|figcaption|figure|footer|header|hgroup|mark|meter|nav|output|progress|section|summary|time|video",f=e.split("|"),g=f.length,h=new RegExp("(^|\\s)("+e+")","gi"),i=new RegExp("<(/*)("+e+")","gi"),j=/^\s*[\{\}]\s*$/,k=new RegExp("(^|[^\\n]*?\\s)("+e+")([^\\n]*)({[\\n\\w\\W]*?})","gi"),l=b.createDocumentFragment(),m=b.documentElement,n=m.firstChild,o=b.createElement("body"),p=b.createElement("style"),q=/print|all/,r;d.getCSS=function(a,b){if(a+""===c)return"";var e=-1,f=a.length,g,h=[];while(++e<f){g=a[e];if(g.disabled)continue;b=g.media||b,q.test(b)&&h.push(d.getCSS(g.imports,b),g.cssText),b="all"}return h.join("")},d.parseCSS=function(a){var b=[],c;while((c=k.exec(a))!=null)b.push(((j.exec(c[1])?"\n":c[1])+c[2]+c[3]).replace(h,"$1.iepp_$2")+c[4]);return b.join("\n")},d.writeHTML=function(){var a=-1;r=r||b.body;while(++a<g){var c=b.getElementsByTagName(f[a]),d=c.length,e=-1;while(++e<d)c[e].className.indexOf("iepp_")<0&&(c[e].className+=" iepp_"+f[a])}l.appendChild(r),m.appendChild(o),o.className=r.className,o.id=r.id,o.innerHTML=r.innerHTML.replace(i,"<$1font")},d._beforePrint=function(){p.styleSheet.cssText=d.parseCSS(d.getCSS(b.styleSheets,"all")),d.writeHTML()},d.restoreHTML=function(){o.innerHTML="",m.removeChild(o),m.appendChild(r)},d._afterPrint=function(){d.restoreHTML(),p.styleSheet.cssText=""},s(b),s(l);d.disablePP||(n.insertBefore(p,n.firstChild),p.media="print",p.className="iepp-printshim",a.attachEvent("onbeforeprint",d._beforePrint),a.attachEvent("onafterprint",d._afterPrint))}(a,b),e._version=d,e._domPrefixes=n,e.testProp=function(a){return z([a])},e.testAllProps=A,g.className=g.className.replace(/\bno-js\b/,"")+(f?" js "+r.join(" "):"");return e}(this,this.document);
+        window.ie = (function(){var undef,v = 3,div = document.createElement('div'),all = div.getElementsByTagName('i');while (div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',all[0]);return v > 4 ? v : undef;}());
+    </script>
+
+<style>
+        .googleContentRec {display:inline-block;width:650px;height:300px;}
+
+    </style>
+<style>
+        /* INPUTS OVERWRITES */
+        .combineSearchBox {border:1px solid #737373;} /* overwrite main css */
+        .combineSearchBox.newInput.inputTextBox, .portfolioSearch .newInput.inputTextBox  {padding:0;}
+    </style>
+<!--[if (IE 8)|(IE 9)]>
+<link rel="stylesheet" type="text/css" href="https://i-invdn-com.investing.com/css/ie8-9main_v2b.css">
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="https://i-invdn-com.investing.com/css/ie8main_v2a.css">
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="https://i-invdn-com.investing.com/css/ie7main_v1i.css">
+<![endif]-->
+<style>
+        .MainTableDirectory .HeadTitlesRow TH {text-align:center; font-weight:bold;}
+    </style>
+<style>
+        .openTbl TH.icon {text-align:center;}         .openTbl TH.icon SPAN {position:relative; top:2px;}
+    </style>
+<script>
+        var oldIE = false, explorerEight = false ,explorerNine = false, sponsoredArticle;
+    </script>
+<!--[if lte IE 7]>
+	<script>
+		oldIE = true;
+	</script>
+	<![endif]-->
+<!--[if (IE 8)]>
+	<script>
+		explorerEight = true;
+	</script>
+	<![endif]-->
+<!--[if (IE 9)]>
+	<script>
+		explorerNine = true;
+	</script>
+	<![endif]-->
+<script>var ad0ac5454a59a4c3dab26d4fbbaf76c1="59396c91dd71c81f22549b0048da1cbe";</script>
+<script data-obct type="text/javascript">
+    /** DO NOT MODIFY THIS CODE**/
+    !function(_window, _document) {
+        var OB_ADV_ID='00d807ecaf50797b1d395f73b69546fffe';
+        if (_window.obApi) {var toArray = function(object) {return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];};_window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));return;}
+        var api = _window.obApi = function() {api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);};api.version = '1.1';api.loaded = true;api.marketerId = OB_ADV_ID;api.queue = [];var tag = _document.createElement('script');tag.async = true;tag.src = '//amplify.outbrain.com/cp/obtp.js';tag.type = 'text/javascript';var script = _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
+    obApi('track', 'PAGE_VIEW');
+</script><script>window.newsAndAnalysisAlertSettings = JSON.parse('null');</script> 
+<script type="text/javascript">
+        window.pubsubDebugData = {
+            dfp:{
+                iframes:[],
+                scripts:[]
+            },
+            code:{
+                scripts:[]
+            }
+        };
+
+        function sendPrimisEventToPubSub(params)
+        {
+            $.ajax({
+                url: "/pubsub/Service/message",
+                type:'POST',
+                data: params
+            });
+        }
+
+        function getSekindoParamsFromDFPScript()
+        {
+            var sekindoParams = {};
+            var iframes = $('body').find('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                window.pubsubDebugData.dfp.iframes[i] = iframes[i].id;
+                if(iframes[i].id && (iframes[i].id.indexOf('_video_') !== -1)){
+                    var scripts = iframes[i].contentWindow.document.getElementsByTagName("script");
+                    for (var q = 0; q < scripts.length; q++) {
+                        window.pubsubDebugData.dfp.scripts[i] = scripts[q].src;
+                        if (scripts[q].src && (scripts[q].src.indexOf('https://live.sekindo.com/live/liveView.php') !== -1)) {
+                            var url = new URL(scripts[q].src);
+                            var queryParams = new URLSearchParams(url.search);
+                            if(queryParams.get('s') && queryParams.get('vp_template')){
+                                sekindoParams.media_placement_id = queryParams.get('s');
+                                sekindoParams.vp_template = queryParams.get('vp_template');
+                                sekindoParams.delivery_system = 'dfp';
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return sekindoParams;
+        }
+
+        function getSekindoParamsFromCodeScript()
+        {
+            var params = {};
+            var scripts = $('body').find('script');
+            for (var i = 0; i < scripts.length; i++) {
+                window.pubsubDebugData.code.scripts[i] = scripts[i].src;
+                if (scripts[i].src && (scripts[i].src.indexOf('https://live.sekindo.com/live/liveView.php') !== -1)) {
+                    var url = new URL(scripts[i].src)
+                    var queryParams = new URLSearchParams(url.search);
+                    if(queryParams.get('s') && queryParams.get('vp_template')){
+                        params.media_placement_id = queryParams.get('s');
+                        params.vp_template = queryParams.get('vp_template');
+                        params.delivery_system = 'code';
+                        break;
+                    }
+                }
+            }
+
+            return params;
+        }
+
+        window.addEventListener('primisPlayerInit', function (e) {
+            var player = e.detail;
+
+            /**
+             * Ad started event
+             */
+            player.addEventListener('adStarted', function (val){
+                var sekindoParams = getSekindoParamsFromDFPScript();
+                if($.isEmptyObject(sekindoParams)){
+                    sekindoParams = getSekindoParamsFromCodeScript();
+                }
+
+                cb_params = {};
+                cb_params.impValue = val.impValue;
+                cb_params.servingFee = val.servingFee;
+                sekindoParams.cb_params = cb_params;
+                sekindoParams.event_type = 'adStarted';
+                sekindoParams.debug = window.pubsubDebugData;
+
+                sendPrimisEventToPubSub(sekindoParams);
+            });
+
+            /**
+             * Video Start event
+             */
+            player.addEventListener('videoStart', function (val){
+                console.log('Playing video: ' + val.title);
+            });
+        });
+    </script>
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<body class="takeover dfpTakeovers ">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGT3R3D&l=dataLayerGTMParams" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script>
+            dataLayerGTMParams.push({'event': 'client-ready'});
+        </script>
+<script>
+                $(function() {
+                    var mutationObserver = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            if (mutation.attributeName === "class") {
+                                if($('header').hasClass('switchHeader')) {
+                                    $('.wrapper').addClass('hidden_navBar');
+                                } else {
+                                    $('.wrapper').removeClass('hidden_navBar');
+                                }
+                            }
+                        });
+                    });
+                    mutationObserver.observe($('header')[0], {
+                        attributes: true
+                    });
+
+                });
+            </script>
+<div id="sideNotificationZone" class="sideNotificationZone">
+<div class="floatingAlertWrapper alertWrapper js-notification-item displayNone">
+<div class="alertNotifIcon"><span class="js-icon"></span></div>
+<div class="alertNotifData">
+<a class="alertDataTitle js-title"></a>
+<span class="alertDataDetails js-small-text"></span>
+</div>
+<a data-tooltip="Manage my alerts" class="js-manage-alerts gearIconSmall genToolTip oneliner reverseToolTip"></a>
+<span class="alertCloseIconSmall js-close"></span>
+</div>
+</div>
+<div class="breakingNews">
+<div class="floatingAlertWrapper">
+<span class="breakingNewsTitle bold">Breaking News</span>
+<span class="breakingNewsText js-breaking-news-content"></span>
+</div>
+<span class="closeIcon js-close"></span>
+</div>
+<div class="generalOverlay js-general-overlay displayNone"></div>
+<script>
+        $('.js-general-overlay').on('click', $.stopProp);
+    </script>
+<div class="earAdvWrapper">
+<div class="earAdv left js-floaty-flyer">
+</div>
+</div>
+<script>
+                $('.js-floaty-flyer').css('position', $(window).height() <= 909 ? 'absolute' : 'fixed');
+            </script>
+<div class="wrapper">
+<header class="">
+<div class="adsFreeSubscriptionMessage strip type-1 js-billboard-ad-free-message">
+<div class="text">
+<span class="bold">Ad-Free Version</span>. Upgrade your Investing.com experience. Save up to 73% <a href="/ad-free-subscription?source=desktop&medium=header_button" class="adsFreeSubscriptionMessage-cta"><span class="text">Upgrade now</span></a>
+</div>
+<div class="js-close-header-strip closeHeaderStrip"><img src="https://i-invdn-com.investing.com/images/adfree/ad-free-header-strip-close.svg"></div>
+</div>
+<script>
+	$('body').addClass('has-ads-free-promo-header');
+
+	$('.js-close-header-strip').click(function (){
+	    $('.js-billboard-ad-free-message').remove();
+	    $('body').removeClass('has-ads-free-promo-header');
+
+        var date = new Date();
+        var path = '/';
+        date.setTime(date.getTime()+ 24*60*60*1000);
+        var expires = "expires=" + date.toUTCString();
+        document.cookie = "hide_ads_free_header_strip" + "=" + "1;" + expires + ';domain=.investing.com;path=' + path;
+    });
+</script>
+
+<div class="topBar">
+<div class="topBarInnerWrapper">
+<a href="/" class="topBarLogo">
+<img src="https://i-invdn-com.investing.com/logos/investing-com-logo-2022.png" alt="Investing.com - Financial Markets Worldwide" class="investingLogo">
+</a>
+<div id="topBarPopup" load="topBarSpinner"></div>
+<div class="js-search-overlay topSearchOverlay displayNone"></div>
+<div class="searchDiv newSearchDiv js-main-search-wrapper">
+<div class="searchBoxContainer topBarSearch topBarInputSelected">
+<input autocomplete='off' type="text" class="searchText arial_12 lightgrayFont js-main-search-bar" value="" placeholder="Search the website...">
+<label class="searchGlassIcon js-magnifying-glass-icon">&nbsp;</label>
+<i class="cssSpinner"></i>
+</div>
+<div class="js-results-dialog displayNone">
+<div class="js-query-results newSearch_topBar newSearch_topBarResults displayNone">
+<div class="searchMain">
+<div class="js-query-quotes-header textBox groupHeader searchPopup_results">
+<a class="js-quote-header-link">Quotes</a>
+<div class="js-quote-types-dropdown newSearchSelect selectWrap">
+<a class="newBtnDropdown noHover">
+<span class="js-dropdown-text-input inputDropDown">All Instrument Types</span>
+<i class="bottunImageDoubleArrow buttonWhiteImageDownArrow"></i>
+</a>
+<ul class="dropdownBtnList displayNone js-quote-types-dropdown-ul">
+<li data-value='all'>All Instrument Types</li><li data-value='indice'>Indices</li><li data-value='equities'>Equities</li><li data-value='etf'>ETFs</li><li data-value='fund'>Funds</li><li data-value='commodity'>Commodities</li><li data-value='currency'>Currencies</li><li data-value='crypto'>Crypto</li><li data-value='bond'>Bonds</li><li data-value='certificate'>Certificates</li> </ul>
+</div>
+</div>
+<div class="js-scrollable-results-wrapper newResultsContainer">
+<div class="js-table-results tableWrapper"></div>
+</div>
+
+<div class="js-query-no-results noResults displayNone">
+<i class="searchNoResultsNew"></i>
+<p class="lighterGrayFont">Please try another search</p>
+</div>
+<div class="searchResultsFooter">
+<i class="blueSearchGlassIcon middle"></i>
+<a class="js-footer-link" href="/">Search website for:&nbsp;<span class="js-footer-link-text bold"></span></a>
+</div>
+</div>
+<div class="js-right-side-results searchAside"></div>
+</div>
+<div class="js-default-search-results newSearch_topBar">
+<div class="searchMain js-main-group-results"></div>
+<div class="searchAside">
+<div class="searchAside_item">
+<a class="asideTitle" href="/news/most-popular-news">
+<div class="js-search-ga-header groupHeader" ga-label="Popular News">Popular News</div>
+<span class="js-search-ga-more" ga-label="Popular News - More">More</span>
+</a>
+<div class="js-search-ga-items articles mediumTitle1" ga-label="Popular News - Article"><article class="js-article-item articleItem   " data-id="3098182">
+<a href="/news/fortune-oil-producer-zooms-10-hits-upper-circuit-after-tanking-25-3098182" class="img"><img class="lazyload" data-src="https://i-invdn-com.investing.com/news/LYNXMPEDAD000_S.jpg" alt="Fortune Oil Producer Zooms 10%, Hits Upper Circuit After Tanking 25%" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png';"></a> <div class="textDiv">
+<a href="/news/fortune-oil-producer-zooms-10-hits-upper-circuit-after-tanking-25-3098182" title="Fortune Oil Producer Zooms 10%, Hits Upper Circuit After Tanking 25%" class="title">Fortune Oil Producer Zooms 10%, Hits Upper Circuit After Tanking 25%</a>
+</div>
+<div class="clear"></div>
+</article><article class="js-article-item articleItem   " data-id="3098121">
+<a href="/news/oil-eases-on-sanction-clarifications-impact-of-boiling-oil-prices-on-india-3098121" class="img"><img class="lazyload" data-src="https://i-invdn-com.investing.com/news/LYNXNPEC6B00X_S.jpg" alt="Oil Eases on Sanction Clarifications; Impact of Boiling Oil Prices on India" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png';"></a> <div class="textDiv">
+<a href="/news/oil-eases-on-sanction-clarifications-impact-of-boiling-oil-prices-on-india-3098121" title="Oil Eases on Sanction Clarifications; Impact of Boiling Oil Prices on India" class="title">Oil Eases on Sanction Clarifications; Impact of Boiling Oil Prices on India</a>
+</div>
+<div class="clear"></div>
+</article><article class="js-article-item articleItem   " data-id="3098283">
+<a href="/news/mrs-bectors-food-records-fresh-alltime-low-post-flop-q3-results-3098283" class="img"><img class="lazyload" data-src="https://i-invdn-com.investing.com/news/LYNXMPEB280W7_S.jpg" alt="Mrs Bectors Food Records Fresh All-Time Low Post Flop Q3 Results" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png';"></a> <div class="textDiv">
+<a href="/news/mrs-bectors-food-records-fresh-alltime-low-post-flop-q3-results-3098283" title="Mrs Bectors Food Records Fresh All-Time Low Post Flop Q3 Results" class="title">Mrs Bectors Food Records Fresh All-Time Low Post Flop Q3 Results</a>
+</div>
+<div class="clear"></div>
+</article></div>
+</div>
+<div class="searchAside_item js-popular-analysis-wrapper">
+<a class="asideTitle" href="/analysis/most-popular-analysis">
+<div class="js-search-ga-header groupHeader" ga-label="Popular Analysis">Popular Analysis</div>
+<span class="js-search-ga-more" ga-label="Popular Analysis - More">More</span>
+</a>
+<div class="js-search-ga-items articles smallTitle1 analysisImg js-popular-analysis-items" ga-label="Popular Analysis - Article"><article class="js-article-item articleItem   " data-id="200512433">
+<a href="/analysis/stock-pick-for-monday-february-21-2022-200512433" class="img"><img class="lazyload" data-src="https://d56-invdn-com.investing.com/company_logo/50719df93d933a07a0ffeba0a6df289a.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/anonym.gif';"></a> <div class="textDiv">
+<a href="/analysis/stock-pick-for-monday-february-21-2022-200512433" title="Stock Pick for Monday, February 21, 2022" class="title">Stock Pick for Monday, February 21, 2022</a>
+</div>
+<div class="clear"></div>
+</article><article class="js-article-item articleItem   " data-id="200512568">
+<a href="/analysis/option-trading-strategies-200512568" class="img"><img class="lazyload" data-src="https://d56-invdn-com.investing.com/company_logo/66d3fbb06d933b904d4ef6768a937573.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/anonym.gif';"></a> <div class="textDiv">
+<a href="/analysis/option-trading-strategies-200512568" title="Option Trading Strategies" class="title">Option Trading Strategies</a>
+</div>
+<div class="clear"></div>
+</article><article class="js-article-item articleItem   " data-id="200512597">
+<a href="/analysis/nifty-slips-amid-russian-saga-over-ukraine-but-the-worst-may-be-over-200512597" class="img"><img class="lazyload" data-src="https://d56-invdn-com.investing.com/company_logo/e170597520df15af58e286dbc5c28498.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/anonym.gif';"></a> <div class="textDiv">
+<a href="/analysis/nifty-slips-amid-russian-saga-over-ukraine-but-the-worst-may-be-over-200512597" title="Nifty Slips Amid Russian Saga Over Ukraine, but the Worst may be Over" class="title">Nifty Slips Amid Russian Saga Over Ukraine, but the Worst may be Over</a>
+</div>
+<div class="clear"></div>
+</article></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="js-group-template textBox displayNone">
+<div class="js-group-title groupHeader"></div>
+<div class="js-group-results newResultsContainer">
+</div>
+</div>
+
+<div class="js-news-items-group-template searchAside_item displayNone">
+<a class="asideTitle js-group-more-link">
+<div class="js-group-title groupHeader"></div>
+<span>More</span>
+</a>
+<div class="js-group-results articles smallTitle1 analysisImg"></div>
+</div>
+
+
+<a class="row js-quote-row-template js-quote-item displayNone">
+<span class="first flag"><i class="ceFlags middle js-quote-item-flag"></i></span>
+<span class="second js-quote-item-symbol symbolName"></span>
+<span class="third js-quote-item-name"></span>
+<span class="fourth typeExchange js-quote-item-type"></span>
+</a>
+
+<article class="js-news-item-template articleItem displayNone">
+<a href="/" class="js-news-item-link">
+<img class="js-news-item-img" src="https://d1-invdn-com.investing.com/company_logo/d01b563261bcf223986f7ac222680343.jpg">
+<div class="js-news-item-name textDiv"></div>
+</a>
+</article>
+<div class="js-tool-item-template displayNone">
+<a class="js-tool-item-link eventsAndTools">
+<span class="js-tool-item-name"></span>
+</a>
+</div>
+</div>
+<script type="text/javascript">
+	window.topBarSearchData = {
+		texts: {
+			recentSearchText: 'My Recent Searches',
+			popularSearchText: 'Popular Searches',
+            newsSearchText: 'News',
+            analysisSearchText: 'Analysis',
+            economicEventsSearchText: 'Economic Events',
+            toolsSearchText: 'Tools & Sections',
+			authorsSearchText: 'Authors',
+			webinarsSearchText: 'Webinars'
+		},
+		popularSearches: [{"pairId":"18376","link":"\/equities\/state-bank-of-india","symbol":"SBI","name":"State Bank Of India","flag":"India","type":"Equity - NSE","ci":"14"},{"pairId":"18367","link":"\/equities\/reliance-industries","symbol":"RELI","name":"Reliance Industries Ltd","flag":"India","type":"Equity - NSE","ci":"14"},{"pairId":"18425","link":"\/equities\/tata-motors-ltd","symbol":"TAMO","name":"Tata Motors Ltd","flag":"India","type":"Equity - NSE","ci":"14"},{"pairId":"18426","link":"\/equities\/tata-power-company","symbol":"TTPW","name":"Tata Power Co. Ltd","flag":"India","type":"Equity - NSE","ci":"14"},{"pairId":"17985","link":"\/equities\/adani-power","symbol":"ADAN","name":"Adani Power Ltd","flag":"India","type":"Equity - NSE","ci":"14"}]	};
+</script> <div class="topBarTools">
+<span id="userAccount" class="topBarUserAvatar js-open-auth-trigger-inside" data-page-type="topBar">
+<div class="loggedIn inlineblock"><span onmouseover="_myAccountDropDown.render();" onmouseout="_myAccountDropDown.render();" class="topBarText bold pointer name"><img src="https://lh4.googleusercontent.com/-o4MdaXifVR4/AAAAAAAAAAI/AAAAAAAAAhc/-nnAGiW-jRc/photo.jpg" class="userAvatar middle inlineblock" id="userImg"><span class="myAccount topBarText">Namit</span></span></div><div id="myAccountHeaderPop" class="tooltipPopup bigArrowTopbar noHeader displayNone myAccountSelPopup" onmouseover="_myAccountDropDown.render();" onmouseout="_myAccountDropDown.render();"><div class="content"><ul class="bold "><li style="width:px;"><span class="smallGrayArrow middle"></span><a href="/portfolio" class="arial_12 bold">My Watchlist</a></li><li style="width:px;"><span class="smallGrayArrow middle"></span><a href="/members-admin/alert-center" class="arial_12 bold">Alert Center</a></li><li style="width:px;"><span class="smallGrayArrow middle"></span><a href="/members-admin/alerts-feed" class="arial_12 bold">Alerts Feed</a></li><li style="width:px;"><span class="smallGrayArrow middle"></span><a href="/members-admin/saved-items" class="arial_12 bold">Saved Items</a></li><li style="width:px;"><span class="smallGrayArrow middle"></span><a href="/members-admin/content-analysis-list" class="arial_12 bold">Content</a></li><li style="width:px;"><span class="smallGrayArrow middle"></span><a href="/members-admin/content-analysis-add" class="arial_12 bold">Add Analysis</a></li></ul><div class="dottedBorder">&nbsp;</div><ul class="noBold "><li style="width:px;"><span class="smallGrayEmptyArrow middle"></span><a href="/members-admin/sentiments" class="arial_12 bold">My Sentiments</a></li></ul><div class="dottedBorder">&nbsp;</div><ul class="noBold "><li style="width:px;"><span class="smallGrayEmptyArrow"></span><a href="/members-admin/ad-free?source=desktop&medium=profile" class="arial_12 bold">Ad-Free Version</a></li><li style="width:px;"><span class="smallGrayEmptyArrow"></span><a href="/members-admin/settings-edit-user-details" class="arial_12 bold">Settings</a></li><li style="width:px;"><span class="smallGrayEmptyArrow"></span><a href="/members-admin/logout?logoutToken=d12d656f28214acc59b059dd0f2e35db" class="arial_12 bold">Sign out</a></li></ul></div></div><div id="settingsDropDown" class="subMenuOneColumnWrap hoverboxWithShadow settingsPopup" onmouseover="settingsDropDown.render();" onmouseout="settingsDropDown.render();"><div class="subMenuOneColumn"><ul class="bold "></ul><div class="dottedBorder">&nbsp;</div><ul class="noBold "></ul></div><span class="arrow">&nbsp;</span></div> </span>
+<span id="topBarAlertCenterBtn" class="topBarIconWrap">
+<i class="topBarAlertsIcon"></i><i class="topBarAlertBadge js-badge arial_10 block">192</i></span>
+<span id="portfolioTopBarBtn" class="topBarIconWrap">
+<i class="topBarPortfolioIcon"></i></span>
+<span id="topBarMarketBtn" class="topBarIconWrap">
+<i class="topBarWorldMarketsIcon"></i></span>
+<div class="langSelect inlineblock">
+<div id="langSelect" class="inlineblock pointer" onmouseover="$('#editionContainer').fadeOut('fast'); flagsDropDown.render();" onmouseout="flagsDropDown.render();"><span class="ceFlags India middle inlineblock"></span></div>
+<div id="TopFlagsContainer" class="tooltipPopup countrySelPopup bigArrowTopbar noHeader displayNone" onmouseover="flagsDropDown.render();" onmouseout="flagsDropDown.render();">
+<div class="content">
+<ul><li><a href="https://www.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to www.investing.com'); setTimeout('document.location = \'https://www.investing.com\'', 500);return false;"><span class="ceFlags USA"></span>English (USA)</a></li><li><a href="https://ru.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to ru.investing.com'); setTimeout('document.location = \'https://ru.investing.com\'', 500);return false;"><span class="ceFlags Russian_Federation"></span>Русский</a></li><li><a href="https://uk.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to uk.investing.com'); setTimeout('document.location = \'https://uk.investing.com\'', 500);return false;"><span class="ceFlags UK"></span>English (UK)</a></li><li><a href="https://tr.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to tr.investing.com'); setTimeout('document.location = \'https://tr.investing.com\'', 500);return false;"><span class="ceFlags Turkey"></span>Türkçe</a></li><li><a href="https://ca.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to ca.investing.com'); setTimeout('document.location = \'https://ca.investing.com\'', 500);return false;"><span class="ceFlags Canada"></span>English (Canada)</a></li><li><a href="https://sa.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to sa.investing.com'); setTimeout('document.location = \'https://sa.investing.com\'', 500);return false;"><span class="ceFlags Saudi_Arabia"></span>‏العربية‏</a></li><li><a href="https://au.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to au.investing.com'); setTimeout('document.location = \'https://au.investing.com\'', 500);return false;"><span class="ceFlags Australia"></span>English (Australia)</a></li><li><a href="https://gr.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to gr.investing.com'); setTimeout('document.location = \'https://gr.investing.com\'', 500);return false;"><span class="ceFlags Greece"></span>Ελληνικά</a></li><li><a href="https://za.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to za.investing.com'); setTimeout('document.location = \'https://za.investing.com\'', 500);return false;"><span class="ceFlags South_Africa"></span>English (South Africa)</a></li><li><a href="https://se.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to se.investing.com'); setTimeout('document.location = \'https://se.investing.com\'', 500);return false;"><span class="ceFlags Sweden"></span>Svenska</a></li><li><a href="https://ph.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to ph.investing.com'); setTimeout('document.location = \'https://ph.investing.com\'', 500);return false;"><span class="ceFlags Philippines"></span>English (Philippines)</a></li><li><a href="https://fi.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to fi.investing.com'); setTimeout('document.location = \'https://fi.investing.com\'', 500);return false;"><span class="ceFlags Finland"></span>Suomi</a></li><li><a href="https://ng.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to ng.investing.com'); setTimeout('document.location = \'https://ng.investing.com\'', 500);return false;"><span class="ceFlags Nigeria"></span>English (Nigeria)</a></li><li><a href="https://il.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to il.investing.com'); setTimeout('document.location = \'https://il.investing.com\'', 500);return false;"><span class="ceFlags Israel"></span>עברית</a></li><li><a href="https://de.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to de.investing.com'); setTimeout('document.location = \'https://de.investing.com\'', 500);return false;"><span class="ceFlags Germany"></span>Deutsch</a></li><li><a href="https://jp.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to jp.investing.com'); setTimeout('document.location = \'https://jp.investing.com\'', 500);return false;"><span class="ceFlags Japan"></span>日本語</a></li><li><a href="https://es.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to es.investing.com'); setTimeout('document.location = \'https://es.investing.com\'', 500);return false;"><span class="ceFlags Spain"></span>Español (España)</a></li><li><a href="https://kr.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to kr.investing.com'); setTimeout('document.location = \'https://kr.investing.com\'', 500);return false;"><span class="ceFlags South_Korea"></span>한국어</a></li><li><a href="https://mx.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to mx.investing.com'); setTimeout('document.location = \'https://mx.investing.com\'', 500);return false;"><span class="ceFlags Mexico"></span>Español (México)</a></li><li><a href="https://cn.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to cn.investing.com'); setTimeout('document.location = \'https://cn.investing.com\'', 500);return false;"><span class="ceFlags China"></span>简体中文</a></li><li><a href="https://fr.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to fr.investing.com'); setTimeout('document.location = \'https://fr.investing.com\'', 500);return false;"><span class="ceFlags France"></span>Français</a></li><li><a href="https://hk.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to hk.investing.com'); setTimeout('document.location = \'https://hk.investing.com\'', 500);return false;"><span class="ceFlags Hong_Kong"></span>繁體中文</a></li><li><a href="https://it.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to it.investing.com'); setTimeout('document.location = \'https://it.investing.com\'', 500);return false;"><span class="ceFlags Italy"></span>Italiano</a></li><li><a href="https://id.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to id.investing.com'); setTimeout('document.location = \'https://id.investing.com\'', 500);return false;"><span class="ceFlags Indonesia"></span>Bahasa Indonesia</a></li><li><a href="https://nl.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to nl.investing.com'); setTimeout('document.location = \'https://nl.investing.com\'', 500);return false;"><span class="ceFlags Netherlands"></span>Nederlands</a></li><li><a href="https://ms.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to ms.investing.com'); setTimeout('document.location = \'https://ms.investing.com\'', 500);return false;"><span class="ceFlags Malaysia"></span>Bahasa Melayu</a></li><li><a href="https://pt.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to pt.investing.com'); setTimeout('document.location = \'https://pt.investing.com\'', 500);return false;"><span class="ceFlags Portugal"></span>Português (Portugal)</a></li><li><a href="https://th.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to th.investing.com'); setTimeout('document.location = \'https://th.investing.com\'', 500);return false;"><span class="ceFlags Thailand"></span>ไทย</a></li><li><a href="https://pl.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to pl.investing.com'); setTimeout('document.location = \'https://pl.investing.com\'', 500);return false;"><span class="ceFlags Poland"></span>Polski</a></li><li><a href="https://vn.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to vn.investing.com'); setTimeout('document.location = \'https://vn.investing.com\'', 500);return false;"><span class="ceFlags Vietnam"></span>Tiếng Việt</a></li><li><a href="https://br.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to br.investing.com'); setTimeout('document.location = \'https://br.investing.com\'', 500);return false;"><span class="ceFlags Brazil"></span>Português (Brasil)</a></li><li><a href="https://hi.investing.com" onclick="ga('allSitesTracker.send', 'event', 'Edition Redirect Popup', 'Users Choice', 'Redirect to hi.investing.com'); setTimeout('document.location = \'https://hi.investing.com\'', 500);return false;"><span class="ceFlags India"></span>हिंदी</a></li></ul> </div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+
+	loader([{
+		type: 'component', value: 'Translate'
+	}]).ready(function(Translate) {
+		Translate
+			.setDictionary('TopBarAlertsSignInPopup', {
+				'popupHeader': 'Recent Alerts',
+				'notLoggedInText': "Sign up to create alerts for Instruments, \nEconomic Events and content by followed authors",
+				'iconClasses': 'signinIcon',
+				'popupClasses': 'topBarAlertsSignInPopup'
+			})
+			.setDictionary('TopBarPortfolioSignInPopup', {
+				'popupHeader': 'My Portfolio',
+				'notLoggedInText': "Sign up to Create and Manage your own Watchlists and Holdings with investing.com's Portfolio tool.",
+				'iconClasses': 'signinIconPortfolio',
+				'popupClasses': 'topBarPortfolioBox'
+			});
+	})
+</script>
+<div id="navBar" class="navBar">
+<nav id="navMenu" class="navMenuWrapper">
+<ul class="navMenuUL">
+<li>
+<a href="/markets/" class="nav">Markets</a>
+<ul class="subMenuNav">
+<li class="row">
+<a href="/currencies/">Forex</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/currencies/streaming-forex-rates-majors">Forex Majors</a></li>
+<li><a href="/currencies/single-currency-crosses">Single Currency Crosses</a></li>
+<li><a href="/currencies/live-currency-cross-rates">Live Currency Cross Rates</a></li>
+<li><a href="/currencies/exchange-rates-table">Exchange Rates Table</a></li>
+<li><a href="/rates-bonds/forward-rates">Forward Rates</a></li>
+<li><a href="/currencies/fx-futures">FX Futures</a></li>
+<li><a href="/currencies/forex-options">FX Options</a></li> </ul>
+<ul class="popular">
+<li><a href="/currencies/usd-inr">USD/INR</a></li>
+<li><a href="/currencies/eur-inr">EUR/INR</a></li>
+<li><a href="/currencies/gbp-inr">GBP/INR</a></li>
+<li><a href="/currencies/eur-usd">EUR/USD</a></li>
+<li><a href="/currencies/gbp-usd">GBP/USD</a></li>
+<li><a href="/currencies/usd-jpy">USD/JPY</a></li>
+<li><a href="/currencies/aud-usd">AUD/USD</a></li>
+<li><a href="/crypto/bitcoin/btc-usd">BTC/USD</a></li>
+<li><a href="/currencies/us-dollar-index">Dollar Index</a></li>
+</ul>
+</div> </li>
+<li class="row">
+<a href="/commodities/">Commodities</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/commodities/real-time-futures">Real Time Commodities</a></li>
+<li><a href="/commodities/metals">Metals</a></li>
+<li><a href="/commodities/softs">Softs</a></li>
+<li><a href="/commodities/meats">Meats</a></li>
+<li><a href="/commodities/energy">Energy</a></li>
+<li><a href="/commodities/grains">Grains</a></li>
+<li><a href="/indices/commodities-indices">Commodity Indices</a></li> </ul>
+<ul class="popular">
+<li><a href="/commodities/crude-oil">Crude Oil WTI</a></li>
+<li><a href="/commodities/natural-gas">Natural Gas</a></li>
+<li><a href="/commodities/gold">Gold</a></li>
+<li><a href="/commodities/silver">Silver</a></li>
+<li><a href="/commodities/copper">Copper</a></li>
+<li><a href="/commodities/cotton">MCX Cotton</a></li>
+</ul>
+</div> </li>
+<li class="row">
+<a href="/indices/">Indices</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/indices/india-indices">India Indices</a></li>
+<li><a href="/indices/major-indices">Major Indices</a></li>
+<li><a href="/indices/world-indices">World Indices</a></li>
+<li><a href="/indices/global-indices">Global Indices</a></li>
+<li><a href="/indices/indices-futures">Index Futures</a></li>
+<li><a href="/indices/indices-cfds">Indices CFDs</a></li> </ul>
+<ul class="popular">
+<li><a href="/indices/sensex">BSE Sensex</a></li>
+<li><a href="/indices/s-p-cnx-nifty">Nifty 50</a></li>
+<li><a href="/indices/s-p-cnx-500">Nifty 500</a></li>
+<li><a href="/indices/us-30">Dow Jones</a></li>
+<li><a href="/indices/us-spx-500">S&P 500</a></li>
+<li><a href="/indices/japan-ni225">Nikkei 225</a></li>
+<li><a href="/indices/uk-100">FTSE 100</a></li>
+</ul>
+</div> </li>
+<li class="row">
+<a href="/equities/">Shares</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/stock-screener/">Stock Screener</a></li>
+<li><a href="/equities/trending-stocks">Trending Stocks</a></li>
+<li><a href="/equities/india">India</a></li>
+<li><a href="/equities/asia-pacific">Asia/Pacific</a></li>
+<li><a href="/equities/americas">Americas</a></li>
+<li><a href="/equities/europe">UK & Europe</a></li>
+<li><a href="/equities/pre-market">USA Pre-Market</a></li>
+<li><a href="/equities/52-week-high">52 Week High</a></li>
+<li><a href="/equities/52-week-low">52 Week Low</a></li>
+<li><a href="/equities/most-active-stocks">Most Active</a></li>
+<li><a href="/equities/top-stock-gainers">Top Gainers</a></li>
+<li><a href="/equities/top-stock-losers">Top Losers</a></li>
+<li><a href="/equities/world-adrs">World ADRs</a></li>
+<li><a href="/equities/india-adrs">India ADRs</a></li> </ul>
+<ul class="popular">
+<li><a href="/equities/state-bank-of-india">SBI</a></li>
+<li><a href="/equities/ntpc">NTPC</a></li>
+<li><a href="/equities/reliance-industries">Reliance Industries</a></li>
+<li><a href="/equities/tata-motors">Tata Motors ADR</a></li>
+<li><a href="/equities/apple-computer-inc">Apple</a></li>
+<li><a href="/equities/google-inc">Alphabet A</a></li>
+</ul>
+</div> </li>
+<li class="row">
+<a href="/etfs/">ETFs</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/etfs/major-etfs">Major ETFs</a></li>
+<li><a href="/etfs/world-etfs">World ETFs</a></li>
+<li><a href="/etfs/india-etfs">India ETFs</a></li> </ul>
+<ul class="popular">
+<li><a href="/etfs/spdr-s-p-500">SPDR S&P 500</a></li>
+<li><a href="/etfs/ishares-msci-emg-markets">iShares MSCI Emerging Markets</a></li>
+<li><a href="/etfs/diamonds-trust">SPDR Dow Jones Industrial Average</a></li>
+<li><a href="/etfs/powershares-qqqq">Invesco QQQ Trust</a></li>
+</ul>
+</div> </li>
+<li class="row">
+<a href="/funds/">Funds</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/funds/world-funds">World Funds</a></li>
+<li><a href="/funds/major-funds">Major Funds</a></li> </ul>
+<ul class="popular">
+<li><a href="/funds/hdfc-prudence-fund-direct-plan-d">HDFC Prudence Fund -Direct Plan - Dividend Option</a></li>
+<li><a href="/funds/icici-prudential-flexible-income-pl">ICICI Prudential Flexible Income Plan Growth</a></li>
+<li><a href="/funds/hdfc-equity-fund-direct-plan-div">HDFC Equity Fund -Direct Plan - Dividend Option</a></li>
+<li><a href="/funds/icici-prudential-value-discov-div">ICICI Prudential Value Discovery Fund Direct Plan </a></li>
+</ul>
+</div> </li>
+<li class="row">
+<a href="/rates-bonds/">Bonds</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/rates-bonds/financial-futures">Financial Futures</a></li>
+<li><a href="/rates-bonds/world-government-bonds">World Government Bonds</a></li>
+<li><a href="/rates-bonds/government-bond-spreads">Government Bond Spreads</a></li>
+<li><a href="/rates-bonds/forward-rates">Forward Rates</a></li>
+<li><a href="/indices/bond-indices">Bond Indices</a></li> </ul>
+<ul class="popular">
+<li><a href="/rates-bonds/india-10-year-bond-yield">India 10Y</a></li>
+<li><a href="/rates-bonds/india-2-year-bond-yield">India 2Y</a></li>
+<li><a href="/rates-bonds/u.s.-10-year-bond-yield">U.S. 10Y</a></li>
+<li><a href="/rates-bonds/japan-10-year-bond-yield">Japan 10Y</a></li>
+<li><a href="/rates-bonds/china-10-year-bond-yield">China 10Y</a></li>
+</ul>
+</div> </li>
+<li class="row">
+<a href="/crypto/">Cryptocurrency</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/crypto/currency-pairs">Cryptocurrency Pairs</a></li>
+<li><a href="/crypto/currencies">All CryptoCurrencies</a></li>
+<li><a href="/crypto/bitcoin">Bitcoin</a></li>
+<li><a href="/crypto/ethereum">Ethereum</a></li>
+<li><a href="/crypto/dogecoin">Dogecoin</a></li>
+<li><a href="/currency-converter/?tag=Cryptocurrency">Currency Converter</a></li> </ul>
+<ul class="popular">
+<li><a href="/crypto/bitcoin/btc-usd">BTC/USD</a></li>
+<li><a href="/crypto/ethereum/eth-usd">ETH/USD</a></li>
+<li><a href="/crypto/litecoin/ltc-usd">LTC/USD</a></li>
+<li><a href="/crypto/ethereum-classic/etc-usd">ETC/USD</a></li>
+<li><a href="/crypto/ethereum/eth-btc">ETH/BTC</a></li>
+<li><a href="/crypto/dogecoin/doge-usd">DOGE/USD</a></li>
+</ul>
+</div> </li>
+<li class="row">
+<a href="/certificates/">Certificates</a>
+<div class="navBarDropDown">
+<ul class="main">
+<li><a href="/certificates/major-certificates">Major Certificates</a></li>
+<li><a href="/certificates/world-certificates">World Certificates</a></li> </ul>
+<ul class="popular">
+<li><a href="/certificates/sg-ftse-mib-gross-tr-5x-s-18jun21">SG FTSE MIB Gross TR 5x Daily Short Strategy RT 18</a></li>
+<li><a href="/certificates/vontobel-7x-long-natural-gas-8.06">Vontobel 7X Long Fixed Lever on Natural Gas 8.06</a></li>
+<li><a href="/certificates/bnp-call-500.59-eur-aex-31dec99">BNP Call 500.59 EUR AEX 31Dec99</a></li>
+<li><a href="/certificates/commerz-put-cac-fut-05-17-31dec99">COMMERZBANK AG Put CAC FUT 05/17 31Dec99</a></li>
+</ul>
+</div> </li>
+</ul> </li>
+<li class="selected">
+<a class="nav" href="//in.investing.com/portfolio/">
+Portfolio </a>
+</li>
+<li>
+<a class="nav" href="//in.investing.com/crypto/">
+Crypto </a>
+<div class="navBarDropDown" style="width: 387px">
+<ul class="main" style="width: 200px">
+<li class="navTitle">Cryptocurrency</li>
+<li><a href="/crypto/currencies">All CryptoCurrencies</a></li>
+<li><a href="/crypto/currency-pairs">Cryptocurrency Pairs</a></li>
+<li><a href="/crypto/ico-calendar">ICO Calendar</a></li>
+<li><a href="/brokers/cryptocurrency-brokers">Cryptocurrency Brokers</a></li>
+<li><a href="/crypto/bitcoin">Bitcoin</a></li>
+<li><a href="/crypto/ethereum">Ethereum</a></li>
+<li><a href="/crypto/xrp">Ripple</a></li>
+<li><a href="/crypto/litecoin">Litecoin</a></li>
+<li><a href="/currency-converter/?tag=Cryptocurrency">Currency Converter</a></li> </ul>
+<ul class="popular" style="width: 187px">
+<li class="navTitle">More in Cryptocurrency</li>
+<li><a href="/crypto/bitcoin/btc-usd">BTC/USD</a></li>
+<li><a href="/crypto/ethereum/eth-usd">ETH/USD</a></li>
+<li><a href="/crypto/litecoin/ltc-usd">LTC/USD</a></li>
+<li><a href="/crypto/ethereum-classic/etc-usd">ETC/USD</a></li>
+<li><a href="/crypto/ethereum/eth-btc">ETH/BTC</a></li>
+<li><a href="/crypto/iota/iota-usd">IOTA/USD</a></li>
+ <li><a href="/crypto/xrp/xrp-usd">XRP/USD</a></li>
+<li><a href="/crypto/bitcoin/bitcoin-futures">Bitcoin Futures CME</a></li>
+<li><a href="/crypto/bitcoin/cboe-bitcoin-futures">Bitcoin Futures CBOE</a></li>
+</ul>
+</div> </li>
+<li>
+<a class="nav" href="//in.investing.com/charts/">
+Charts </a>
+<div class="navBarDropDown" style="width: 430px">
+<ul class="main" style="width: 210px">
+<li class="navTitle">Real Time Charts</li>
+<li><a href="/charts/live-charts">Live Charts</a></li>
+<li><a href="/charts/forex-charts">Forex Chart</a></li>
+<li><a href="/charts/futures-charts">Futures Chart</a></li>
+<li><a href="/charts/stocks-charts">Stocks Chart</a></li>
+<li><a href="/charts/indices-charts">Indices Chart</a></li>
+<li><a href="/charts/cryptocurrency-charts">Cryptocurrency Chart</a></li> </ul>
+<ul class="popular" style="width: 220px">
+<li><a href="/charts/real-time-forex-charts">Interactive Forex Chart</a></li>
+<li><a href="/charts/real-time-futures-charts">Interactive Futures Chart</a></li>
+<li><a href="/charts/real-time-indices-charts">Interactive Indices Chart</a></li>
+<li><a href="/charts/real-time-stocks-charts">Interactive Stocks Chart</a></li>
+<li><a href="/charts/multiple-forex-streaming-charts">Multiple Forex Charts</a></li>
+<li><a href="/charts/multiple-indices-streaming-charts">Multiple Indices Charts</a></li>
+</ul>
+</div> </li>
+<li>
+<a class="nav" href="//in.investing.com/news/">
+News </a>
+<div class="navBarDropDown" style="width: 367px">
+<ul class="main" style="width: 180px">
+<li class="navTitle">Financial News</li>
+<li><a href="/news/forex-news">Forex</a></li>
+<li><a href="/news/commodities-news">Commodities</a></li>
+<li><a href="/news/stock-market-news">Stock Markets</a></li>
+<li><a href="/news/economic-indicators">Economic Indicators</a></li>
+<li><a href="/news/economy">Economy</a></li>
+<li><a href="/news/cryptocurrency-news">Cryptocurrency News</a></li> </ul>
+<ul class="popular" style="width: 187px">
+<li class="navTitle">More In News</li>
+<li><a href="/news/latest-news">Latest</a></li>
+<li><a href="/news/most-popular-news">Most Popular</a></li>
+<li><a href="/economic-calendar/">Economic Calendar</a></li>
+<li><a href="/news/general">General</a></li>
+ <li><a href="/news/world-news">World</a></li>
+</ul>
+</div> </li>
+<li>
+<a class="nav" href="//in.investing.com/analysis/">
+Analysis </a>
+<div class="navBarDropDown" style="width: 346px">
+<ul class="main" style="width: 159px">
+<li class="navTitle">Analysis</li>
+<li><a href="/analysis/market-overview">Market Overview</a></li>
+<li><a href="/analysis/forex">Forex</a></li>
+<li><a href="/analysis/stock-markets">Stock Markets</a></li>
+<li><a href="/analysis/commodities">Commodities</a></li>
+<li><a href="/analysis/bonds">Bonds</a></li>
+<li><a href="/analysis/etfs">ETFs</a></li>
+<li><a href="/analysis/cryptocurrency">Cryptocurrency</a></li> </ul>
+<ul class="popular" style="width: 187px">
+<li class="navTitle">More In Comment</li>
+<li><a href="/analysis/most-popular-analysis">Most Popular</a></li>
+<li><a href="/analysis/editors-picks">Editor`s Picks</a></li>
+<li><a href="/analysis/comics">Comics</a></li>
+</ul>
+</div> </li>
+<li>
+<a class="nav" href="//in.investing.com/technical/">
+Technicals </a>
+<div class="navBarDropDown" style="width: 439px">
+<ul class="main" style="width: 219px">
+<li class="navTitle">Tools</li>
+<li><a href="/technical/personalized-quotes-technical-summary">Technical Summary</a></li>
+<li><a href="/technical/technical-analysis">Technical Analysis</a></li>
+<li><a href="/technical/pivot-points">Pivot Points</a></li>
+<li><a href="/technical/moving-averages">Moving Averages</a></li>
+<li><a href="/technical/indicators">Indicators</a></li>
+<li><a href="/technical/candlestick-patterns">Candlestick Patterns</a></li> </ul>
+<ul class="popular" style="width: 220px">
+<li class="navTitle">More In Technicals</li>
+<li><a href="/technical/candlestick-patterns">Candlestick Patterns</a></li>
+<li><a href="/tools/fibonacci-calculator">Fibonacci Calculator</a></li>
+<li><a href="/tools/pivot-point-calculator">Pivot Point Calculator</a></li>
+</ul>
+</div> </li>
+<li>
+<a class="nav" href="//in.investing.com/brokers/">
+Brokers </a>
+<div class="navBarDropDown" style="width: 360px">
+<ul class="main" style="width: 180px">
+<li class="navTitle">Brokers</li>
+<li><a href="/brokers/forex-brokers">Forex Brokers</a></li>
+ <li><a href="/brokers/cryptocurrency-brokers">Cryptocurrency Brokers</a></li>
+<li><a href="/brokers/cfd-brokers">CFD Brokers</a></li>
+<li><a href="/brokers/stock-brokers">Share Dealers</a></li>
+<li><a href="/brokers/promotions">Promotions</a></li>
+<li><a href="/brokers/compare-spreads-eur-usd">Compare Forex Spreads</a></li>
+<li><a href="/brokers/compare-quotes-eur-usd">Compare Forex Quotes</a></li> </ul>
+<ul class="popular" style="width: 180px">
+<li class="navTitle">More In Brokers</li>
+<li><a href="/brokers/forex-demo-accounts">Forex Demo Accounts</a></li>
+<li><a href="/brokers/forex-live-accounts">Forex Live Accounts</a></li>
+<li><a href="/brokers/press-releases">Press Releases</a></li>
+<li><a href="/brokers/interviews">Interviews</a></li>
+<li><a href="/brokers/regulation">Regulation</a></li>
+</ul>
+</div> </li>
+<li>
+<a class="nav" href="//in.investing.com/tools/">
+Tools </a>
+<div class="navBarDropDown" style="width: 360px">
+<ul class="main" style="width: 180px">
+<li class="navTitle">Calendars</li>
+<li><a href="/economic-calendar/">Economic Calendar</a></li>
+<li><a href="/holiday-calendar/">Holiday Calendar</a></li>
+<li><a href="/earnings-calendar/">Earnings Calendar</a></li>
+<li><a href="/dividends-calendar/">Dividend Calendar</a></li>
+<li><a href="/stock-split-calendar/">Splits Calendar</a></li>
+<li><a href="/ipo-calendar/">IPO Calendar</a></li>
+<li><a href="/futures-expiration-calendar/">Futures Expiry Calendar</a></li>
+<li class="navTitle">Investment Tools</li>
+<li><a href="/stock-screener/">Stock Screener</a></li>
+<li><a href="/central-banks/fed-rate-monitor">Fed Rate Monitor Tool</a></li>
+<li><a href="/currency-converter/">Currency Converter</a></li>
+<li><a href="/tools/fibonacci-calculator">Fibonacci Calculator</a></li> </ul>
+<ul class="popular" style="width: 180px">
+<li class="navTitle">More In Tools</li>
+<li><a href="/tools/correlation-calculator">Forex Correlation</a></li>
+<li><a href="/tools/pivot-point-calculator">Pivot Point Calculator</a></li>
+<li><a href="/tools/profit-calculator">Profit Calculator</a></li>
+<li><a href="/tools/margin-calculator">Margin Calculator</a></li>
+<li><a href="/tools/currency-heatmap">Currencies Heat Map</a></li>
+<li><a href="/tools/forex-volatility-calculator">Forex Volatility</a></li>
+<li><a href="/tools/forward-rates-calculator">Forward Rates Calculator</a></li>
+<li><a href="/tools/mortgage-calculator">Mortgage Calculator</a></li>
+</ul>
+</div> </li>
+<li>
+<a class="nav" href="//in.investing.com/education/">
+Education </a>
+</li>
+<li>
+<a class="nav" href="//in.investing.com/mobile/">
+Mobile Apps </a>
+</li>
+<li class="last">
+<a class="nav pointer">
+More </a>
+<div class="navBarDropDown" style="width: 337px">
+<ul class="main" style="width: 169px">
+<li><a href="/alerts/">Alerts</a></li>
+<li><a href="/education/webinars">Webinars</a></li>
+<li><a href="/education/conferences">Conferences</a></li>
+<li><a href="/education/forex-trading-kit">Trading Guide</a></li>
+<li><a href="/central-banks/">Central Banks</a></li>
+<li><a href="/members-admin/ad-free?source=desktop&medium=top_menu">Ad-Free Version</a></li> </ul>
+<ul class="popular" style="width: 168px">
+<li><a href="/webmaster-tools/">Webmaster Tools</a></li>
+<li><a href="/broker-blacklist/">Broker Blacklist</a></li>
+<li><a href="/markets/sentiment-outlook">Sentiments Outlook</a></li>
+</ul>
+</div> </li>
+</ul>
+</nav>
+
+<nav id="subNav" class="subMenuWrapper">
+<ul class="subNavUL">
+<li>
+<a href="/markets/" id="markets_subnav_link"> Markets </a> </li>
+<li>
+<a href="/indices/major-indices"> Major Indices </a> </li>
+<li>
+<a href="/indices/indices-futures"> Index Futures </a> </li>
+<li>
+<a href="/crypto/currencies"> All CryptoCurrencies </a> </li>
+<li>
+<a href="/commodities/real-time-futures"> Real Time Commodities </a> </li>
+<li>
+<a href="/charts/live-charts"> Live Charts </a> </li>
+<li>
+<a href="/technical/personalized-quotes-technical-summary"> Technical Summary </a> </li>
+<li class="last ">
+<a href="/economic-calendar/"> Economic Calendar </a> </li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="midHeader">
+<div class="adsFreeSubscriptionMessage billboard displayNoneImp js-billboard-ad-free-message">
+<div class="text">
+<span class="bold">Ad-Free Version</span>. Upgrade your Investing.com experience. Save up to 73% <a href="/ad-free-subscription?source=desktop&medium=billboard_message" class="adsFreeSubscriptionMessage-cta"><span class="text">More details</span></a>
+</div>
+<div class="js-close-header-strip closeHeaderStrip"><img src="https://i-invdn-com.investing.com/images/adfree/ad-free-header-strip-close.svg"></div>
+</div>
+<div id="sln-hbanner" class="wideTopBanner" style="height: 276px;">
+<div class="dfpAdUnitContainer billboard">
+<div id="div-gpt-ad-1441189641022-6" advertisementText="Advertisement" resize="1" style="height:276px;">
+<script> _.displaySlot('div-gpt-ad-1441189641022-6'); </script>
+</div> </div>
+</div>
+</div>
+<script type='text/javascript'>
+			</script>
+
+<section id="fullColumn" class="">
+<h1 class="float_lang_base_1 portfolioH1Dropdown js-header-dropdown-arrow relativeAttr" id="more">My Watchlists	<span class="dropDownArrowBlackBig middle"></span>
+<div id="portfolios_choose_list" class="js-header-dropdown portfolios_choose_list reverse tooltipPopup allPortfolios displayNone" attr-addToPortfolioPop="">
+<div title="All Portfolios" class="header" id="list_portfolio_all" rel="all">My Watchlists</div>
+<div class="content js-header-dropdown-content">
+<div attr-portfoliorows="" class="smallPopupRows" id="allPortfoliosList"></div>
+</div>
+</div></h1>
+<div class="headBtnWrapper float_lang_base_2">
+<a href="/portfolio/importcsvstep1" class="newBtn LightGray noIcon last">Import Watchlist</a> <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="innerHeaderSeperatorBottom"></div>
+
+<script type="text/javascript">
+                window.siteData = {
+                    htmlDirection: 'ltr',
+                    decimalPoint: '.' || '.',
+                    thousandSep: ',' || ',',
+                    isEu : false,
+                    userLoggedIn: true,
+                    userHasPhoneRegistered: true,
+                    currencyPosition: 'left',
+                    datepicker: {
+                        applyButton: 'Apply',
+                        format: 'd/m/Y',
+                        formatShort: 'd/m/y',
+                        formatLong: 'd/m/Y',
+                        formatSend: 'yy-mm-dd',
+                        firstDay: '1',
+                        dayNames: ["Su","Mo","Tu","We","Th","Fr","Sa"],
+                        monthNamesShort: ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."],
+                        monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                        translations: {
+                            custom: 'Custom dates',
+                            start: 'Start Date',
+                            end: 'End Date'
+                        }
+                    },
+                    techTranslations: {"_Currencies_Strong_Buy":"Strong Buy","_Currencies_Strong_Sell":"Strong Sell","_specialBuy":"BUY","_specialSell":"Sell","_moving_avarge_tool_sell":"Sell","_moving_avarge_tool_buy":"Buy","_Currencies_Neutral":"Neutral","_not_available":"Not available","_Currencies_Less_Volatility":"Less Volatility","_Currencies_More_Volatility":"High Volatility","_Currencies_Overbought":"Overbought","_Currencies_Oversold":"Oversold"},
+                    edition: $('html').attr('lang'),
+                    domainID: '56',
+                    appNexusUrl: 'https://secure.adnxs.com/seg?t=2&add=19833590',
+                    pageType: ''
+                };
+                                window.siteData.blocked_users = [];
+                                (function (pattern) {
+                    window.siteData.elapsedTimePattern = pattern.is('false') ? null : $.extend(JSON.parse(pattern), { justNow: 'Just Now' });
+                })('{"minutes":{"X minute ago":[1],"X minutes ago":["2-59"]},"hours":{"X hour ago":[1],"X hours ago":["2-24"]}}');
+
+                                window.siteData.smlID = 144;
+                                                window.siteData.mmID = 1006;
+                
+                window.truncatedCommentShowMoreDefine = 'Show more';
+            </script>
+<div class="dfpAdUnitContainer portfolio">
+<div id="div-gpt-ad-1541684394813-0" style="">
+<script> _.displaySlot('div-gpt-ad-1541684394813-0'); </script>
+</div> </div>
+<div id="dialog-confirm-delete-position" class="displayNone" title="Delete position"></div>
+<div class="tooltipPopup pointValuePopupOutside displayNone" id="pointValuePopupOutside">
+<div title="My Portfolio" class="header">Point Value<i class="bugCloseIcon float_lang_base_2" onclick="closePointValueDialog()"></i></div>
+<div class="content">
+<p class="noBold">Determine the point value to be used to calculate the P/L (profit and loss). Futures’ point values depend on whether you are trading directly in a futures exchange or via CFDs. For example, if you are trading S&P 500 futures directly in the CME exchange then for each contract, a change of 1 point equals $50. However, if you are trading S&P 500 futures via CFD, then for each change of 1 point in the S&P futures, assuming the broker uses $1 per point, the point value is 1.</p>
+</div>
+</div>
+<div class="clear"></div>
+<input id="userDetails" type="hidden" value="91dea96e61eced28d426049eb95a1c66">
+<div class="allPortfoliosWrapper">
+<div class="js-scrollability-wrapper slideWrapper float_lang_base_1"><ul class="ui-sortable portfolioTabs ">
+<li class="js-portfolio-tab-wrapper portfolioTab" id="tab_10612274" data-portfolio-id="10612274" title="indices">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_10612274" data-portfolio-id="10612274" data-oldName="indices" data-publicID="NTFiMWU1ZDkyZmBubztjZQ%3D%3D"><input name="summary" type="text" value="indices" title="indices"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_25381470" data-portfolio-id="25381470" title="Sector Index INDIA ">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_25381470" data-portfolio-id="25381470" data-oldName="Sector Index INDIA " data-publicID="NTJhN2UwP2szZGBoZjIzMQ%3D%3D"><input name="summary" type="text" value="Sector Index INDIA " title="Sector Index INDIA "><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_20515550" data-portfolio-id="20515550" title="Current Holdings">
+<span class="checkersBig"></span><span class="positionIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_20515550" data-portfolio-id="20515550" data-oldName="Current Holdings" data-publicID="NjExYjNgPmM3ZDozYTc1Nw%3D%3D"><input name="summary" type="text" value="Current Holdings" title="Current Holdings"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_22055745" data-portfolio-id="22055745" title="MARCH POSITIONAL OPP">
+<span class="checkersBig"></span><span class="positionIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_22055745" data-portfolio-id="22055745" data-oldName="MARCH POSITIONAL OPP" data-publicID="MzQyY244Zj9mNWtgZTJiZQ%3D%3D"><input name="summary" type="text" value="MARCH POSITIONAL OPP" title="MARCH POSITIONAL OPP"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_22056139" data-portfolio-id="22056139" title="CURR WATCHLIST">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_22056139" data-portfolio-id="22056139" data-oldName="CURR WATCHLIST" data-publicID="YGc1ZDNlNG00ZG5jMGA4Mw%3D%3D"><input name="summary" type="text" value="CURR WATCHLIST" title="CURR WATCHLIST"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab selected" id="tab_10080824" data-portfolio-id="10080824" title="actual & past Holding">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_10080824" data-portfolio-id="10080824" data-oldName="actual & past Holding" data-publicID="ODxjMGUzP2tjNT05bj9mYA%3D%3D"><input name="summary" type="text" value="actual & past Holding" title="actual & past Holding"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_11492437" data-portfolio-id="11492437" title="Pharma And API shares">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_11492437" data-portfolio-id="11492437" data-oldName="Pharma And API shares" data-publicID="NjI0Zm48N2I1YW1lMGAzNg%3D%3D"><input name="summary" type="text" value="Pharma And API shares" title="Pharma And API shares"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_11493574" data-portfolio-id="11493574" title="Construction Shares ">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_11493574" data-portfolio-id="11493574" data-oldName="Construction Shares " data-publicID="Z2M%2BbGIwN2I3YmBpMmYyNA%3D%3D"><input name="summary" type="text" value="Construction Shares " title="Construction Shares "><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_11493826" data-portfolio-id="11493826" title="IT shares">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_11493826" data-portfolio-id="11493826" data-oldName="IT shares" data-publicID="YmY%2FbWAyMmc%2Fajo%2BYzIxNQ%3D%3D"><input name="summary" type="text" value="IT shares" title="IT shares"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_12250261" data-portfolio-id="12250261" title="Malls And Retail ">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_12250261" data-portfolio-id="12250261" data-oldName="Malls And Retail " data-publicID="MDQwYTNnZD1jNT4wYjdhYg%3D%3D"><input name="summary" type="text" value="Malls And Retail " title="Malls And Retail "><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_12248976" data-portfolio-id="12248976" title="Financial Stocks">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_12248976" data-portfolio-id="12248976" data-oldName="Financial Stocks" data-publicID="MzdhMDNnMGg%2FYTs%2BN2NlYQ%3D%3D"><input name="summary" type="text" value="Financial Stocks" title="Financial Stocks"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_11495348" data-portfolio-id="11495348" title="Entertainment Shares">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_11495348" data-portfolio-id="11495348" data-oldName="Entertainment Shares" data-publicID="YGQ2ZDNhZDEyYWlmM2Rlbw%3D%3D"><input name="summary" type="text" value="Entertainment Shares" title="Entertainment Shares"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_11494136" data-portfolio-id="11494136" title="OLD holding">
+<span class="checkersBig"></span><span class="positionIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_11494136" data-portfolio-id="11494136" data-oldName="OLD holding" data-publicID="NTFmNDZkYzZjMW5jYDAxNQ%3D%3D"><input name="summary" type="text" value="OLD holding" title="OLD holding"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_13117426" data-portfolio-id="13117426" title="trading positions">
+<span class="checkersBig"></span><span class="positionIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_13117426" data-portfolio-id="13117426" data-oldName="trading positions" data-publicID="NDBlNWE2YTwzYm9nYTA1MQ%3D%3D"><input name="summary" type="text" value="trading positions" title="trading positions"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_12253590" data-portfolio-id="12253590" title="Penny stocks">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_12253590" data-portfolio-id="12253590" data-oldName="Penny stocks" data-publicID="NTEyY246Zj8zZjw1MmhjYQ%3D%3D"><input name="summary" type="text" value="Penny stocks" title="Penny stocks"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_11740086" data-portfolio-id="11740086" title="Personal care">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_11740086" data-portfolio-id="11740086" data-oldName="Personal care" data-publicID="OT1hM2Y3M2tiNGxgYzhmYg%3D%3D"><input name="summary" type="text" value="Personal care" title="Personal care"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_11992380" data-portfolio-id="11992380" title="UTI Value Opportunities Fund">
+<span class="checkersBig"></span><span class="positionIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_11992380" data-portfolio-id="11992380" data-oldName="UTI Value Opportunities Fund" data-publicID="ZGAwYm4xZTBlMWplZj0wMg%3D%3D"><input name="summary" type="text" value="UTI Value Opportunities Fund" title="UTI Value Opportunities Fund"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_12254011" data-portfolio-id="12254011" title="Do More Research">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_12254011" data-portfolio-id="12254011" data-oldName="Do More Research" data-publicID="MTU2Z2czM2ozYTs3MGJkZw%3D%3D"><input name="summary" type="text" value="Do More Research" title="Do More Research"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_12510439" data-portfolio-id="12510439" title="Hotels&Tourism">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_12510439" data-portfolio-id="12510439" data-oldName="Hotels&Tourism" data-publicID="Z2NjMmY1Yz4%2FaWtjMmJlbg%3D%3D"><input name="summary" type="text" value="Hotels&Tourism" title="Hotels&Tourism"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_12523602" data-portfolio-id="12523602" title="ETF and mutual funds">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_12523602" data-portfolio-id="12523602" data-oldName="ETF and mutual funds" data-publicID="YGQxYDVmYT83Yj40ZDdhYQ%3D%3D"><input name="summary" type="text" value="ETF and mutual funds" title="ETF and mutual funds"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_12953002" data-portfolio-id="12953002" title="todays best RR">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_12953002" data-portfolio-id="12953002" data-oldName="todays best RR" data-publicID="YmZkNTRrP2Y0YTs3MmExMQ%3D%3D"><input name="summary" type="text" value="todays best RR" title="todays best RR"><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li><li class="js-portfolio-tab-wrapper portfolioTab" id="tab_14340822" data-portfolio-id="14340822" title="december mutual funds ">
+<span class="checkersBig"></span><span class="watchlistIcon middle portfolioImg"></span>
+<div class="js-portfolio-tab-wrapper-inner editableField" id="portfolioEdit_14340822" data-portfolio-id="14340822" data-oldName="december mutual funds " data-publicID="NzMwZzZjNGxkMmltYzIyMg%3D%3D"><input name="summary" type="text" value="december mutual funds " title="december mutual funds "><span class="newSiteIconsSprite editIcon"></span>
+</div>
+</li></ul></div><div class="js-scrollability-controls-wrapper float_lang_base_1 arrowCont"><span class="js-scrollability-controls-prev prevArrow"></span><span class="js-scrollability-controls-next nextArrow"></span></div><div class="plusCont float_lang_base_1"><span class="plusTab reverseToolTip genToolTip oneliner" id="" data-tooltip="Create a New Portfolio">+</span>
+<div id="addPortfolio">
+<div class="tooltipPopup createPortfolio displayNone" id="addPortfolioPopup">
+<div title="My Portfolio" class="header">Select your watchlist type</div>
+<div attr-portfoliorows="" class="content">
+<div class="portfolioIcon float_lang_base_1 active">
+<i class="watchlistBigIcon"></i>
+Watchlist </div>
+<div class="portfolioIcon float_lang_base_2">
+<i class="positionBigIcon"></i>
+Holdings </div>
+<div class="clear"></div>
+</div>
+<div class="footer">
+<a href="javascript:void(0);" id="createPortfolio" class="float_lang_base_2 newBtn toggleButton LightGray noIcon">Create</a><input type="text" attr-newprofilename="" id="newPortfolioText" class="inputText newInput inputTextBox" placeholder="Enter watchlist name">
+<input type="hidden" id="newPortfolioType" value="watchlist">
+</div>
+</div>
+</div></div><div class="clear"></div>
+<p class="displayNone js-delete-portfolio-phrasing">Are you sure you want to delete %PORTFOLIONAME%?</p>
+<div id="dialog-confirm-delete-10080824" class="genPopup noFooter displayNone">
+<div class="header">
+Delete watchlist <span class="closePopup" onClick="javascript:hidePopup('dialog-confirm-delete-10080824');"><i class="popupCloseIcon"></i></span>
+</div>
+<div id="delete-portfolio-content-10080824" class="content">
+</div>
+<div class="content footer">
+<a href="javascript:void(0);" onClick='javascript:hidePopup("dialog-confirm-delete-10080824");' class="newBtn noIcon LightGray">Cancel</a> <a href="javascript:void(0);" onClick="javascript:Portfolio.deletePortfolio(10080824);" class="newBtn noIcon LightGray">Delete</a> </div>
+</div>
+<div class="genPopup displayNone js-manage-portfolio-popup">
+<div class="header">
+Manage watchlist emails <span class="closePopup js-manage-portfolio-close"><i class="popupCloseIcon"></i></span>
+</div>
+<div class="content">
+<p class="bold ">Select the types of portfolio emails you wish to receive:</p>
+<input id="weeklySummaryCheckbox" type="checkbox" class="statusCheck js-weekly-summary-checkbox" checked>
+<label for="weeklySummaryCheckbox" class="checkboxLabel"></label>
+<div class="popupContentText">
+<span class="bold">Weekly Performance Summary</span>
+<span>Receive an email summarizing the performance of your portfolio during the previous week.</span>
+<div class="gmtSelectWrap">
+Receive every Saturday at: <select class="js-weekly-recurrence">
+<option value="0">12:00AM</option>
+<option value="1">1:00AM</option>
+<option value="2">2:00AM</option>
+<option value="3">3:00AM</option>
+<option value="4">4:00AM</option>
+<option value="5">5:00AM</option>
+<option value="6" selected>6:00AM</option>
+<option value="7">7:00AM</option>
+<option value="8">8:00AM</option>
+<option value="9">9:00AM</option>
+<option value="10">10:00AM</option>
+<option value="11">11:00AM</option>
+<option value="12">12:00PM</option>
+<option value="13">1:00PM</option>
+<option value="14">2:00PM</option>
+<option value="15">3:00PM</option>
+<option value="16">4:00PM</option>
+<option value="17">5:00PM</option>
+<option value="18">6:00PM</option>
+<option value="19">7:00PM</option>
+<option value="20">8:00PM</option>
+<option value="21">9:00PM</option>
+<option value="22">10:00PM</option>
+<option value="23">11:00PM</option>
+</select>
+<span class="gmt">Time Zone: Chennai, Kolkata, Mumbai, New Delhi (GMT +5:30)</span> </div>
+</div>
+</div>
+<div class="footer">
+<a href="/members-admin/settings-edit-user-details" class="linkTextFooterPopup bold float_lang_base_1">Change your time zone</a>
+<a href="javascript:void(0);" class="bold js-manage-portfolio-close">Cancel</a>
+<a href="javascript:void(0);" class="newBtn newBtn noIcon Orange2 js-save-email-settings">Save</a> </div>
+</div>
+<div id="portfolioblock_10080824" data-portfolio-id="10080824" class="js-portfolio-content-marker cardWrapper portfolioPositions watchlist js-watchlist-portfolio">
+<div id="search_section_10080824" class="portfolioSearch">
+<span class="float_lang_base_1 bold">Add symbol</span>
+
+<div class="portfolioActionsContainer float_lang_base_2">
+<span class="threeDotsIcon"></span>
+<div class="tooltipPopup portfolioActionsPop noHeader displayNone">
+<div class="addRow js-open-download-portfolio-popup" id="download_10080824" data-popup="popup" data-portfolio="10080824">
+<a name="download" href="javascript:void(0);"><span class="downloadIcon middle"></span>Download Watchlist</a>
+</div>
+<div class="addRow">
+<a id="portfolioDelete_10080824" data-pid="10080824" class="js-delete-portfolio-button" href="javascript:void(0);"><span class="deleteIconMid middle"></span>Delete watchlist</a>
+</div>
+</div>
+</div>
+
+<div class="searchDiv newInput inputTextBox float_lang_base_1" id="searchDiv_10080824">
+<div class="inlineblock searchBoxContainer topBarSearch " id="searchTextTopContainer_10080824">
+<form onsubmit="return search_10080824.allowdForm;" id="combineSearchForm_10080824" action="/" method="post">
+<div class="inlineblock" id="searchBox_10080824">
+<input type="text" autocomplete="off" class="searchText arial_12 lightgrayFont middle " id="searchText_10080824" name="quotes_search_text" placeholder="EUR/USD or GOOG" tabindex="1"></div><label for="searchText_10080824" class="searchGlassIcon">&nbsp;</label>
+<i class="cssSpinner"></i>
+</form>
+</div>
+<div class="clear"></div>
+<div class="searchPopupResults displayNone" id="subContainer_10080824">
+<div class="searchTabs" id="search_tabs_10080824">
+<div id="searchBoxTabsTopTabsMenu">
+<ul id="searchBoxTabsTopTabs_10080824" class="tabsForBox">
+</ul>
+</div>
+</div>
+<div id="countries_wrapper_10080824" class="displayNone">
+<div class="newSiteIconsSprite smallTriangleArrowUp"></div>
+<div class="countriesDiv">
+<table id="countries_table_10080824">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<div identifier="searchThing" class="textBox" id="searchTopResults_10080824"></div>
+
+</div>
+</div>
+<div id="search_loading_10080824" style="display:none">
+<span class="inlineblock loading">&nbsp;</span>
+</div>
+<div class="clear"></div>
+
+<script>
+    window.searchParams = window.searchParams || {};
+    window.searches = window.searches || {};
+
+    window.searchParams['10080824'] = {
+    	$newSearchWidget : true,
+        $prefix:'10080824',
+        $AllCountries:'All Countries',
+        $tabsinfo:'[{"id":"search_box_top_10080824All","name":"All","select":true},{"id":"search_box_top_10080824Indices","name":"Indices","select":false},{"id":"search_box_top_10080824Stocks","name":"Equities","select":false},{"id":"search_box_top_10080824ETFs","name":"ETFs","select":false},{"id":"search_box_top_10080824Funds","name":"Funds","select":false},{"id":"search_box_top_10080824Commodities","name":"Commodities","select":false},{"id":"search_box_top_10080824Forex","name":"Currencies","select":false},{"id":"search_box_top_10080824Bonds","name":"Bonds","select":false},{"id":"search_box_top_10080824Countries","name":"All Countries","select":false}]',
+        $searchtype:'portfolio',
+        $resultType:'',
+        $functionName:'watchlistsearch',
+        $paramList:{'portfolioId':10080824},
+		$url:'/search/service/search',
+        $no_search_results:'Please try another search'
+    };
+
+    window.searches['10080824'] = new FXautoComplete(window.searchParams['10080824'], {loadOnTabChange: true});
+
+    $( document ).ready(function() {
+        $('#searchText_10080824').attr('tabindex', 1);
+    });
+</script>
+</div>
+<div class="cardBlock portfolioCardBlock">
+<ul class="tabsRedesign js-tabs-list" id="alltabs_10080824" watchlist>
+<li id="li1_10080824" class='first selected'><a href="javascript:void(0);" name="tab1_10080824" portfolioID="10080824" tab="overview">Summary</a></li>
+<li id="li2_10080824" class='last'><a href="javascript:void(0);" name="tab2_10080824" portfolioID="10080824" tab="charts">Charts</a></li>
+</ul>
+<div class="clear"></div>
+<div id="portfolioData_10080824" data-instrument-count="">
+<ul class="js-tab-box-menu tabsBoxSubMenu js-sub-tabs" id="mainPositions10080824" data-portfolio="10080824">
+<li id=overview data-tab-name="overview" class="first selected"><a href="javascript:void(0);">Price</a></li>
+<li id=fundamental data-tab-name="fundamental"><a href="javascript:void(0);">Fundamental</a></li>
+<li id=technical data-tab-name="technical"><a href="javascript:void(0);">Technical</a></li>
+<li id=performance data-tab-name="performance"><a href="javascript:void(0);">Performance</a></li>
+<li id=candlestick data-tab-name="candlestick" class="last"><a href="javascript:void(0);">Candlestick Patterns</a></li>
+</ul>
+<script>
+$(function() {	
+	tabsWidgetBindJSFunc('mainPositions10080824', 'bindGreyButtons', false );
+});     
+</script>
+<div class="js-watchlist-content">
+<p rel="no_content_in_10080824" class="noData displayNone">
+Build your watchlist here by adding stocks, bonds, commodities, indices or currencies.</p>
+<div id="customizeButton" class="js-customize-btn">
+<script>
+	var columnsSettings_10080824 = new ColumnsSettings(
+		'ltr',																	   // strHtmlDir
+		'portfolioData_10080824',															 	   // containerId
+		'overview',															   	   // tab
+		'10080824',																		   // id
+		'Currently selected: X (max 10)', // message
+		'10',															   // intMaxCheckboxes
+		'1'                                                          // intMinOptCheckboxes
+	);
+</script>
+<button class="customizeButton" onclick="columnsSettings_10080824.colSelectIconClick(event);" id="colSelectIcon_10080824">
+<span class="colSelectIcon"></span>
+<span>Customise</span>
+</button>
+<form class="colSelectForm" id="overviewColsSelect10080824">
+<div class="tooltipPopup displayNone colSelectPopup js-column-select-popup" id="colSelectPopup_10080824">
+<div class="header">
+Adjust table </div>
+<div class="content">
+<div class="smallPopupRows">
+<ul>
+<li>
+<input type="checkbox" id="10080824_1" data-column-name="name" value="name" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" data-required="1" /> 
+<label title="Name" for="10080824_1" class="pointer">
+Name </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_2" data-column-name="symbol" value="symbol" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" data-required="1" /> 
+<label title="Symbol" for="10080824_2" class="pointer">
+Symbol </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_3" data-column-name="exchange" value="exchange" onclick="columnsSettings_10080824.onCheckboxClick(this);" disabled="disabled" /> 
+<label title="Exchange" for="10080824_3" class="pointer">
+Exchange </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_4" data-column-name="last" value="last" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" /> 
+<label title="Last" for="10080824_4" class="pointer">
+Last </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_5" data-column-name="bid" value="bid" onclick="columnsSettings_10080824.onCheckboxClick(this);" disabled="disabled" /> 
+<label title="Bid" for="10080824_5" class="pointer">
+Bid </label>
+ </li>
+<li>
+<input type="checkbox" id="10080824_6" data-column-name="ask" value="ask" onclick="columnsSettings_10080824.onCheckboxClick(this);" disabled="disabled" /> 
+<label title="Ask" for="10080824_6" class="pointer">
+Ask </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_7" data-column-name="extended_hours" value="extended_hours" onclick="columnsSettings_10080824.onCheckboxClick(this);" disabled="disabled" /> 
+<label title="Extended Hours" for="10080824_7" class="pointer">
+Extended Hours </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_8" data-column-name="extended_hours_percent" value="extended_hours_percent" onclick="columnsSettings_10080824.onCheckboxClick(this);" disabled="disabled" /> 
+<label title="Extended Hours (%)" for="10080824_8" class="pointer">
+Extended Hours (%) </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_9" data-column-name="open" value="open" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" /> 
+<label title="Open" for="10080824_9" class="pointer">
+Open </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_10" data-column-name="prev" value="prev" onclick="columnsSettings_10080824.onCheckboxClick(this);" disabled="disabled" /> 
+<label title="Prev." for="10080824_10" class="pointer">
+Prev. </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_11" data-column-name="high" value="high" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" /> 
+<label title="High" for="10080824_11" class="pointer">
+High </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_12" data-column-name="low" value="low" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" /> 
+<label title="Low" for="10080824_12" class="pointer">
+Low </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_13" data-column-name="chg" value="chg" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" /> 
+<label title="Chg." for="10080824_13" class="pointer">
+Chg. </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_14" data-column-name="chgpercent" value="chgpercent" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" /> 
+<label title="Chg. %" for="10080824_14" class="pointer">
+Chg. % </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_15" data-column-name="vol" value="vol" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" /> 
+<label title="Vol." for="10080824_15" class="pointer">
+Vol. </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_16" data-column-name="next_earning" value="next_earning" onclick="columnsSettings_10080824.onCheckboxClick(this);" disabled="disabled" /> 
+<label title="Next Earnings Date" for="10080824_16" class="pointer">
+Next Earnings Date </label>
+</li>
+<li>
+<input type="checkbox" id="10080824_17" data-column-name="time" value="time" onclick="columnsSettings_10080824.onCheckboxClick(this);" checked="true" /> 
+<label title="Time" for="10080824_17" class="pointer">
+Time </label>
+</li>
+</ul>
+</div>
+<div>
+<div id="overviewColsSelectMessage" class="colsSelectMessage">
+Currently selected: <span>10</span> (max&nbsp;10&nbsp;) </div>
+</div>
+</div>
+<div class="footer">
+
+<div class="float_lang_base_1">
+<input type="checkbox" id="10080824_tableAdjust" value="tableAdjust" checked="true" /> 
+<label for="10080824_tableAdjust">Adjust Columns</label>
+</div>
+<a href="javascript:void(0)" id="selectColumnsButton_10080824" onclick='columnsSettings_10080824.onApplyClick(showHidePortfolioColumn, {"portofolioId":"10080824","tab":"overview"});' class="newBtn float_lang_base_2 noIcon Orange2">Apply</a> </div>
+</div>
+</form>
+<script>
+	$('#colSelectPopup_10080824').click(function(e) {
+		e.stopPropagation();
+	});
+</script>
+</div>
+<table tablesorter_overview rel="10080824" class="js-table-sortable genTbl openTbl js-portfolio-tbl myPortfolioTbl " data-numofrows="6">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th class="flag">&nbsp;</th>
+<th class="left symbol elp" data-column-name="name">Name<span sort_default class="headerSortDefault"></span></th>
+<th class="left " data-column-name="symbol">Symbol<span sort_default class="headerSortDefault"></span></th>
+<th class="left  displayNone" data-column-name="exchange">Exchange<span sort_default class="headerSortDefault"></span></th>
+<th class="" data-column-name="last">Last</th>
+<th class=" displayNone" data-column-name="bid">Bid</th>
+<th class=" displayNone" data-column-name="ask">Ask</th>
+<th class="js-extended-hours displayNone" data-column-name="extended_hours" title="Show the performance of an instrument during Pre/Post Market hours.">Extended Hours</th>
+<th class="js-extended-hours pointer displayNone" data-column-name="extended_hours_percent">Extended Hours (%) <span sort_default class="headerSortDefault"></span></th>
+<th data-column-name="open">Open</th>
+<th class="displayNone" data-column-name="prev" title="Closing price on the previous trading day">Prev.</th>
+<th data-column-name="high">High</th>
+<th data-column-name="low">Low</th>
+<th class="" data-column-name="chg">Chg.<span sortablecache sort_default class="headerSortDefault"></span></th>
+<th class="" data-column-name="chgpercent">Chg. %<span sortablecache sort_default class="headerSortDefault"></span></th>
+<th data-column-name="vol">Vol.<span sortablecache sort_default class="headerSortDefault"></span></th>
+<th class="left textNum displayNone" data-column-name="next_earning">Next Earnings Date<span sort_default class="headerSortDefault"></span></th>
+<th class="" data-column-name="time">Time<span sortablecache sort_default class="headerSortDefault"></span></th>
+<th class="icon" colspan="2">
+</th>
+</tr>
+</thead>
+<tbody id="tbody_overview_10080824">
+<tr id="sort_18177" rel="10080824_18177" data-pair-id="18177" data-pair-exchange-id="46" data-is-open-by="exchange" data-is-pair-exchange-open="1">
+<td class="left dragHandle"><span class="checkers"></span></td>
+<td class="flag"><span title="India" class="ceFlags India">&nbsp;</span></td>
+<td data-column-name="name" data-pair-id="18177" class="symbol plusIconTd left bold elp  alert js-injected-user-alert-container">
+<span class="aqPopupWrapper js-hover-me-wrapper"><a target="_blank" href="/equities/hdfc-bank-ltd" title="HDFC Bank Ltd" class="aqlink js-hover-me" hoverme="markets" data-pairid="18177">HDFC Bank</a></span>
+<span class="js-plus-icon alertBellGrayPlus genToolTip oneliner" data-tooltip="Create Alert" data-tooltip-alt="Alert is active"></span>
+</td>
+<td data-column-name="symbol" class="left bold "><a target="_blank" href="/equities/hdfc-bank-ltd" title="HDBK">HDBK</a></td>
+<td data-column-name="exchange" class="left displayNone" title="NSE">NS</td>
+<td data-column-name="last" class="pid-18177-last " id="10080824_last_18177">1,510.65</td>
+<td data-column-name="bid" class="pid-18177-bid displayNone" id="10080824_bid_18177">1,510.30</td>
+<td data-column-name="ask" class="pid-18177-ask displayNone" id="10080824_ask_18177">1,510.65</td>
+<td data-column-name="extended_hours" class="js-extended-hours js-extended-last Font pidExt-18177-last displayNone">--</td>
+<td data-column-name="extended_hours_percent" class="js-extended-hours js-extended-percent Font pidExt-18177-pcp displayNone">--</td>
+<td data-column-name="open" class="">1,525.10</td>
+<td data-column-name="prev" class="displayNone">1,510.70</td>
+<td data-column-name="high" class="pid-18177-high " id="10080824_high_18177">1,525.70</td>
+<td data-column-name="low" class="pid-18177-low " id="10080824_low_18177">1,508.60</td>
+<td data-column-name="chg" class="bold redFont pid-18177-pc " id="10080824_chg_18177">-0.05</td>
+<td data-column-name="chgpercent" class="bold redFont pid-18177-pcp " id="10080824_p_chg_18177">0.00%</td>
+<td data-column-name="vol" class="pid-18177-turnover " data-value="3031057">3.03M</td>
+<td data-column-name="next_earning" class="left textNum displayNone" data-value="1650240000">Apr 18, 2022</td>
+<td data-column-name="time" class="pid-18177-time " id="10080824_time_18177" data-value="1645606002">14:16:42</td>
+<td class="icon" id="10080824_isopen_18177"><span class="greenClockIcon middle isOpenExch-46"></span></td>
+<td class="icon"><a href="javascript:void(0)" data-pair-id="18177" data-portfolio-id="10080824" rel="removePairFromPortfolio_10080824" class="bugCloseIcon genToolTip oneliner" data-tooltip="Delete">&nbsp;</a></td>
+</tr><tr id="sort_18367" rel="10080824_18367" data-pair-id="18367" data-pair-exchange-id="46" data-is-open-by="exchange" data-is-pair-exchange-open="1">
+<td class="left dragHandle"><span class="checkers"></span></td>
+<td class="flag"><span title="India" class="ceFlags India">&nbsp;</span></td>
+<td data-column-name="name" data-pair-id="18367" class="symbol plusIconTd left bold elp  alert js-injected-user-alert-container">
+<span class="aqPopupWrapper js-hover-me-wrapper"><a target="_blank" href="/equities/reliance-industries" title="Reliance Industries Ltd" class="aqlink js-hover-me" hoverme="markets" data-pairid="18367">Reliance Industries</a></span>
+<span class="js-plus-icon alertBellGrayPlus genToolTip oneliner" data-tooltip="Create Alert" data-tooltip-alt="Alert is active"></span>
+</td>
+<td data-column-name="symbol" class="left bold "><a target="_blank" href="/equities/reliance-industries" title="RELI">RELI</a></td>
+<td data-column-name="exchange" class="left displayNone" title="NSE">NS</td>
+<td data-column-name="last" class="pid-18367-last " id="10080824_last_18367">2,392.10</td>
+<td data-column-name="bid" class="pid-18367-bid displayNone" id="10080824_bid_18367">2,392.10</td>
+<td data-column-name="ask" class="pid-18367-ask displayNone" id="10080824_ask_18367">2,392.25</td>
+<td data-column-name="extended_hours" class="js-extended-hours js-extended-last Font pidExt-18367-last displayNone">--</td>
+<td data-column-name="extended_hours_percent" class="js-extended-hours js-extended-percent Font pidExt-18367-pcp displayNone">--</td>
+<td data-column-name="open" class="">2,401.10</td>
+<td data-column-name="prev" class="displayNone">2,389.00</td>
+<td data-column-name="high" class="pid-18367-high " id="10080824_high_18367">2,406.55</td>
+<td data-column-name="low" class="pid-18367-low " id="10080824_low_18367">2,388.75</td>
+<td data-column-name="chg" class="bold greenFont pid-18367-pc " id="10080824_chg_18367">+3.10</td>
+<td data-column-name="chgpercent" class="bold greenFont pid-18367-pcp " id="10080824_p_chg_18367">+0.13%</td>
+<td data-column-name="vol" class="pid-18367-turnover " data-value="2266433">2.27M</td>
+<td data-column-name="next_earning" class="left textNum displayNone" data-value="1651190400">Apr 29, 2022</td>
+<td data-column-name="time" class="pid-18367-time " id="10080824_time_18367" data-value="1645606002">14:16:42</td>
+<td class="icon" id="10080824_isopen_18367"><span class="greenClockIcon middle isOpenExch-46"></span></td>
+<td class="icon"><a href="javascript:void(0)" data-pair-id="18367" data-portfolio-id="10080824" rel="removePairFromPortfolio_10080824" class="bugCloseIcon genToolTip oneliner" data-tooltip="Delete">&nbsp;</a></td>
+</tr><tr id="sort_18198" rel="10080824_18198" data-pair-id="18198" data-pair-exchange-id="46" data-is-open-by="exchange" data-is-pair-exchange-open="1">
+<td class="left dragHandle"><span class="checkers"></span></td>
+<td class="flag"><span title="India" class="ceFlags India">&nbsp;</span></td>
+<td data-column-name="name" data-pair-id="18198" class="symbol plusIconTd left bold elp  alert js-injected-user-alert-container">
+<span class="aqPopupWrapper js-hover-me-wrapper"><a target="_blank" href="/equities/icici-bank-ltd" title="ICICI Bank Ltd" class="aqlink js-hover-me" hoverme="markets" data-pairid="18198">ICICI Bank</a></span>
+<span class="js-plus-icon alertBellGrayPlus genToolTip oneliner" data-tooltip="Create Alert" data-tooltip-alt="Alert is active"></span>
+</td>
+<td data-column-name="symbol" class="left bold "><a target="_blank" href="/equities/icici-bank-ltd" title="ICBK">ICBK</a></td>
+<td data-column-name="exchange" class="left displayNone" title="NSE">NS</td>
+<td data-column-name="last" class="pid-18198-last " id="10080824_last_18198">745.95</td>
+<td data-column-name="bid" class="pid-18198-bid displayNone" id="10080824_bid_18198">745.95</td>
+<td data-column-name="ask" class="pid-18198-ask displayNone" id="10080824_ask_18198">746.00</td>
+<td data-column-name="extended_hours" class="js-extended-hours js-extended-last Font pidExt-18198-last displayNone">--</td>
+<td data-column-name="extended_hours_percent" class="js-extended-hours js-extended-percent Font pidExt-18198-pcp displayNone">--</td>
+<td data-column-name="open" class="">754.60</td>
+<td data-column-name="prev" class="displayNone">751.30</td>
+<td data-column-name="high" class="pid-18198-high " id="10080824_high_18198">756.40</td>
+<td data-column-name="low" class="pid-18198-low " id="10080824_low_18198">742.70</td>
+<td data-column-name="chg" class="bold redFont pid-18198-pc " id="10080824_chg_18198">-5.35</td>
+<td data-column-name="chgpercent" class="bold redFont pid-18198-pcp " id="10080824_p_chg_18198">-0.71%</td>
+<td data-column-name="vol" class="pid-18198-turnover " data-value="8479928">8.48M</td>
+<td data-column-name="next_earning" class="left textNum displayNone" data-value="1652054400">May 09, 2022</td>
+<td data-column-name="time" class="pid-18198-time " id="10080824_time_18198" data-value="1645606002">14:16:42</td>
+<td class="icon" id="10080824_isopen_18198"><span class="greenClockIcon middle isOpenExch-46"></span></td>
+<td class="icon"><a href="javascript:void(0)" data-pair-id="18198" data-portfolio-id="10080824" rel="removePairFromPortfolio_10080824" class="bugCloseIcon genToolTip oneliner" data-tooltip="Delete">&nbsp;</a></td>
+</tr><tr id="sort_18217" rel="10080824_18217" data-pair-id="18217" data-pair-exchange-id="46" data-is-open-by="exchange" data-is-pair-exchange-open="1">
+<td class="left dragHandle"><span class="checkers"></span></td>
+<td class="flag"><span title="India" class="ceFlags India">&nbsp;</span></td>
+<td data-column-name="name" data-pair-id="18217" class="symbol plusIconTd left bold elp  alert js-injected-user-alert-container">
+<span class="aqPopupWrapper js-hover-me-wrapper"><a target="_blank" href="/equities/infosys" title="Infosys Ltd" class="aqlink js-hover-me" hoverme="markets" data-pairid="18217">Infosys</a></span>
+<span class="js-plus-icon alertBellGrayPlus genToolTip oneliner" data-tooltip="Create Alert" data-tooltip-alt="Alert is active"></span>
+</td>
+<td data-column-name="symbol" class="left bold "><a target="_blank" href="/equities/infosys" title="INFY">INFY</a></td>
+<td data-column-name="exchange" class="left displayNone" title="NSE">NS</td>
+<td data-column-name="last" class="pid-18217-last " id="10080824_last_18217">1,743.20</td>
+<td data-column-name="bid" class="pid-18217-bid displayNone" id="10080824_bid_18217">1,742.70</td>
+<td data-column-name="ask" class="pid-18217-ask displayNone" id="10080824_ask_18217">1,743.15</td>
+<td data-column-name="extended_hours" class="js-extended-hours js-extended-last Font pidExt-18217-last displayNone">--</td>
+<td data-column-name="extended_hours_percent" class="js-extended-hours js-extended-percent Font pidExt-18217-pcp displayNone">--</td>
+<td data-column-name="open" class="">1,750.00</td>
+<td data-column-name="prev" class="displayNone">1,734.35</td>
+<td data-column-name="high" class="pid-18217-high " id="10080824_high_18217">1,750.00</td>
+<td data-column-name="low" class="pid-18217-low " id="10080824_low_18217">1,733.40</td>
+<td data-column-name="chg" class="bold greenFont pid-18217-pc " id="10080824_chg_18217">+8.85</td>
+<td data-column-name="chgpercent" class="bold greenFont pid-18217-pcp " id="10080824_p_chg_18217">+0.51%</td>
+<td data-column-name="vol" class="pid-18217-turnover " data-value="3089610">3.09M</td>
+<td data-column-name="next_earning" class="left textNum displayNone" data-value="1649808000">Apr 13, 2022</td>
+<td data-column-name="time" class="pid-18217-time " id="10080824_time_18217" data-value="1645606002">14:16:42</td>
+<td class="icon" id="10080824_isopen_18217"><span class="greenClockIcon middle isOpenExch-46"></span></td>
+<td class="icon"><a href="javascript:void(0)" data-pair-id="18217" data-portfolio-id="10080824" rel="removePairFromPortfolio_10080824" class="bugCloseIcon genToolTip oneliner" data-tooltip="Delete">&nbsp;</a></td>
+</tr><tr id="sort_18471" rel="10080824_18471" data-pair-id="18471" data-pair-exchange-id="46" data-is-open-by="exchange" data-is-pair-exchange-open="1">
+<td class="left dragHandle"><span class="checkers"></span></td>
+<td class="flag"><span title="India" class="ceFlags India">&nbsp;</span></td>
+<td data-column-name="name" data-pair-id="18471" class="symbol plusIconTd left bold elp  alert js-injected-user-alert-container">
+<span class="aqPopupWrapper js-hover-me-wrapper"><a target="_blank" href="/equities/zee-entertainment-enterprises" title="Zee Entertainment Enterprises Ltd." class="aqlink js-hover-me" hoverme="markets" data-pairid="18471">Zee Entertainment</a></span>
+<span class="js-plus-icon alertBellGrayPlus genToolTip oneliner" data-tooltip="Create Alert" data-tooltip-alt="Alert is active"></span>
+</td>
+<td data-column-name="symbol" class="left bold "><a target="_blank" href="/equities/zee-entertainment-enterprises" title="ZEE">ZEE</a></td>
+<td data-column-name="exchange" class="left displayNone" title="NSE">NS</td>
+<td data-column-name="last" class="pid-18471-last " id="10080824_last_18471">242.00</td>
+<td data-column-name="bid" class="pid-18471-bid displayNone" id="10080824_bid_18471">242.05</td>
+<td data-column-name="ask" class="pid-18471-ask displayNone" id="10080824_ask_18471">242.20</td>
+<td data-column-name="extended_hours" class="js-extended-hours js-extended-last Font pidExt-18471-last displayNone">--</td>
+<td data-column-name="extended_hours_percent" class="js-extended-hours js-extended-percent Font pidExt-18471-pcp displayNone">--</td>
+<td data-column-name="open" class="">244.75</td>
+<td data-column-name="prev" class="displayNone">240.45</td>
+<td data-column-name="high" class="pid-18471-high " id="10080824_high_18471">246.00</td>
+<td data-column-name="low" class="pid-18471-low " id="10080824_low_18471">239.60</td>
+<td data-column-name="chg" class="bold greenFont pid-18471-pc " id="10080824_chg_18471">+1.55</td>
+<td data-column-name="chgpercent" class="bold greenFont pid-18471-pcp " id="10080824_p_chg_18471">+0.64%</td>
+<td data-column-name="vol" class="pid-18471-turnover " data-value="8194995">8.19M</td>
+<td data-column-name="next_earning" class="left textNum displayNone" data-value="1652227200">May 11, 2022</td>
+<td data-column-name="time" class="pid-18471-time " id="10080824_time_18471" data-value="1645606001">14:16:41</td>
+<td class="icon" id="10080824_isopen_18471"><span class="greenClockIcon middle isOpenExch-46"></span></td>
+<td class="icon"><a href="javascript:void(0)" data-pair-id="18471" data-portfolio-id="10080824" rel="removePairFromPortfolio_10080824" class="bugCloseIcon genToolTip oneliner" data-tooltip="Delete">&nbsp;</a></td>
+</tr><tr id="sort_18445" rel="10080824_18445" data-pair-id="18445" data-pair-exchange-id="46" data-is-open-by="exchange" data-is-pair-exchange-open="1">
+<td class="left dragHandle"><span class="checkers"></span></td>
+<td class="flag"><span title="India" class="ceFlags India">&nbsp;</span></td>
+<td data-column-name="name" data-pair-id="18445" class="symbol plusIconTd left bold elp  alert js-injected-user-alert-container">
+<span class="aqPopupWrapper js-hover-me-wrapper"><a target="_blank" href="/equities/ultratech-cement" title="UltraTech Cement Ltd" class="aqlink js-hover-me" hoverme="markets" data-pairid="18445">UltraTech Cement</a></span>
+<span class="js-plus-icon alertBellGrayPlus genToolTip oneliner" data-tooltip="Create Alert" data-tooltip-alt="Alert is active"></span>
+</td>
+<td data-column-name="symbol" class="left bold "><a target="_blank" href="/equities/ultratech-cement" title="ULTC">ULTC</a></td>
+<td data-column-name="exchange" class="left displayNone" title="NSE">NS</td>
+<td data-column-name="last" class="pid-18445-last " id="10080824_last_18445">6,854.95</td>
+<td data-column-name="bid" class="pid-18445-bid displayNone" id="10080824_bid_18445">6,852.15</td>
+<td data-column-name="ask" class="pid-18445-ask displayNone" id="10080824_ask_18445">6,853.55</td>
+<td data-column-name="extended_hours" class="js-extended-hours js-extended-last Font pidExt-18445-last displayNone">--</td>
+<td data-column-name="extended_hours_percent" class="js-extended-hours js-extended-percent Font pidExt-18445-pcp displayNone">--</td>
+<td data-column-name="open" class="">6,780.00</td>
+<td data-column-name="prev" class="displayNone">6,749.55</td>
+<td data-column-name="high" class="pid-18445-high " id="10080824_high_18445">6,857.90</td>
+<td data-column-name="low" class="pid-18445-low " id="10080824_low_18445">6,735.00</td>
+<td data-column-name="chg" class="bold greenFont pid-18445-pc " id="10080824_chg_18445">+105.40</td>
+<td data-column-name="chgpercent" class="bold greenFont pid-18445-pcp " id="10080824_p_chg_18445">+1.56%</td>
+<td data-column-name="vol" class="pid-18445-turnover " data-value="370296">370.30K</td>
+<td data-column-name="next_earning" class="left textNum displayNone" data-value="1650844800">Apr 25, 2022</td>
+<td data-column-name="time" class="pid-18445-time " id="10080824_time_18445" data-value="1645606002">14:16:42</td>
+<td class="icon" id="10080824_isopen_18445"><span class="greenClockIcon middle isOpenExch-46"></span></td>
+<td class="icon"><a href="javascript:void(0)" data-pair-id="18445" data-portfolio-id="10080824" rel="removePairFromPortfolio_10080824" class="bugCloseIcon genToolTip oneliner" data-tooltip="Delete">&nbsp;</a></td>
+</tr> </tbody>
+</table>
+</div> </div>
+
+</div>
+
+</div>
+<div class="js-news-analysis-container">
+<h2 class="title">Watchlist News</h2>
+<div class="js-content-wrapper" data-category="news">
+<div class="js-articles-wrapper largeTitle js-news-items">
+<article class="js-article-item articleItem   " data-id="3097894">
+<a href="/news/stocks-in-focus-on-feb-23-hdfc-wipro-ril--more-3097894" class="img"><img class="lazyload" data-src="https://i-invdn-com.investing.com/news/LYNXMPEE6J0SI_S.jpg" alt="Stocks in Focus on Feb 23: HDFC, Wipro, RIL & More" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png';"></a> <div class="textDiv">
+<a href="/news/stocks-in-focus-on-feb-23-hdfc-wipro-ril--more-3097894" title="Stocks in Focus on Feb 23: HDFC, Wipro, RIL & More" class="title">Stocks in Focus on Feb 23: HDFC, Wipro, RIL & More</a>
+<span class="articleDetails"><span>By Investing.com</span><span class="date">&nbsp;-&nbsp;5 hours ago</span></span> <p>By Malvika Gurung
+Investing.com -- HDFC (NS:HDFC): Societe Generale (PA:SOGN) sold about 71 lakh equity shares of the company, at an average price of Rs 2,436.8 apiece, amounting...</p> </div>
+<div class="clear"></div>
+</article>
+<article class="js-external-link-wrapper articleItem" data-id="3097884" data-content-type="news" data-link="https://invst.ly/xh250" data-provider-name="FinancialExpress">
+<a href="https://invst.ly/xh250" rel="nofollow" target="_blank" class="js-external-link img">
+<img class="lazyload" data-src="https://i-invdn-com.investing.com/news/moved_small-LYNXMPEHAS08S_L.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png'" alt="Buy Reliance Industries, ONGC, Infosys stocks, charts show bullish trend; Nifty’s support at 17000" />
+</a>
+<div class="textDiv">
+<a href="https://invst.ly/xh250" class="js-external-link title" title="Buy Reliance Industries, ONGC, Infosys stocks, charts show bullish trend; Nifty’s support at 17000" rel="nofollow" target="_blank">Buy Reliance Industries, ONGC, Infosys stocks, charts show bullish trend; Nifty’s support at 17000</a>
+<div class="articleDetails"><span>By FinancialExpress</span><span class="date">&nbsp;-&nbsp;6 hours ago</span></div>
+<p>Technically, although the index recovered sharply from the day's lowest point, the short term formation of the index is still on the weak side</p>
+</div>
+<div class="clear"></div>
+</article>
+<article class="js-external-link-wrapper articleItem" data-id="3096916" data-content-type="news" data-link="https://invst.ly/xgts8" data-provider-name="News18">
+<a href="https://invst.ly/xgts8" rel="nofollow" target="_blank" class="js-external-link img">
+<img class="lazyload" data-src="https://i-invdn-com.investing.com/news/LYNXNPEC700W3_S.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png'" alt="SBI, HDFC Bank, Others Increase Fixed Deposit Interest Rates: Right Time to Invest?" />
+</a>
+<div class="textDiv">
+<a href="https://invst.ly/xgts8" class="js-external-link title" title="SBI, HDFC Bank, Others Increase Fixed Deposit Interest Rates: Right Time to Invest?" rel="nofollow" target="_blank">SBI, HDFC Bank, Others Increase Fixed Deposit Interest Rates: Right Time to Invest?</a>
+<div class="articleDetails"><span>By News18</span><span class="date">&nbsp;-&nbsp;22 hours ago</span></div>
+<p>Over the past two week various banks like HDFC Bank, State Bank of India (SBI), IndusInd Bank, IDBI Bank etc have hiked interest rates of various FD tenures. Is it the right time...</p>
+</div>
+<div class="clear"></div>
+</article>
+<article class="js-external-link-wrapper articleItem" data-id="3096880" data-content-type="news" data-link="https://invst.ly/xgtkj" data-provider-name="Business Standard">
+<a href="https://invst.ly/xgtkj" rel="nofollow" target="_blank" class="js-external-link img">
+<img class="lazyload" data-src="https://i-invdn-com.investing.com/news/LYNXNPEC700W3_S.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png'" alt="HDFC Bank finances Asia's largest waste to energy plant in Indore" />
+</a>
+<div class="textDiv">
+<a href="https://invst.ly/xgtkj" class="js-external-link title" title="HDFC Bank finances Asia's largest waste to energy plant in Indore" rel="nofollow" target="_blank">HDFC Bank finances Asia's largest waste to energy plant in Indore</a>
+<div class="articleDetails"><span>By Business Standard</span><span class="date">&nbsp;-&nbsp;23 hours ago</span></div>
+<p>Indore (Madhya Pradesh) [India], February 22 (ANI/BusinessWire India): HDFC Bank under its ESG commitment is proud to be associated with Indore Clean Energy Private Limited (ICEPL)...</p>
+</div>
+<div class="clear"></div>
+</article>
+<article class="js-external-link-wrapper articleItem" data-id="3096510" data-content-type="news" data-link="https://invst.ly/xgq3h" data-provider-name="ZeeNews">
+<a href="https://invst.ly/xgq3h" rel="nofollow" target="_blank" class="js-external-link img">
+<img class="lazyload" data-src="https://i-invdn-com.investing.com/news/LYNXMPEDB301R_S.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png'" alt="IT biggies TCS, Infosys, Wipro, Cognizant to ask employees to work from office again: Reports" />
+</a>
+<div class="textDiv">
+<a href="https://invst.ly/xgq3h" class="js-external-link title" title="IT biggies TCS, Infosys, Wipro, Cognizant to ask employees to work from office again: Reports" rel="nofollow" target="_blank">IT biggies TCS, Infosys, Wipro, Cognizant to ask employees to work from office again: Reports</a>
+<div class="articleDetails"><span>By ZeeNews</span><span class="date">&nbsp;-&nbsp;Feb 22, 2022</span></div>
+<p>Media reports have said that top IT firms like TCS, Wipro, Cognizant and Infosys are contemplating to end Work From Home provision and ask the employees to return to office.</p>
+</div>
+<div class="clear"></div>
+</article>
+<article class="js-external-link-wrapper articleItem" data-id="3096458" data-content-type="news" data-link="https://invst.ly/xgpp2" data-provider-name="Business Standard">
+<a href="https://invst.ly/xgpp2" rel="nofollow" target="_blank" class="js-external-link img">
+<img class="lazyload" data-src="https://i-invdn-com.investing.com/news/ICICIBank_150x108_S_1645139998.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png'" alt="ICICI Bank acquires stake in Verve Financial Services for Rs 20 cr" />
+</a>
+<div class="textDiv">
+<a href="https://invst.ly/xgpp2" class="js-external-link title" title="ICICI Bank acquires stake in Verve Financial Services for Rs 20 cr" rel="nofollow" target="_blank">ICICI Bank acquires stake in Verve Financial Services for Rs 20 cr</a>
+<div class="articleDetails"><span>By Business Standard</span><span class="date">&nbsp;-&nbsp;Feb 22, 2022</span></div>
+<p>ICICI Bank entered into an agreement on 21 February 2022 for a cash investment of Rs 19.99 crore in the equity shares of Verve Financial Services (VFSPL).</p>
+</div>
+<div class="clear"></div>
+</article> </div>
+<div id="paginationGetMoreNews" class="js-show-more"><a data-action="listPaginationItems" class="showMoreComments block" href="javascript:void(0);" onclick="components.getMoreEventNewsAnalysisMultiplePairs('2','18177,18367,18198,18217,18471,18445','news','portfolio')"><span class="showMoreCommentsLoading middle displayNone">&nbsp;</span><span class="arial_12" id="paginationShowMoreText">Show more</span></a></div></div>
+<div class="doubleLineSeperator"></div>
+<h2 class="title">Watchlist Analysis</h2>
+<div class="js-content-wrapper" data-category="article">
+<div class="js-articles-wrapper largeTitle analysisImg js-analysis-items">
+<article class="js-article-item articleItem   " data-id="200512599">
+<a href="/analysis/war-erupts-between-the-bulls--the-bears-as-nifty-tanks-again-200512599" class="img"><img class="lazyload" data-src="https://d56-invdn-com.investing.com/company_logo/4fc4c379e99a3c85565eff44e2138b84.jpg" alt="Umesh Rindani" onerror="javascript:this.src='https://i-invdn-com.investing.com/anonym.gif';"></a> <div class="textDiv">
+<a href="/analysis/war-erupts-between-the-bulls--the-bears-as-nifty-tanks-again-200512599" title="War Erupts Between the Bulls & the Bears as Nifty Tanks Again" class="title">War Erupts Between the Bulls & the Bears as Nifty Tanks Again <span class="smallGrayPDFIcon middle">&nbsp;</span></a>
+<span class="articleDetails"><span>By <a href="/members/contributors/228175290">Umesh Rindani</a></span><span class="date">&nbsp;-&nbsp;21 hours ago</span></span> <p>NIFTY 50 EOD ANALYSIS 22-2-22
+In this post, I talk about the analysis for the day and the trading range for tomorrow. The video discusses with the help of the charts how the indices as well as leading...</p> </div>
+<div class="clear"></div>
+</article>
+<article class="js-article-item articleItem   " data-id="200512451">
+<a href="/analysis/2-emerging-market-etfs-to-add-diversification-as-us-equity-markets-slump-200512451" class="img"><img class="lazyload" data-src="https://d1-invdn-com.investing.com/company_logo/f5990cad5d0cb4a9b35d6d2732d6930f.jpg" alt="Tezcan Gecgil/Investing.com " onerror="javascript:this.src='https://i-invdn-com.investing.com/anonym.gif';"><span class="investingAnalysis"></span></a> <div class="textDiv">
+<a href="/analysis/2-emerging-market-etfs-to-add-diversification-as-us-equity-markets-slump-200512451" title="2 Emerging Market ETFs To Add Diversification As U.S. Equity Markets Slump" class="title">2 Emerging Market ETFs To Add Diversification As U.S. Equity Markets Slump</a>
+<span class="articleDetails"><span>By <a href="/members/contributors/215115156">Tezcan Gecgil/Investing.com </a></span><span class="date">&nbsp;-&nbsp;Feb 21, 2022</span></span> <p>Declines on Wall Street, driven by an array of geopolitical and economic jitters, are causing investors to look outside the US for stocks to diversify their portfolios. As a result, shares that...</p> </div>
+<div class="clear"></div>
+</article>
+<article class="js-external-link-wrapper articleItem" data-id="200512383" data-content-type="articles" data-link="https://invst.ly/xg4is" data-provider-name="">
+<a href="https://invst.ly/xg4is" rel="nofollow" target="_blank" class="js-external-link img">
+<img class="lazyload" data-src="https://i-invdn-com.investing.com/companies_logos/analysis3rdparty.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png'" alt="Want to bet on green energy? These 2 PSUs are still best choices: Rajat Sharma" />
+</a>
+<div class="textDiv">
+<a href="https://invst.ly/xg4is" class="js-external-link title" title="Want to bet on green energy? These 2 PSUs are still best choices: Rajat Sharma" rel="nofollow" target="_blank">Want to bet on green energy? These 2 PSUs are still best choices: Rajat Sharma</a>
+<div class="articleDetails"><span>By The Economic Times</span><span class="date">&nbsp;-&nbsp;Feb 20, 2022</span></div>
+<p>“One can look at SJVN and NTPC which are focussing a lot more towards hydroelectric and solar energy. Both the companies have extremely good dividend yields of about 7-8%, are very safe, good,...</p>
+</div>
+<div class="clear"></div>
+</article>
+<article class="js-external-link-wrapper articleItem" data-id="200512348" data-content-type="articles" data-link="https://invst.ly/xg0w8" data-provider-name="">
+<a href="https://invst.ly/xg0w8" rel="nofollow" target="_blank" class="js-external-link img">
+<img class="lazyload" data-src="https://i-invdn-com.investing.com/companies_logos/analysis3rdparty.jpg" onerror="javascript:this.src='https://i-invdn-com.investing.com/news/news-paper_108x81.png'" alt="70% of Sensex stocks will go nowhere, bet on smallcaps to compound your money: Shankar Sharma" />
+</a>
+<div class="textDiv">
+<a href="https://invst.ly/xg0w8" class="js-external-link title" title="70% of Sensex stocks will go nowhere, bet on smallcaps to compound your money: Shankar Sharma" rel="nofollow" target="_blank">70% of Sensex stocks will go nowhere, bet on smallcaps to compound your money: Shankar Sharma</a>
+<div class="articleDetails"><span>By The Economic Times</span><span class="date">&nbsp;-&nbsp;Feb 19, 2022</span></div>
+<p>"I was very clear that 2022 is going to be a difficult year just because the data on a long-term 100-year history basis is more likely to be right than the emotions of all of us who believe that...</p>
+</div>
+<div class="clear"></div>
+</article>
+<article class="js-article-item articleItem   " data-id="200512284">
+<a href="/analysis/nifty-disappoints--ends-the-week-below-17300-200512284" class="img"><img class="lazyload" data-src="https://d56-invdn-com.investing.com/company_logo/4fc4c379e99a3c85565eff44e2138b84.jpg" alt="Umesh Rindani" onerror="javascript:this.src='https://i-invdn-com.investing.com/anonym.gif';"></a> <div class="textDiv">
+<a href="/analysis/nifty-disappoints--ends-the-week-below-17300-200512284" title="Nifty Disappoints & Ends the Week Below 17300" class="title">Nifty Disappoints & Ends the Week Below 17300 <span class="smallGrayPDFIcon middle">&nbsp;</span></a>
+<span class="articleDetails"><span>By <a href="/members/contributors/228175290">Umesh Rindani</a></span><span class="date">&nbsp;-&nbsp;Feb 18, 2022</span></span> <p>NIFTY 50 EOD ANALYSIS 18-2-22
+In this post, I talk about the analysis for the day and the trading range for tomorrow. The video discusses with the help of the charts how the indices as well as leading...</p> </div>
+<div class="clear"></div>
+</article>
+<article class="js-article-item articleItem   " data-id="200512157">
+<a href="/analysis/icici-bank-haunted-by-abg-makes-bank-nifty-nervous-200512157" class="img"><img class="lazyload" data-src="https://d56-invdn-com.investing.com/company_logo/4fc4c379e99a3c85565eff44e2138b84.jpg" alt="Umesh Rindani" onerror="javascript:this.src='https://i-invdn-com.investing.com/anonym.gif';"></a> <div class="textDiv">
+<a href="/analysis/icici-bank-haunted-by-abg-makes-bank-nifty-nervous-200512157" title="ICICI Bank Haunted by ABG, Makes Bank Nifty Nervous" class="title">ICICI Bank Haunted by ABG, Makes Bank Nifty Nervous <span class="smallGrayPDFIcon middle">&nbsp;</span></a>
+<span class="articleDetails"><span>By <a href="/members/contributors/228175290">Umesh Rindani</a></span><span class="date">&nbsp;-&nbsp;Feb 17, 2022</span></span> <p>NIFTY 50 EOD ANALYSIS 17-2-22
+In this post, I talk about the analysis for the day and the trading range for tomorrow. The video discusses with the help of the charts how the indices as well as leading...</p> </div>
+<div class="clear"></div>
+</article> </div>
+<div id="paginationGetMoreArticles" class="js-show-more"><a data-action="listPaginationItems" class="showMoreComments block" href="javascript:void(0);" onclick="components.getMoreEventNewsAnalysisMultiplePairs('2','18177,18367,18198,18217,18471,18445','article','portfolio')"><span class="showMoreCommentsLoading middle displayNone">&nbsp;</span><span class="arial_12" id="paginationShowMoreText">Show more</span></a></div></div>
+</div><table id="templateOpenPositionsRow" style="display:none;">
+<tr id="details_{{ROWID}}" class="openedTR noHover expand-child js-opened-tr">
+<td colspan="{{colspan}}" class="left noPadding">
+<div class="openedTRWrap positionDetails js-disable-container closePositionTools js-opened-tr-wrap disabled" data-open-date="{{openDate}}" data-curr-date="{{currDate}}" data-portfolio="{{portfolioid}}" data-id="{{ROWID}}" data-curr-price="{{curPrice}}" data-open-price="{{openPrice}}" style="display:none;">
+<input id="position{{ROWID}}" type="hidden" value="{{positionid}}" class="js-positionid-input">
+<input id="operation{{ROWID}}" type="hidden" value="{{operation}}" class="js-operation-input">
+<input id="pair{{ROWID}}" type="hidden" value="{{pairid}}" class="js-pair-input">
+<section class="inlineblock fieldsContainer js-fields-container" data-row-id="{{ROWID}}" data-portfolio-id="{{portfolioid}}" data-pair-name="{{pairName}}" data-position-id="{{positionid}}">
+<div><label class="bold js-date-label posTitle" data-closed-text="Close Date" data-open-text="Open Date">Open Date:</label>
+
+<div tabindex="12" id="flatDatePickerCanvasHol{{ROWID}}" class="datePickerWrap outlineNone analysisDatePicker">
+<div id="widget{{ROWID}}" class="float_lang_base_1">
+<div id="widgetField{{ROWID}}" class="dateField inlineblock">
+<div id="widgetFieldDateRange{{ROWID}}" class="dateRange arial_11 js-date-range" style="display:inline">
+</div>
+</div>
+<input type="hidden" id="picker{{ROWID}}" class="js-picker" />
+<div id="widgetFieldBottomBorder{{ROWID}}" class="widgetFieldBottomBorder"></div>
+<div id="widgetHolCalendar{{ROWID}}" class="calendarWidgetltr"></div>
+</div>
+<div id="float_lang_base_2{{ROWID}}" class="float_lang_base_2 datePickerIconWrap pointer"><span class="datePickerIcon">&nbsp;</span>
+</div>
+</div>
+
+<input id="curDate{{ROWID}}" type="hidden" value="23/02/2022" class="js-cur-date">
+</div>
+<div class="js-input-container"><label class="bold posTitle">Amount:</label><input disabled tabindex="13" data-amount="" class="newInput inputTextBox amount disabled js-amount-input" id="amount{{ROWID}}" type="text" value="{{amount}}" maxlength="20">
+</div>
+<div class="js-input-container"><label class="bold js-price-label posTitle" data-closed-text="Close Price" data-open-text="Open Price">Open Price:</label><input disabled tabindex="14" class="newInput inputTextBox js-price-input" id="curPrice{{ROWID}}" type="text" placeholder value="{{openPrice}}" maxlength="15">
+</div>
+<div id="pointValue-container{{ROWID}}" class="js-point-value-container"><label for="a_pointvalue{{ROWID}}" class="bold posTitle">Point Value:<i href="javascript:void(0);" class="js-pointvalue-label pointViewLabel"></i></label>
+<div class="input-group input-group-enabled inputGroup js-input-container">
+<i class="curContainer">{{comissionCur}}</i>
+
+<input disabled tabindex="15" name="a_pointvalue_{{ROWID}}" id="a_pointvalue{{ROWID}}" type="text" class="form-control form-control-enabled js-pointvalue-input" maxlength="9" value="{{pointvalue}}">
+</div>
+</div>
+<div id="leverage_{{ROWID}}" class="js-leverage-container js-input-container"><label for="a_leverage_{{ROWID}}" class="bold posTitle">Leverage:</label>
+<select disabled tabindex="5" class="selectBox newInput js-leverage-input" id="a_leverage_{{ROWID}}"><option value="1">1:1</option><option value="10">1:10</option><option value="25">1:25</option><option value="50">1:50</option><option value="100">1:100</option><option value="200">1:200</option><option value="400">1:400</option><option value="500">1:500</option><option value="1000">1:1000</option></select>
+</div>
+<div id="comission-container{{ROWID}}"><label for="a_comission_{{ROWID}}" class="bold posTitle js-input-container">Total Commission:</label>
+<div class="input-group input-group-enabled inputGroup js-input-container">
+<i class="curContainer">{{comissionCur}}</i>
+<input disabled tabindex="16" name="a_comission_{{ROWID}}" id="a_comission_{{ROWID}}" type="text" class="form-control form-control-enabled js-commission-input" id="comission{{ROWID}}" value="{{comission}}" maxlength="15">
+</div>
+</div>
+</section>
+<div class="actionIconsWrap js-icons-wrap">
+<label class="bold posTitle">Actions</label>
+<div class="actionIcons">
+<div class="js-close-position" data-row="{{ROWID}}"><i class="closePositionIcon"></i><span title="Close Position">Close Position</span></div>
+<div class="js-edit-position" data-row="{{ROWID}}"><i class="editIconDark"></i><span title="Edit position">Edit position</span></div>
+</div>
+</div>
+<div class="positionActionsButtons js-pos-buttons displayNoneImp">
+<a href="javascript:void(0);" name="closeButton" id="closeBtn{{ROWID}}" class="newBtn Arrow LightGray js-close-btn displayNoneImp">Close Position</a> <a href="javascript:void(0);" name="editButton" id="editBtn{{ROWID}}" class="newBtn Arrow LightGray js-edit-btn displayNoneImp">Save Changes</a> <a href="javascript:void(0);" class="js-hide-btn pointer">Cancel</a>
+</div>
+<div class="messageBlock js-msg-block" id="details_Msg{{ROWID}}"></div>
+</div> 
+</td>
+</tr>
+</table><table id="templateSummaryOpenPositionsRow" style="display:none;">
+<tr id="details_{{ROWID}}" class="openedTR noHover expand-child js-opened-tr">
+<td colspan="{{colspan}}" class="left noPadding">
+<div class="openedTRWrap positionDetails js-disable-container closePositionTools js-opened-tr-wrap disabled" data-open-date="{{openDate}}" data-curr-date="{{currDate}}" data-portfolio="{{portfolioid}}" data-id="{{ROWID}}" data-curr-price="{{curPrice}}" data-open-price="{{openPrice}}" style="display:none;">
+<input id="position{{ROWID}}" type="hidden" value="{{positionid}}" class="js-positionid-input">
+<input id="operation{{ROWID}}" type="hidden" value="{{operation}}" class="js-operation-input">
+<input id="pair{{ROWID}}" type="hidden" value="{{pairid}}" class="js-pair-input">
+<section class="inlineblock fieldsContainer js-fields-container" data-row-id="{{ROWID}}" data-portfolio-id="{{portfolioid}}" data-pair-name="{{pairName}}" data-position-id="{{positionid}}">
+<div><label class="bold js-date-label posTitle" data-closed-text="Close Date" data-open-text="Open Date">Open Date:</label>
+
+<div tabindex="12" id="flatDatePickerCanvasHol{{ROWID}}" class="datePickerWrap outlineNone analysisDatePicker">
+<div id="widget{{ROWID}}" class="float_lang_base_1">
+<div id="widgetField{{ROWID}}" class="dateField inlineblock">
+<div id="widgetFieldDateRange{{ROWID}}" class="dateRange arial_11 js-date-range" style="display:inline">
+</div>
+</div>
+<input type="hidden" id="picker{{ROWID}}" class="js-picker" />
+<div id="widgetFieldBottomBorder{{ROWID}}" class="widgetFieldBottomBorder"></div>
+<div id="widgetHolCalendar{{ROWID}}" class="calendarWidgetltr"></div>
+</div>
+<div id="float_lang_base_2{{ROWID}}" class="float_lang_base_2 datePickerIconWrap pointer"><span class="datePickerIcon">&nbsp;</span>
+</div>
+</div>
+
+<input id="curDate{{ROWID}}" type="hidden" value="23/02/2022" class="js-cur-date">
+</div>
+<div class="js-input-container"><label class="bold posTitle">Amount:</label><input disabled tabindex="13" data-amount="" class="newInput inputTextBox amount disabled js-amount-input" id="amount{{ROWID}}" type="text" value="{{amount}}" maxlength="20">
+</div>
+<div class="js-input-container"><label class="bold js-price-label posTitle" data-closed-text="Close Price" data-open-text="Open Price">Open Price:</label><input disabled tabindex="14" class="newInput inputTextBox js-price-input" id="curPrice{{ROWID}}" type="text" placeholder value="{{openPrice}}" maxlength="15">
+</div>
+<div id="pointValue-container{{ROWID}}" class="js-point-value-container"><label for="a_pointvalue{{ROWID}}" class="bold posTitle">Point Value:<i href="javascript:void(0);" class="js-pointvalue-label pointViewLabel"></i></label>
+<div class="input-group input-group-enabled inputGroup js-input-container">
+<i class="curContainer">{{comissionCur}}</i>
+
+<input disabled tabindex="15" name="a_pointvalue_{{ROWID}}" id="a_pointvalue{{ROWID}}" type="text" class="form-control form-control-enabled js-pointvalue-input" maxlength="9" value="{{pointvalue}}" disabled>
+</div>
+</div>
+<div id="leverage_{{ROWID}}" class="js-leverage-container js-input-container"><label for="a_leverage_{{ROWID}}" class="bold posTitle">Leverage:</label>
+<select disabled tabindex="5" class="selectBox newInput js-leverage-input" id="a_leverage_{{ROWID}}" disabled><option value="1">1:1</option><option value="10">1:10</option><option value="25">1:25</option><option value="50">1:50</option><option value="100">1:100</option><option value="200">1:200</option><option value="400">1:400</option><option value="500">1:500</option><option value="1000">1:1000</option></select>
+</div>
+<div id="comission-container{{ROWID}}"><label for="a_comission_{{ROWID}}" class="bold posTitle js-input-container">Total Commission:</label>
+<div class="input-group input-group-enabled inputGroup js-input-container">
+<i class="curContainer">{{comissionCur}}</i>
+<input disabled tabindex="16" name="a_comission_{{ROWID}}" id="a_comission_{{ROWID}}" type="text" class="form-control form-control-enabled js-commission-input" id="comission{{ROWID}}" value="{{comission}}" maxlength="15">
+</div>
+</div>
+</section>
+<div class="actionIconsWrap js-icons-wrap">
+<label class="bold posTitle">Actions</label>
+<div class="actionIcons">
+<div class="js-close-position" data-row="{{ROWID}}"><i class="closePositionIcon"></i><span title="Close Position">Close Position</span></div>
+<div class="js-edit-position" data-row="{{ROWID}}"><i class="editIconDark"></i><span title="Edit position">Edit position</span></div>
+</div>
+</div>
+<div class="positionActionsButtons js-pos-buttons displayNoneImp">
+<a href="javascript:void(0);" name="closeButton" id="closeBtn{{ROWID}}" class="newBtn Arrow LightGray js-close-btn displayNoneImp">Close Position</a> <a href="javascript:void(0);" name="editButton" id="editBtn{{ROWID}}" class="newBtn Arrow LightGray js-edit-btn displayNoneImp">Save Changes</a> <a href="javascript:void(0);" class="js-hide-btn pointer">Cancel</a>
+</div>
+<div class="messageBlock js-msg-block" id="details_Msg{{ROWID}}"></div>
+</div> 
+</td>
+</tr>
+</table>
+<div id="div-gpt-ad-1370187203350-lead_port1" style="height:90px;text-align:center;" class="portfolioBanners" advertisementText="Advertisement">
+<script> _.displaySlot('div-gpt-ad-1370187203350-lead_port1'); </script>
+</div></div>
+<div class="clear"></div><div id="theDisclaimer" class="disclaimerBox"><span>Disclaimer:</span> <b>Fusion Media</b> would like to remind you that the data contained in this website is not necessarily real-time nor accurate. All CFDs (stocks, indexes, futures) and Forex prices are not provided by exchanges but rather by market makers, and so prices may not be accurate and may differ from the actual market price, meaning prices are indicative and not appropriate for trading purposes. Therefore Fusion Media doesn`t bear any responsibility for any trading losses you might incur as a result of using this data.<br /><br />
+<b>Fusion Media</b> or anyone involved with Fusion Media will not accept any liability for loss or damage as a result of reliance on the information including data, quotes, charts and buy/sell signals contained within this website. Please be fully informed regarding the risks and costs associated with trading the financial markets, it is one of the riskiest investment forms possible. </div><script>
+
+window.hashedPortfolioIds = window.hashedPortfolioIds || {};
+window.hashedPortfolioIds[10612274] = "NTFiMWU1ZDkyZmBubztjZQ%3D%3D";window.hashedPortfolioIds[25381470] = "NTJhN2UwP2szZGBoZjIzMQ%3D%3D";window.hashedPortfolioIds[20515550] = "NjExYjNgPmM3ZDozYTc1Nw%3D%3D";window.hashedPortfolioIds[22055745] = "MzQyY244Zj9mNWtgZTJiZQ%3D%3D";window.hashedPortfolioIds[22056139] = "YGc1ZDNlNG00ZG5jMGA4Mw%3D%3D";window.hashedPortfolioIds[10080824] = "ODxjMGUzP2tjNT05bj9mYA%3D%3D";window.hashedPortfolioIds[11492437] = "NjI0Zm48N2I1YW1lMGAzNg%3D%3D";window.hashedPortfolioIds[11493574] = "Z2M%2BbGIwN2I3YmBpMmYyNA%3D%3D";window.hashedPortfolioIds[11493826] = "YmY%2FbWAyMmc%2Fajo%2BYzIxNQ%3D%3D";window.hashedPortfolioIds[12250261] = "MDQwYTNnZD1jNT4wYjdhYg%3D%3D";window.hashedPortfolioIds[12248976] = "MzdhMDNnMGg%2FYTs%2BN2NlYQ%3D%3D";window.hashedPortfolioIds[11495348] = "YGQ2ZDNhZDEyYWlmM2Rlbw%3D%3D";window.hashedPortfolioIds[11494136] = "NTFmNDZkYzZjMW5jYDAxNQ%3D%3D";window.hashedPortfolioIds[13117426] = "NDBlNWE2YTwzYm9nYTA1MQ%3D%3D";window.hashedPortfolioIds[12253590] = "NTEyY246Zj8zZjw1MmhjYQ%3D%3D";window.hashedPortfolioIds[11740086] = "OT1hM2Y3M2tiNGxgYzhmYg%3D%3D";window.hashedPortfolioIds[11992380] = "ZGAwYm4xZTBlMWplZj0wMg%3D%3D";window.hashedPortfolioIds[12254011] = "MTU2Z2czM2ozYTs3MGJkZw%3D%3D";window.hashedPortfolioIds[12510439] = "Z2NjMmY1Yz4%2FaWtjMmJlbg%3D%3D";window.hashedPortfolioIds[12523602] = "YGQxYDVmYT83Yj40ZDdhYQ%3D%3D";window.hashedPortfolioIds[12953002] = "YmZkNTRrP2Y0YTs3MmExMQ%3D%3D";window.hashedPortfolioIds[14340822] = "NzMwZzZjNGxkMmltYzIyMg%3D%3D";
+$(document).ready(function(){
+	window.portfolioLineActionsHTMLTemplate = {
+		clonedPositionSummary :  $('#templateSummaryOpenPositionsRow').clone(),
+		clonedPosition :  $('#templateOpenPositionsRow').clone()
+	}
+});
+
+
+var numberFormat = 'us';
+var numbersTypeSorter = 'currency';
+var percentTypeSorter = 'percent';
+var bigNumbersFormat  = 'big_numbers';
+if(numberFormat == 'eu') {
+	numbersTypeSorter = 'eu_numbers';
+	percentTypeSorter = 'eu_percent';
+	bigNumbersFormat = 'big_numbers_eu';
+}
+
+var serverData = {
+    'portfoliosDataArr': {},
+    'decSep': '.',
+    'thousandSep': ',',
+    '_positive_number_ammount_msg': 'Amount can only be a positive number',
+    '_bad_price_value_msg': 'The price entered is incorrect, please check your figures',
+    '_invalid_point_value_msg': 'The point value entered is incorrect, please check your figures',
+    '_positive_number_commision_msg': 'Commission can only be a positive number',
+    '_incorrect_date_msg': 'The date entered is incorrect, please check your date',
+    '$sortNumfunc': 'num_with_curr',
+    '$sortDatefunc': 'date_dmy',
+    '_portfolioBuy': 'BUY',
+    '_add_positions': 'Add Position',
+    '_btn_close_position': 'Close Position',
+    '_Close': 'Close',     '_delete_position_title': 'Delete Position',
+    '_delete_postion_msg' : 'Are you sure you want to permanently delete your %POSITION% position?',
+    'currencyPosition':'left'    
+};
+
+var FilterObj = new Object();
+
+
+
+$(document).ready(function(){
+    loadSorter();
+});
+
+
+//one for all portfolios
+$(function() {
+	var $cardWrapper = $('.cardWrapper');
+    $( "#dialog-confirm-delete-position" ).dialog({
+           autoOpen: false,
+           width: 475,
+           dialogClass: "generalPopup",
+           resizable: false,
+           draggable: false,
+           modal: true,
+           closeText: "Close",
+           title:'Delete Position',
+           buttons: {
+                  "Delete": function() {
+
+                      var $this = $("#dialog-confirm-delete-position");
+                      var portfolio_id = $this.data('portfolioid');
+                      var position_id = $this.data('positionid');
+                      var position_type=$this.data('positiontype');
+                      var $el = $this.data('position_el'),
+						  numOfLines = $this.data('lineCount');
+
+                      function slideUPRow(){
+						  $el.slideUp(250, function(){
+							  $el.remove();
+						  })
+                      }
+
+                      if(position_type == 'open'){
+						  window.removeOpenPosition($el, portfolio_id, position_id, numOfLines);
+                       }
+
+                       if(position_type == 'close')
+                       {
+                           slideUPRow();
+                           removeClosePosition(portfolio_id, position_id);
+                       }
+
+                      Portfolio.updateInstrumentCount(portfolio_id, -1);
+               	 
+                   $(this)
+                       .data('portfolioid','')
+                       .data('positionid', '')
+                       .data('positiontype','')
+                       .dialog( "close" );
+               },
+
+			    "Cancel": function() {
+			        $( this ).dialog( "close" );
+			        return false;
+			    }
+               
+           },
+           open: function() {
+               $('.ui-dialog-buttonpane').find('button').addClass('newBtn toggleButton noIcon LightGray');
+           }
+    });
+});
+
+
+    $(document).ready(function() {
+
+                var portfolioBlock = $("#portfolioblock_NDA1ZmUzYTVkMmtvZDU1Mw==");
+        if (portfolioBlock.length) {
+            $('html, body').animate({
+                scrollTop: portfolioBlock.offset().top - 50 - 48
+            }, 600);
+        }
+        
+        components.headers.setHeaderSwitchBorders('#fullColumn', '#footerWrapper');
+        components.headers.onChange(function(isFloatedHeaderShown) {
+            $('#addPortfolioPopup').addClass('displayNone');
+            $('#portfolios_choose_list').addClass('displayNone');
+        });
+    })
+</script>
+
+<div id="floatingH1" class="tradeNowFloat WYSIWYGFloater wideFloater js-floated-header-container">
+<div class="instrumentFloaterInner bold">
+<span class="H1LikeSpan float_lang_base_1" id="moreFloat">My Watchlists</span>
+<div class="headBtnWrapper float_lang_base_2">
+<a href="/portfolio/importcsvstep1" class="newBtn LightGray noIcon last">Import Watchlist</a> <div class="clear"></div>
+</div>
+</div>
+</div>
+<div id="downloadPortfolio" class="downloadPortfolio genPopup displayNone js-download-portfolio-popup" style="z-index: 1100;">
+<div class="header">Download Preferences</div>
+<div class="content radioButtons">
+<p class="label">Select a download option</p>
+<fieldset>
+<input type="radio" name="downloadPortfolio" class="js-option js-default-option" id="download1" value="all" checked="true"><label for="download1">All tabs and columns available</label>
+</fieldset>
+<fieldset>
+<input type="radio" name="downloadPortfolio" class="js-option" id="download2" value="selectedColumns"><label for="download2">All tabs and columns selected</label>
+</fieldset>
+<fieldset>
+<input type="radio" name="downloadPortfolio" class="js-option" id="download3" value="currentTab"><label for="download3">Current view</label>
+</fieldset>
+</div>
+<div class="footer">
+<a href="javascript:void(0)" id="" class="newBtn Orange2 noIcon float_lang_base_2 Orange js-save">Download</a> <a href="javascript:void(0);" onClick='javascript:hidePopup("downloadPortfolio");' class="newBtn noIcon LightGray toggleButton">Cancel</a> <div class="clear"></div>
+</div>
+</div>
+<script>
+	window.meaning = {
+		'strong sell'   : 0,
+		'sell'  : 1,
+		'neutral'       : 2,
+		'buy'   : 3,
+		'strong buy'    : 4,
+		'' : 5
+	};
+	window.portfolioDefinesForLineActions = {
+		amountExceeded : 'Impossible to close more than the amount you have',
+		updateSuccessful: 'The position has been successfully updated',
+		actionFailed: 'Action failed, Please try again later',
+		closeSuccessful: 'The position was closed successfully',
+		partialCloseSuccessful: 'Partial close of the position was completed successfully'
+	};
+</script>
+<script>
+	var tooltipContainer='<div class="qlTooltip top"><img class="spinner" src="https://i-invdn-com.investing.com/ajax-loader-big.gif"/></div>';
+</script>
+<div id="alertPopupBig_instrument" class="alertPopup tooltipPopup displayNone js-user-alert-popup">
+<div class="header headerContent"><span class="headerText">Create Alert</span>
+<a href="javascript:void(0);" class="bugCloseIcon float_lang_base_2 js-close"></a>
+<a href="javascript:void(0);" class="smallGreyQuestionIcon float_lang_base_2 js-show-instructions" title="How will I receive these alerts?"></a>
+</div>
+<div class="header headerNew">New!</div>
+<div class="header headerInstructions">Create Alert<a href="javascript:void(0);" class="smallGreyQuestionIcon float_lang_base_2 js-hide-instructions" title="How will I receive these alerts?"></a></div>
+<div class="contentInstructions">
+<div class="popupBullets">
+<span class="bulletHeader">Website</span>
+<ul>
+<li>As an alert notification</li>
+<li>To use this feature, make sure you are signed-in to your account</li>
+</ul>
+</div>
+<div class="popupBullets">
+<span class="bulletHeader">Mobile App</span>
+<div class="mobileIcons">
+<a href="https://app.appsflyer.com/com.fusionmedia.investing?pid=direct_inv&c=web&af_channel=/portfolio/&af_adset=in&af_ad=alert" class="downloadAndroid" target="_blank"><span class="greenAndroidIcon"></span></a>
+<a href="https://app.appsflyer.com/id909998122?pid=direct_inv&c=web&af_channel=/portfolio/&af_adset=in&af_ad=alert" class="downloadIos" target="_blank"><span class="greyAppleLogo"></span></a>
+</div>
+<ul>
+<li>To use this feature, make sure you are signed-in to your account</li>
+<li>Make sure you are signed-in with the same user profile</li>
+</ul>
+</div>
+</div>
+<div class="content">
+<p class="alertTitle"><i class="instrumentAlertIcon"></i><span class="dirLtr js-alert-name"></span></p>
+<div class="form js-user-alert-form">
+<p class="label js-conditions-title">Condition</p>
+<div class="details">
+<ul class="js-tab-box-menu tabsBoxSubMenu js-tabs-options" id="" data-alert="">
+<li class="first selected" data-value=alertPrice><a href="javascript:void(0);">Price</a></li>
+<li data-value=alertChange><a href="javascript:void(0);">Change</a></li>
+<li data-value=alertVolume><a href="javascript:void(0);">Volume</a></li>
+<li class="last" data-value=alertEarnings><a href="javascript:void(0);">Earnings</a></li>
+</ul>
+<div class="clear"></div>
+<div>
+<fieldset class="js-price-tab js-tab" name="Price">
+<select class="newInput selectBox" name="price">
+<option value="over">Moves above</option>
+<option value="under">Moves below</option>
+</select>
+<input type="text" class="newInput inputTextBox alertValue" placeholder="" value="">
+<p class="frequency">Frequency</p>
+<span class="frequencyIcon"></span>Once </fieldset>
+<fieldset class="displayNone js-change-tab js-tab" name="Change">
+<select class="newInput selectBox" name="change_percent">
+<option value="both">Gains / Loses</option>
+<option value="over">Gains</option>
+<option value="under">Loses</option>
+</select>
+<input type="text" id="alertValueChange" class="newInput inputTextBox alertValue short" value="10">%
+<p class="frequency">Frequency</p>
+<fieldset><label><input type="radio" id="alertFreqRec2" name="alertFreq2" value="Recurring" checked>Recurring</label></fieldset>
+<fieldset><label><input type="radio" id="alertFreqOnce2" name="alertFreq2" value="Once">Once</label></fieldset>
+</fieldset>
+<fieldset class="displayNone js-volume-tab js-tab" name="Volume">
+<select class="newInput selectBox" name="volume">
+<option value="over" selected>Volume exceeds</option>
+</select>
+<input type="text" id="alertValueVolume" class="newInput inputTextBox alertValue" value="">
+<p class="frequency">Frequency</p>
+<fieldset><input type="radio" id="alertFreqRec1" name="alertFreq1" value="Recurring" checked /><label for="alertFreqRec1">Recurring</label></fieldset>
+<fieldset><input type="radio" id="alertFreqOnce1" name="alertFreq1" value="Once" /><label for="alertFreqOnce1">Once</label></fieldset>
+</fieldset>
+<fieldset class="displayNone js-earnings-tab js-tab" name="Earnings">
+<p class="earningsTabHeader"></p>
+<fieldset><input type="radio" id="earnFreq1" name="earnFreq" value="Recurring" checked /><label for="earnFreq1">For all future releases</label></fieldset>
+<fieldset><input type="radio" id="earnFreq2" name="earnFreq" value="Once" /><label for="earnFreq2">Just for the upcoming release</label></fieldset>
+<fieldset class="reminder labelOnly"><label for="earnFreq3"><input type="checkbox" name="earnFreq3" id="earnFreq3" value="1 trading day before" />Send me a reminder 1 trading day before</label></fieldset>
+</fieldset>
+</div>
+</div>
+</div>
+<div class="deliveryDiv js-form-content">
+<div class="details">
+<p class="label labelWrapper bold">Delivery Method</p>
+<p class="labelWrapper"><i class="desktopIcon"></i> <label>Website popup</label></p>
+<p class="labelWrapper"><i class="mobilePhoneIcon"></i> <label>Mobile <a href='https://in.investing.com/mobile' target='_blank'>App</a> notifications</label></p>
+<p class="labelWrapper js-email-alert-notification"><i class="emailIcon"></i> <label for="checkboxEmailAlertPopup" class="genBadge badgeAfter" data-badgetext="Popular">Email Notifications</label></p>
+</div>
+<div class="statusAlert">
+<p class="label bold">Status</p>
+<i class="checkboxDisabledIcon"></i>
+<i class="checkboxDisabledIcon"></i>
+<input type="checkbox" id="checkboxEmailAlertPopup" class="statusCheck" checked><label for="checkboxEmailAlertPopup" class="checkboxLabel js-email-alert-notification"></label>
+</div>
+</div>
+</div>
+<div class="content reply js-status-message">
+</div>
+<div class="footer footerContent">
+<a href="javascript:void(0);" class="newBtn Orange2 noIcon float_lang_base_2 js-btn">Save</a> <a href="/members-admin/alert-center" target="_blank" class="linkText bold">Manage my alerts&nbsp;<i class="blueSmallDoubleArrow"></i></a>
+<div class="clear"></div>
+</div>
+<div class="footer footerInstructions">
+<a href="javascript:void(0);" class="newBtn Orange2 noIcon float_lang_base_1 js-hide-instructions">Back</a> <div class="clear"></div>
+</div>
+<script class="js-run-once-script">
+	if(!window.instrumentPopupParams) window.instrumentPopupParams = {};
+        if(!window.instrumentPopupParams.globals) {
+        window.instrumentPopupParams.globals = {
+                texts: {
+                    _fewAlerts1: 'You have active alerts on this instrument (%number%)',
+                    _fewAlerts2: 'To customise these alerts, please go to the %Alert center%',
+                    _create: 'Create',
+                    _update: 'Save',
+                    _Close: 'Close',
+                    thousandSep: ',',
+                    decimalSep: '.',
+                    _failedUpdateAlert: '_failedUpdateAlert',
+                    _failedCreateAlert: 'Failed to create an alert',
+                    _successfullyCreateAlert: 'Alert created successfully',
+                    _successfullyUpdateAlert: '_successfullyUpdateAlert',
+                    _once: 'Once', 
+                    earningPopupSubHeader: 'Follow %INSTRUMENT_NAME%\'s earnings',
+                },
+                rowTexts: {
+                    types: {
+                        price: 'Price',
+                        change_percent: 'Change',
+                        volume: 'Volume',
+                       	earnings: 'Earnings'
+                    },
+                    criterias: {
+                        price: {
+                            over: 'Moves above %value%',
+                            under: 'Moves below %value%'
+                        },
+                        change_percent: {
+                            over: 'Gains %value%%',
+                            under: 'Loses %value%%'
+                        },
+                        volume: {
+                            over: 'Volume exceeds %value%'
+                        }
+                    },
+	                frequencies: {
+		                Recurring: 'For all future releases',
+		                Once: 'Just for the upcoming release'
+	                }
+                }
+            };
+    }
+    
+    </script></div>
+<script>
+		if(!window.userAlertsPopupParams) window.userAlertsPopupParams = {};
+		window.userAlertsPopupParams.globals = window.userAlertsPopupParams.globals || {
+			alertPendingHtml: 'Alert created successfully'
+		};
+	</script>
+
+</section> 
+<div class="clear"></div>
+<footer id="footerWrapper">
+<div>
+<div id="findABroker" class="findABrokerWrapper">
+<p class="h2LikeTitle"><a href="/brokers/forex-brokers">Trade With A Regulated Broker</a></p>
+<div id="findABrokerTabs">
+<div id="findABroker_html" class="findABroker noTabs">
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=MHA-YGE2YTszYW9mN2JhYzJqYzg1NjEwNyBhMzc9ZRk0Q2RAZnZkIzJobTJvZmRvY2NhZDVlO39hIWBhMjYwYTAxPnthd2Ew')"><img data-rowid="305056" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/fab_87019074.png"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=M3MwbmYxPmRjMWtiZjM4Oj5mZj0yMWVkYXZiMGdtM080QzYSYXE0c2Y8bjFiazgzMDBjamUyN3NhIWdmNTFvPjMyMHVmcD5v')"><img data-rowid="305091" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/fab_57677695.jpg"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=NXU2aGcwMGo2ZDkwZzI0NjNrNW5lZjc2NCNhMzA6Zho1QjMXbn4wdzBqYT43PjI5NTQ0NjBmMnYycmVkOz9jMjU0NnNncTBh')"><img data-rowid="305120" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/FPM_banner-logoblue-120x60.png"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=N3dhPzZhM2k-bGxlYzYwMmQ8PmU_PDU0PSpgMmFrYBxiFTcTY3M1cjRubTJhaGRvMTA0MDFhNHAwcGBhNzNhMDc2YSQ2IDNi')"><img data-rowid="305146" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/120x60_Logo_NAGA_black_text.png"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=YyNjPWUyNW8xY29mbzo3NWU9MWphYjo7MCczYTU_YR1lEj8bZnZiJWY8aDdgaTQ_ZGViZzZpMXVhIWRlZ2MzYmNiYyZlczVk')"><img data-rowid="305159" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/fab_91196965.png"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=MXFiPDNkNG4-bGlgYDVmZDFpNG9kZ2ZnMCcwYmNpbxMxRmJGNCQ2cWE7O2RuZ2RvPj80MmYzNXE1dW9uYWUwYTEwYiczJTRl')"><img data-rowid="305163" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/AVA_NEW_120x60.png"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=NnZjPTZhNmw_bTw1ZjMzMTRsMWpmZTo7YnViMDQ-N0s1Qj8bZnYwd2I4aTZvZmNoPjw3NjJtO381dW9uY2czYjY3YyY2IDZn')"><img data-rowid="305219" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/FBS.jpg"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=YiIwbmQzYzlhMz00YDVjYTBoNG83NGZnYHc0ZjY8NUkwRzEVbn41cmM5OmVgaTc8ZWcyNTZhM3diImBhNzM1ZGJjMHVkcmMy')"><img data-rowid="305271" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/fab_57633611.jpg"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=ZCRkOjNkYTszYW9mYTQ5O2c_P2RkZzQ1NiEzYTE7Yh45TjYSYHA2cWQ-bTI3Pjc8MzA1MDRjYCQ0dGBhNTEzYmRlZCEzJWEw')"><img data-rowid="305351" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/fab_73514486.jpg"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=NXVlO2M0ZT9iMDsyMGUyMD5mZj0yMTo7NyBgMmRuYx9kEzAUNCRhJmU_bjFgaWVuNjU_OD5sYCQ9fTAxNzNvPjU0ZSBjdWU0')"><img data-rowid="305374" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/fabswissquote.png"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=NnZlO245Yzk0ZmlgN2JhYzdvMGtlZjs6MCdvPWBqZBgyRT8bNiZlIjBqYT41PGVuYGQ3MzBkMHQ3d2ZnNjJnNjY3ZSBueGMy')"><img data-rowid="305442" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/fab_21446572.png"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=YyMzbTZhNG5kNm5nYzYzMWc_YjkyMTs6YHcyYGBqZBhjFD4aYXFlImM5aDdmbzU-NTExNmEzYSU0dGBhMDRmN2NiM3Y2IDRl')"><img data-rowid="305474" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/fab_62009887.jpg"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=ZSU0amQzPmRmNGBpbzozMTRsYzhhYjMyMSYyYGdtZBgyRWZCMiI0c2M5YT4zOjI5PztjZGEwN3NmJmRlNzMwYWVkNHFkcj5v')"><img data-rowid="305477" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/Monttoro_120x60.png"></a>
+<a href="javascript:void(0);" onclick="window.open('/jp.php?v2=NXUxbzRjNW9jMWFoMmdkZj5mYjlmZTEwMCdjMTU_ZRk3QDAUMiI1cmM5bTJlbGFqPzpjYzdjYSVlJTIzZmI0ZTU0MXQ0IjVk')"><img data-rowid="305502" src="https://a-invdn-com.investing.com/Broker_Button_New/Fab120/thumb-LegacyFX_logo-dark.png"></a>
+</div>
+</div>
+</div>
+<script>
+	window.FABTabsInitObject = {
+		dataStr: '{"1":[{"id":"305056","link":"\/jp.php?v2=MHA-YGE2YTszYW9mN2JhYzJqYzg1NjEwNyBhMzc9ZRk0Q2RAZnZkIzJobTJvZmRvY2NhZDVlO39hIWBhMjYwYTAxPnthd2Ew","img120":"Fab120\/fab_87019074.png"},{"id":"305091","link":"\/jp.php?v2=M3MwbmYxPmRjMWtiZjM4Oj5mZj0yMWVkYXZiMGdtM080QzYSYXE0c2Y8bjFiazgzMDBjamUyN3NhIWdmNTFvPjMyMHVmcD5v","img120":"Fab120\/fab_57677695.jpg"},{"id":"305120","link":"\/jp.php?v2=NXU2aGcwMGo2ZDkwZzI0NjNrNW5lZjc2NCNhMzA6Zho1QjMXbn4wdzBqYT43PjI5NTQ0NjBmMnYycmVkOz9jMjU0NnNncTBh","img120":"Fab120\/FPM_banner-logoblue-120x60.png"},{"id":"305146","link":"\/jp.php?v2=N3dhPzZhM2k-bGxlYzYwMmQ8PmU_PDU0PSpgMmFrYBxiFTcTY3M1cjRubTJhaGRvMTA0MDFhNHAwcGBhNzNhMDc2YSQ2IDNi","img120":"Fab120\/120x60_Logo_NAGA_black_text.png"},{"id":"305159","link":"\/jp.php?v2=YyNjPWUyNW8xY29mbzo3NWU9MWphYjo7MCczYTU_YR1lEj8bZnZiJWY8aDdgaTQ_ZGViZzZpMXVhIWRlZ2MzYmNiYyZlczVk","img120":"Fab120\/fab_91196965.png"},{"id":"305163","link":"\/jp.php?v2=MXFiPDNkNG4-bGlgYDVmZDFpNG9kZ2ZnMCcwYmNpbxMxRmJGNCQ2cWE7O2RuZ2RvPj80MmYzNXE1dW9uYWUwYTEwYiczJTRl","img120":"Fab120\/AVA_NEW_120x60.png"},{"id":"305219","link":"\/jp.php?v2=NnZjPTZhNmw_bTw1ZjMzMTRsMWpmZTo7YnViMDQ-N0s1Qj8bZnYwd2I4aTZvZmNoPjw3NjJtO381dW9uY2czYjY3YyY2IDZn","img120":"Fab120\/FBS.jpg"},{"id":"305271","link":"\/jp.php?v2=YiIwbmQzYzlhMz00YDVjYTBoNG83NGZnYHc0ZjY8NUkwRzEVbn41cmM5OmVgaTc8ZWcyNTZhM3diImBhNzM1ZGJjMHVkcmMy","img120":"Fab120\/fab_57633611.jpg"},{"id":"305351","link":"\/jp.php?v2=ZCRkOjNkYTszYW9mYTQ5O2c_P2RkZzQ1NiEzYTE7Yh45TjYSYHA2cWQ-bTI3Pjc8MzA1MDRjYCQ0dGBhNTEzYmRlZCEzJWEw","img120":"Fab120\/fab_73514486.jpg"},{"id":"305374","link":"\/jp.php?v2=NXVlO2M0ZT9iMDsyMGUyMD5mZj0yMTo7NyBgMmRuYx9kEzAUNCRhJmU_bjFgaWVuNjU_OD5sYCQ9fTAxNzNvPjU0ZSBjdWU0","img120":"Fab120\/fabswissquote.png"},{"id":"305442","link":"\/jp.php?v2=NnZlO245Yzk0ZmlgN2JhYzdvMGtlZjs6MCdvPWBqZBgyRT8bNiZlIjBqYT41PGVuYGQ3MzBkMHQ3d2ZnNjJnNjY3ZSBueGMy","img120":"Fab120\/fab_21446572.png"},{"id":"305474","link":"\/jp.php?v2=YyMzbTZhNG5kNm5nYzYzMWc_YjkyMTs6YHcyYGBqZBhjFD4aYXFlImM5aDdmbzU-NTExNmEzYSU0dGBhMDRmN2NiM3Y2IDRl","img120":"Fab120\/fab_62009887.jpg"},{"id":"305477","link":"\/jp.php?v2=ZSU0amQzPmRmNGBpbzozMTRsYzhhYjMyMSYyYGdtZBgyRWZCMiI0c2M5YT4zOjI5PztjZGEwN3NmJmRlNzMwYWVkNHFkcj5v","img120":"Fab120\/Monttoro_120x60.png"},{"id":"305502","link":"\/jp.php?v2=NXUxbzRjNW9jMWFoMmdkZj5mYjlmZTEwMCdjMTU_ZRk3QDAUMiI1cmM5bTJlbGFqPzpjYzdjYSVlJTIzZmI0ZTU0MXQ0IjVk","img120":"Fab120\/thumb-LegacyFX_logo-dark.png"}]}',
+		columnsNumber: 6	};
+</script>
+</div>
+<section class="top">
+<div class="float_lang_base_1 links">
+<div class="title">Investing.com</div>
+<ul class="first inlineblock">
+<li><a title="Blog" href="https://in.investing.com/blog">Blog</a></li>
+<li><a title="Mobile" href="https://in.investing.com/mobile/">Mobile</a></li>
+<li><a title="Your Portfolio" href="https://in.investing.com/portfolio/">Your Portfolio</a></li>
+<li><a title="Widgets" href="https://in.investing.com/webmaster-tools/">Widgets</a></li>
+</ul>
+<ul class="inlineblock">
+<li><a title="About Us" href="https://in.investing.com/about-us/">About Us</a></li>
+<li><a title="Advertise" href="https://www.investingmediakit.com/">Advertise</a></li>
+<li><a title="Help & Support" href="/about-us/contact-us" target='_blank'>Help & Support</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+<div class="float_lang_base_1 mobile">
+<img src="https://i-invdn-com.investing.com/footer/footerMobile2018.png" alt="" class="mobileCells">
+<div class="title">Our Apps</div>
+<a href="https://app.appsflyer.com/com.fusionmedia.investing?pid=direct_inv&c=web&af_channel=/portfolio/&af_adset=in&af_ad=footer" target="_blank"><img src="https://i-invdn-com.investing.com/footer/img6/googleplay_com.png" alt="DOWNLOAD APP"></a><a href="https://app.appsflyer.com/id909998122?pid=direct_inv&c=web&af_channel=/portfolio/&af_adset=in&af_ad=footer" target="_blank"><img src="https://i-invdn-com.investing.com/footer/img6/appstore_com.png" alt="App store"></a> </div>
+<div class="float_lang_base_1 social">
+<div class="title">Follow us</div>
+<a target="_blank" href="https://www.facebook.com/InvestingcomIndia/" class="facebook" title="Facebook"></a><a target="_blank" href="https://twitter.com/investing_ind" class="twitter" title="Twitter"></a> </div>
+<div class="clear"></div>
+</section>
+<section class="bottom">
+<img src="https://i-invdn-com.investing.com/logos/footerLogo2.png" alt="Investing.com">
+<ul class="float_lang_base_2 clearfix">
+<li><a href="/about-us/terms-and-conditions">Terms And Conditions</a></li>
+<li><a href="/about-us/privacy-policy">Privacy Policy</a></li>
+<li><a href="/about-us/risk-warning">Risk Warning</a></li>
+</ul>
+<div>&copy; 2007-2022 Fusion Media Limited. All Rights Reserved. </div>
+<div class="disclaimer">
+<span class="bold">Risk Disclosure:</span> Trading in financial instruments and/or cryptocurrencies involves high risks including the risk of losing some, or all, of your investment amount, and may not be suitable for all investors. Prices of cryptocurrencies are extremely volatile and may be affected by external factors such as financial, regulatory or political events. Trading on margin increases the financial risks.<br>
+Before deciding to trade in financial instrument or cryptocurrencies you should be fully informed of the risks and costs associated with trading the financial markets, carefully consider your investment objectives, level of experience, and risk appetite, and seek professional advice where needed.<br />
+<b>Fusion Media</b> would like to remind you that the data contained in this website is not necessarily real-time nor accurate. The data and prices on the website are not necessarily provided by any market or exchange, but may be provided by market makers, and so prices may not be accurate and may differ from the actual price at any given market, meaning prices are indicative and not appropriate for trading purposes. <b>Fusion Media</b> and any provider of the data contained in this website will not accept liability for any loss or damage as a result of your trading, or your reliance on the information contained within this website.<br />
+It is prohibited to use, store, reproduce, display, modify, transmit or distribute the data contained in this website without the explicit prior written permission of Fusion Media and/or the data provider. All intellectual property rights are reserved by the providers and/or the exchange providing the data contained in this website.<br />
+<b>Fusion Media</b> may be compensated by the advertisers that appear on the website, based on your interaction with the advertisements or advertisers. </div>
+</section>
+</footer>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/show-more-1.05.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/n/external-news-1.03.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/core-highstock-1.02.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/jscharts-8.1.18.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/portfolio-2.0.123.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/instruments-1.0.16.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/user-alerts-opener-1.0.08.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/n/consent-manager-1.06.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/n/search-bar-2.0-1.18.min.js"></script>
+<script type="text/javascript" src="https://i-invdn-com.investing.com/js/ads.js"></script>
+<script type="text/javascript" src="https://static.doubleclick.net/instream/ad_status.js"></script>
+<script type="text/javascript">
+
+if(!Modernizr.csstransitions && ie !== 7) {
+	// Bind MouseOver effect to Navigation list nodes
+	$('.navMenuUL > li').bind('mouseenter', function() {
+        clearTimeout($(this).data('hideTimeout'));
+        var someelement = this;
+        var timeoutId = setTimeout(function(){ $('.subTopMenuTwoColumnContainer', someelement).show();$('.arrow', someelement).show();$('.arrow2', someelement).show(); }, 120);
+        $(someelement).data('showTimeout', timeoutId);
+    // Bind MouseOut effect to Navigation list nodes
+    }).bind('mouseleave', function() {
+        clearTimeout($(this).data('showTimeout'));
+        var someelement = this;
+        var timeoutId = setTimeout(function(){ $('.subTopMenuTwoColumnContainer', someelement).hide();$('.arrow', someelement).hide();$('.arrow2', someelement).hide(); }, 120);
+        $(someelement).data('hideTimeout', timeoutId);
+    });
+    
+	// Bind MouseOver effect to Real Time Quotes list nodes
+	$('#navRealTime').bind('mouseenter', function() {
+        clearTimeout($(this).data('hideTimeout'));
+        var someelement = this;
+        var timeoutId = setTimeout(function(){ $('.SubmenuNav', someelement).show(); }, 120);
+        $(someelement).data('showTimeout', timeoutId);
+    // Bind MouseOut effect to Navigation list nodes
+    }).bind('mouseleave', function() {
+        clearTimeout($(this).data('showTimeout'));
+        var someelement = this;
+        var timeoutId = setTimeout(function(){ $('.SubmenuNav', someelement).hide(); }, 120);
+        $(someelement).data('hideTimeout', timeoutId);
+    }); 
+
+	// Bind MouseOver effect to Real Time Quotes list nodes
+	$('.navRealTimeSubmenu .row').bind('mouseenter', function() {
+		
+        clearTimeout($(this).data('hideTimeout'));
+        var someelement = this;
+        var timeoutId = setTimeout(function(){ $('.navRealTimeSubMenuContainer', someelement).show(); }, 120);
+        $(someelement).data('showTimeout', timeoutId);
+    // Bind MouseOut effect to Navigation list nodes
+    }).bind('mouseleave', function() {
+        clearTimeout($(this).data('showTimeout'));
+        var someelement = this;
+        var timeoutId = setTimeout(function(){ $('.navRealTimeSubMenuContainer', someelement).hide(); }, 120);
+        $(someelement).data('hideTimeout', timeoutId);
+    });
+}
+$('#navRealTime').bind('click', function() {
+    clearTimeout($(this).data('hideTimeout'));
+    var someelement = this;
+    var timeoutId = setTimeout(function(){ $('.SubmenuNav', someelement).show(); }, 120);
+    $(someelement).data('showTimeout', timeoutId);
+});
+
+var _gaq = _gaq || [];
+//new
+    ga('create', 'UA-2555300-86', 'investing.com');
+    ga('create', 'UA-2555300-55', 'auto', {'name': 'allSitesTracker'});  // ALL sites tracker.
+    
+var prebidPreActive = '';
+    ga('allSitesTracker.set', 'dimension37', ( prebidPreActive ? 'page with prebid' : 'page without prebid'));
+
+    
+        ga('allSitesTracker.set', 'dimension127', 0);
+    ga('require', 'displayfeatures');
+    ga('allSitesTracker.set', 'dimension73','Web');
+    ga('allSitesTracker.set', 'dimension17', getCookie('_ga').substr(6));
+    ga('allSitesTracker.set', 'dimension1', 202981552);
+	ga('allSitesTracker.set', 'dimension2', '202981552'); 
+	ga('allSitesTracker.set', 'dimension49', '63f4e4f381a21f89729a17271670fa7c-1643211524');
+		ga('allSitesTracker.set', 'dimension38', '63f4e4f381a21f89729a17271670fa7c');	ga('allSitesTracker.set', 'dimension95', '56');
+
+        ga('set','&uid', 202981552);
+    ga('set', 'dimension1', 202981552);
+	ga('set', 'dimension73','Web');
+
+	ga('allSitesTracker.set', 'dimension106', 'No');
+	ga('allSitesTracker.set', 'dimension54', 'No');
+
+	var myDate = new Date();
+	ga('allSitesTracker.set', 'dimension81',myDate.getFullYear() + '/' +('0' + (myDate.getMonth()+1)).slice(-2)+ '/' +  ('0' + (myDate.getDate()+1)).slice(-2) + ' '+('0' + (myDate.getHours()+1)).slice(-2)+ ':'+('0' + (myDate.getMinutes())).slice(-2)+ ':'+('0' + (myDate.getSeconds()+1)).slice(-2));
+	
+    ga('send', 'pageview');
+    ga('allSitesTracker.set','&uid', 202981552);
+	ga('allSitesTracker.set', 'dimension3', 'Yes');
+	    ga('allSitesTracker.set', 'dimension11', 'Yes');
+	ga('allSitesTracker.set', 'dimension4', 'HDFC Bank Ltd, ICICI Bank Ltd, Infosys, Reliance Industries, UltraTech Cement, Zee Entertainment Enterprises, NQ 100, UK 100, US SPX 500, Gold');
+	ga('allSitesTracker.set', 'dimension10', 'HDFC Bank Ltd, ICICI Bank Ltd, Infosys, Reliance Industries, UltraTech Cement, Zee Entertainment Enterprises, NQ 100, UK 100, US SPX 500, Gold');
+	ga('allSitesTracker.set', 'dimension5', 'HDFC Bank Ltd');
+	ga('allSitesTracker.set', 'dimension6', 'ICICI Bank Ltd');
+	ga('allSitesTracker.set', 'dimension7', 'Infosys');
+	ga('allSitesTracker.set', 'dimension8', 'Reliance Industries');
+	ga('allSitesTracker.set', 'dimension9', 'UltraTech Cement');
+	ga('allSitesTracker.set', 'dimension12', 'Zee Entertainment Enterprises');
+	ga('allSitesTracker.set', 'dimension13', 'NQ 100');
+	ga('allSitesTracker.set', 'dimension14', 'UK 100');
+	ga('allSitesTracker.set', 'dimension15', 'US SPX 500');
+	ga('allSitesTracker.set', 'dimension16', 'Gold');
+<!-- Crypto Dimension LD -->
+	    <!--Adblock Check-->
+
+	jQuery(document).ready(checkAds());
+
+	function checkAds(){
+
+		function isIE() {
+			var ua = window.navigator.userAgent;
+			var trident = ua.indexOf('Trident/');
+			var edge = ua.indexOf('Edge/');
+			var msie = ua.indexOf('MSIE ');
+			return Math.max(msie,edge,trident)>0;
+
+		}
+
+		var isIE = isIE();
+		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor) && !isIE;
+		var isFireFox = /Firefox/.test(navigator.userAgent);
+		var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+		var isOneOfThoseBrowsers = [isIE,isChrome,isFireFox,isSafari].indexOf(true)>-1;
+
+		var b = 2;
+
+		//var hasAdsenseBlock = !!$('#adsense').length;
+		//var hasShadowDom = (!!$("html")[0].shadowRoot);
+		//var headerIsShown = ($(".midHeader").height() > 0 && $(".midHeader").css('display') !== 'none');
+
+	    		  
+		if (window.google_ad_status == 1){
+
+    		var adbBlk = getCookie('adbBLk');
+    		if(isOneOfThoseBrowsers && adbBlk>0){
+        		ga('allSitesTracker.set', 'dimension22', '56_Blk_No');
+        		setCookie('adbBLk',56,-1000);
+    		}  
+    		
+    	}else{
+
+    	    b = 1;
+            $('#TopTextAd').css('display','flex');
+
+			if(isOneOfThoseBrowsers) {
+				setCookie('adbBLk',56,1000,'/');
+				ga('allSitesTracker.set', 'dimension21', '56_Blk_Yes');
+				 
+									ga('allSitesTracker.set', 'dimension24', '56_AdBlkPopup');
+							}
+    	}
+		
+		$.ajax({
+		    url: "/jp.php?b="+b+"&k=MmJiNGYxMmlkMDthZzMxYmBiPjYwMjpqYWcyMDA2Y204PzYxZTJjYWE0PjFjOWJkNjYxMjFhOmFiYmRsYTYyNjItYitmZDI_ZG47cGdhMWFgND5gMCk6bmE_MnMwYmMhOH42ImU8YyVhKD4xYzViMQ==&d=1&i=1645609043&e=835707170&lip=dalweb55.forexpros.com&ti=1645609043",
+		    type: 'get',
+		    cache: false,
+		    type: 'GET',
+		    dataType: 'html',
+		    success: function (data) {
+		    	  console.log('server jp b1 dalweb55.forexpros.com');
+		    }
+		});
+    	
+    }
+
+    
+	ga('allSitesTracker.send', 'pageview');
+	<!--End Adblock Check-->
+
+
+</script>
+<script>
+//disabled is a temporary argument for testing purposes 
+var BoxesEvents = function($,ga,disabled)
+{
+	var e_stack = []; //each event is pushed to this stack
+	//this objcet links urls to event types
+    var boxes = {"QBS_2":"sb_indices","QBS_3":"sb_commodities","QBS_1":"sb_forex","QBS_4":"sb_bonds"};
+
+    var resume_click_event = function(ev)
+    {
+    	if (ev['link']==='') {return;}
+        window.location.href = ev['link'];
+    }
+    
+    
+	var register_events = function()
+	{
+	    for (var id in boxes)
+	    {
+		    (function(id){
+			    var _$b = $('#'+id);
+			    if (_$b.length < 1) {return;}
+			    
+			    //box click event
+			    _$b.mouseup(function(e){
+					if (e.button === 2) {return true;} //right mouse button
+					var middleMouse = e.button === 1;
+				    if (!middleMouse) {e.preventDefault();}
+				    var box_event = boxes[id];
+				    e_stack.push({'event':box_event,'link':''});
+				    var ce = null; //current event 
+				    //function creator
+				    var callbackCreate = function(data) {return function() {resume_click_event(data);}}
+		            var hitCallback = null;
+		            
+				    while(ce = e_stack.pop())
+				    {
+						if (ce['link'].substr(0,10) === "javascript") {continue;}//if the link is javascript call ignore it
+						hitCallback = middleMouse ? function(){} : callbackCreate(ce);
+				    	//if a link with no event do nothing
+					    if (ce['event'] == '') {hitCallback(); return true;}
+						
+				    					        window.ga('t0.send',{
+                            'hitType': 'event',          
+                            'eventCategory': 'side-box-events',
+                            'eventAction': ce['event'], 
+                            'eventValue' : 1,
+                            'hitCallback': hitCallback //resume click event
+				            }
+				        );
+				        //fallback if ga doesn't work
+				        window.setTimeout(hitCallback,1500);
+				    }
+				    return middleMouse;
+			    });
+			    
+			    //link event 
+                _$b.on('mouseup','a',function(e){
+					if (e.button === 2) {return true;} //right mouse button
+                	e.preventDefault();
+					var url = this.getAttribute('href');
+					var event = this.getAttribute('data-gae');
+					e_stack.push({'event':'','link':url});
+					if (event)
+					{
+						e_stack.pop();
+						e_stack.push({'event':event,'link':url});
+					} 
+				  });
+    	        
+		    })(id);
+	    }		   	
+	};
+	
+    var init = function()
+    {
+        if (disabled) {return;}
+        if (typeof $ !== 'function') {return;}
+        if (typeof ga !== 'function') {return;}
+        register_events();
+    }();
+}(window.jQuery,window.ga,false);
+</script>
+</div>
+<script type='text/javascript'>
+	if(!window.googletag) {
+		window.googletag = {cmd: []};
+	}
+	googletag.cmd.push(function() {googletag.defineSlot('/6938/FP_IN_site/FP_IN_Leaderboard_Portfolio', [728, 90], 'div-gpt-ad-1370187203350-lead_port1').addService(googletag.pubads());  googletag.pubads().enableSingleRequest();  googletag.enableServices();
+	            	});        if (sponsoredArticle) {
+        googletag.cmd.push(function() { googletag.display(sponsoredArticle); });
+        }
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1370187203350-lead_port1'); });</script><script type='text/javascript'>
+	$(document).ready(function () {
+	googletag.cmd.push(function() {  googletag.pubads().enableSingleRequest();  googletag.enableServices();
+	            	});
+		});</script> <script type='text/javascript'>
+            (function () {
+            	let $ad3;
+                $(window).on('scroll.ad3', $.throttle(function () {
+                    if (typeof(loadFooterBanner) === 'function'){
+                        loadFooterBanner();
+                        loadFooterBanner = function(){}
+                    }
+                    if (!$ad3) {
+                    	$ad3 = $('#ad3');
+                    }
+                    if (window.loadSideBlockAd3 && typeof(googletag.defineSlot) === 'function' && $.isInView($ad3, true, 20)) {
+                        window.loadSideBlockAd3();
+                        window.loadSideBlockAd3 = null;
+						$(window).off('scroll.ad3');
+                    }
+                }, 16))
+            })()
+        </script>
+<div id="abPopup" class="genPopup ab displayNone">
+<div class="header">How to stop running the ad blocker on this site <span class="headerLinks">
+<a href="javascript:void(0);" class="js-chrome-ext js-toggle-btn">Chrome adblock extension</a>
+<a href="javascript:void(0);" class="active js-adbp js-toggle-btn">AdBlock Plus</a>
+</span>
+<div class="clear"></div>
+</div>
+<div class="content js-intro" id="ab-intro">
+<img id="ab-header-src">
+<p class="title">We've noticed you're using an ad blocker</p>
+<p>We spend millions of dollars each year so you can access, for FREE, the highest quality real-time quotes and charts. This is made possible only thanks to the advertising on our site.</p>
+<p></p>
+<p>To continue using Investing.com, please allow this domain on your ad blocker.</p>
+<a href="javascript:void(0);" class="newButton orange hugeBtn js-chrome-ext">Allow this domain</a> <div class="clear"></div>
+<div class="adFreeSubscribeWrap">
+<span class="subscribeAdFree bold newBtn noIcon green"><a href="/ad-free-subscription/?src=adblock&source=desktop&medium=adblock">Subscribe to our Ad-Free version</a></span>
+</div>
+</div>
+<div class="content displayNone" id="ab-how-pop">
+<img id="ab-content-src">
+<div class="clear"></div>
+<a href="javascript:void(0);" class="js-back howToBottom bold">Back</a>
+</div>
+</div>
+<script>
+            window.CDN_URL='https://i-invdn-com.investing.com';
+            window.LANGUAGE_SUFFIX='com';
+        </script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6e1f79ad8a6d3c01',m:'8dL7_JM9UsAS1jasn6gaYUSmj4d1n_NTzO.ynOwovXI-1645609044-0-AU8QnJGC9tpNpRfqzw/T2BQ1LEEO9epWnPwTlOxgnjTvxUGisMK+/kFbMAU3QqHFFDz/5my5GJ/RVJNBl3dthkTgFHqpiStWbY6Dx3T2uSfaYeLMn0dL5+s4eAOJTDO7oBYmdhoou0MnEpcZZkIqZnyCA3QUo4LWMjG56lYpgkBeZio7y7lI+m4Itnxbfd7Rpw==',s:[0xcc35254f59,0x4b5267b8ee],}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6e1f79ad8a6d3c01","token":"00ab903b5e184b1a9d53b0a7a5085300","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
+</body>
+
+<img src="https://secure.adnxs.com/seg?t=2&add=19833489,19833493" width="1" height="1" />
+
+<script>var TimeZoneID = +"23";window.timezoneOffset = +"19800";window.stream = "https://stream220.forexpros.com:443";</script><script>window.uid = 202981552</script><script>
+
+			$(function(){
+				$(window).trigger("socketRetry",[["pid-18177:","pid-18367:","pid-18198:","pid-18217:","pid-18471:","pid-18445:","pidExt-18177:","pidExt-18367:","pidExt-18198:","pidExt-18217:","pidExt-18471:","pidExt-18445:","isOpenExch-46:","domain-56:"]]);
+			});
+			</script><script>function refresher() { void (0);}</script><script>
+    	var _comscore = _comscore || [];
+    	_comscore.push(
+    	{ c1: "2", c2: "16896267" }
+
+    	);
+    	(function()
+    	{ var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); }
+
+    	)();
+    	</script>
+<script type="text/javascript">
+        fbq = window.fbq || $.noop;
+    </script>
+</html>

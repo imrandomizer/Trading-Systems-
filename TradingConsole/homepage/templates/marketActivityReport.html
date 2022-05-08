@@ -1,0 +1,686 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+[class^="call-to-action"] {
+				/*display: inline-block;*/
+				/*vertical-align: middle;*/
+				display: none
+			}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+</style>
+
+
+		<link rel="stylesheet" type="text/css" href="./static/vendor/jquery-ui/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="./static/vendor/jquery-ui/jquery-ui.theme.css" />
+		<link rel="stylesheet" type="text/css" href="./static/vendor/select2/css/select2.css" />
+		<link rel="stylesheet" type="text/css" href="./static/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="./static/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" />
+
+		<script src="./static/vendor/jquery/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		
+		<script src="https://moment.github.io/luxon/global/luxon.js"></script>
+
+
+<section class="card">
+								
+<canvas id="FII_FUT" width="102" height="20"></canvas>
+<h3 class="text-dark mb-1 font-weight-light pt-2" style="
+    align-self: center;
+    align-content: center;
+" >FII FUTURE POSITION</h3>
+
+		<hr/>
+
+
+
+<canvas id="FII_OPTIONS_LONGS" width="102" height="20"></canvas>
+<h3 class="text-dark mb-1 font-weight-light pt-2" style="
+    align-self: center;
+    align-content: center;
+" >FII OPTION LONGS</h3>
+
+		<hr/>
+
+
+		<canvas id="FII_OPTIONS_SHORTS" width="102" height="20"></canvas>
+<h3 class="text-dark mb-1 font-weight-light pt-2" style="
+    align-self: center;
+    align-content: center;
+" >FII OPTION SHORTS</h3>
+
+		<hr/>
+
+
+<canvas id="DII_OPTIONS_POS" width="102" height="20"></canvas>
+<h3 class="text-dark mb-1 font-weight-light pt-2" style="
+    align-self: center;
+    align-content: center;
+" >DII OPTION POSITIONS</h3>
+
+		<hr/>
+
+
+
+<canvas id="DII_FUT" width="102" height="20"></canvas>
+<h3 class="text-dark mb-1 font-weight-light pt-2" style="
+    align-self: center;
+    align-content: center;
+" >DII FUTURE POSITION</h3>
+
+		<hr/>
+
+
+<canvas id="netLongsFIIDII" width="102" height="20"></canvas>
+<h3 class="text-dark mb-1 font-weight-light pt-2" style="
+    align-self: center;
+    align-content: center;
+" >NET LONGS (FII/DII) </h3>
+
+		<hr/>
+
+
+									
+								
+</section>
+
+
+
+
+<script>
+
+
+</script>
+
+<style>
+
+.select2-container--bootstrap .select2-selection--single{
+	min-height:52px;
+	font-size: x-large;
+}
+
+.select2-container--bootstrap.select2-container--focus .select2-selection, .select2-container--bootstrap.select2-container--open .select2-selection{
+	min-height:52px;
+	}
+
+h1, .h1, h2, .h2, h3, .h3 {
+     margin-top: 5px; 
+     margin-bottom: 5px; 
+}
+
+
+</style>>
+
+<script src="./static/vendor/jquery/jquery.js"></script>
+<script src="./static/vendor/jquery-ui/jquery-ui.js"></script>
+<script src="./static/vendor/select2/js/select2.js"></script>
+<script src="./static/js/theme.js"></script>
+<script src="./static/js/theme.init.js"></script>
+
+
+<script>
+
+
+function timeConverter(timestamp){
+
+ 	date = timestamp.substring(6,8);
+ 	month = parseInt(timestamp.substring(4,6))-1;
+ 	year = timestamp.substring(0,4);
+  
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  
+
+
+  return date+"/"+months[month]+"/"+year;
+}
+
+		
+var dataToDisplay = "{{ParticipantData}}";
+dataToDisplay = dataToDisplay.replaceAll('&#x27;',"\"")
+dataToDisplay = JSON.parse(dataToDisplay);		                	
+
+var FII_FUT_HTML = document.getElementById('FII_FUT').getContext('2d');
+var FUT_POSTIONS_FII =  null;
+
+var DII_FUT_HTML = document.getElementById('DII_FUT').getContext('2d');
+var FUT_POSTIONS_DII =  null;
+
+
+var FII_OPTIONS_LONGS = document.getElementById('FII_OPTIONS_LONGS').getContext('2d');
+var FII_OPTIONS_SHORTS = document.getElementById('FII_OPTIONS_SHORTS').getContext('2d');
+
+var DII_OPTIONS_POS = document.getElementById('DII_OPTIONS_POS').getContext('2d');
+
+
+var netLongsFIIDIIHTML = document.getElementById('netLongsFIIDII').getContext('2d');
+
+FII_LONGS = []
+FII_SHORTS= []
+DII_LONGS = []
+DII_SHORTS=[]
+
+
+FII_CALL_LONG = []
+FII_PUT_SHORT = []
+
+
+
+FII_CALL_SHORT = []
+FII_PUT_LONG = []
+
+DII_OPTIONS_POS_CALLS = []
+DII_OPTIONS_POS_PUTS = []
+
+
+netLongsFIIDII = []
+netLongsFIIDII_ONLYFUT = [] 
+
+
+
+xAxis    = [] 
+
+
+
+for(var x in dataToDisplay["FUTURES_MARKET"]){
+	console.log(x)
+	console.log(dataToDisplay["FUTURES_MARKET"])
+	
+	try{
+	FII_LONGS.push(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Future Index Long"]);
+	FII_SHORTS.push(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Future Index Short"]);
+	DII_LONGS.push(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Future Index Long"]);
+	DII_SHORTS.push(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Future Index Short"]);
+
+
+	FII_CALL_LONG.push(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Option Index Call Long"])
+	FII_PUT_SHORT.push(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Option Index Put Short"])
+	FII_CALL_SHORT.push(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Option Index Call Short"])
+	FII_PUT_LONG.push(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Option Index Put Long"])
+
+	DII_OPTIONS_POS_CALLS.push(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Option Index Call Long"])
+	DII_OPTIONS_POS_PUTS.push(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Option Index Put Long"])
+
+
+	var netPosition = parseInt(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Future Index Long"]) + 
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Future Index Long"]) + 
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Option Index Call Long"]) +
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Option Index Put Short"]) -
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Option Index Put Long"]) -
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Option Index Call Short"]) -
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Option Index Put Long"]) - 
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Future Index Short"]) -
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Future Index Short"]) + 
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Option Index Call Long"]);
+
+
+	netLongsFIIDII.push(netPosition);
+
+	netPosition = parseInt(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Future Index Long"]) + 
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Future Index Long"]) -
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["FII"]["Future Index Short"]) -
+	                  parseInt(dataToDisplay["FUTURES_MARKET"][x]["DII"]["Future Index Short"]);
+
+	netLongsFIIDII_ONLYFUT.push(netPosition);
+
+	xAxis.push(timeConverter(x));
+
+  }
+  catch(err){
+  	console.log(err.message)
+  	console.log(err)
+  }
+
+}
+
+
+FUT_POSTIONS_FII = new Chart(FII_FUT_HTML, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "FII LONG",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        
+        pointRadius : 3,
+        data: FII_LONGS,
+        borderColor: 'rgb(0, 255, 0)',
+        fill : false
+      },
+      {
+        label: "FII SHORT",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        borderColor: 'rgb(255, 0, 0)',
+        pointRadius : 3,
+        data: FII_SHORTS,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+  				
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Price'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Price'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+FUT_OPTIONS_LONGS_FIIS = new Chart(FII_OPTIONS_LONGS, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "BUY (CALL)",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        
+        pointRadius : 3,
+        data: FII_CALL_LONG,
+        borderColor: 'rgb(0, 255, 0)',
+        fill : false
+      },
+      {
+        label: "SELL  (PUT)",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        borderColor: 'rgb(255, 0, 0)',
+        pointRadius : 3,
+        data: FII_PUT_SHORT,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+  				
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Price'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Price'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+FUT_OPTIONS_SHORTS_FIIS = new Chart(FII_OPTIONS_SHORTS, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "BUY  (PUT)",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        
+        pointRadius : 3,
+        data: FII_PUT_LONG,
+        borderColor: 'rgb(0, 255, 0)',
+        fill : false
+      },
+      {
+        label: "SELL (CALLS)",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        borderColor: 'rgb(255, 0, 0)',
+        pointRadius : 3,
+        data: FII_CALL_SHORT,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+  				
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Price'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Price'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+
+FUT_OPTIONS_LONGS_DIIS = new Chart(DII_OPTIONS_POS, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "BUY  (CALLS)",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        
+        pointRadius : 3,
+        data: DII_OPTIONS_POS_CALLS,
+        borderColor: 'rgb(0, 255, 0)',
+        fill : false
+      },
+      {
+        label: "BUY (PUTS)",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        borderColor: 'rgb(255, 0, 0)',
+        pointRadius : 3,
+        data: DII_OPTIONS_POS_PUTS,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+  				
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Price'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Price'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+
+FUT_POSTIONS_DII = new Chart(DII_FUT_HTML, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "DII LONG",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        
+        pointRadius : 3,
+        data: DII_LONGS,
+        borderColor: 'rgb(0, 255, 0)',
+        fill : false
+      },
+      {
+        label: "DII SHORT",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        borderColor: 'rgb(255, 0, 0)',
+        pointRadius : 3,
+        data: DII_SHORTS,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+  				
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Price'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Price'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+netPosition = new Chart(netLongsFIIDIIHTML, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "NET POSITION",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        
+        pointRadius : 3,
+        data: netLongsFIIDII,
+        borderColor: 'rgb(0, 255, 0)',
+        fill : false
+      },
+      {
+        label: "NET FUTURE POSITION",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        
+        pointRadius : 3,
+        data: netLongsFIIDII_ONLYFUT,
+        borderColor: 'rgb(0, 255, 0)',
+        fill : false
+      }
+
+      
+    ]
+
+  	},
+  	options: {
+  				
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Price'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Price'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+
+
+
+
+
+var x = document.getElementsByClassName("container container-with-sidebar")
+
+for(i= 0;i<x.length;i++)
+{
+    x[i].style.display = "none";
+}
+
+
+</script>>
+
+{% endblock content %}

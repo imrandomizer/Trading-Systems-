@@ -1,0 +1,104 @@
+--2020-08-28 22:58:38--  http://curl/
+Resolving curl (curl)... failed: Name or service not known.
+wget: unable to resolve host address ‘curl’
+--2020-08-28 22:58:38--  https://www.nseindia.com/api/corporates-pit?index=equities
+Resolving www.nseindia.com (www.nseindia.com)... 106.51.145.183
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-28 23:10:35--  (try: 2)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-28 23:22:07--  (try: 3)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-28 23:34:05--  (try: 4)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-28 23:46:08--  (try: 5)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-28 23:56:18--  (try: 6)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 00:06:29--  (try: 7)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 00:18:31--  (try: 8)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 00:28:42--  (try: 9)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 00:40:50--  (try:10)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 00:51:05--  (try:11)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 01:01:20--  (try:12)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 01:13:27--  (try:13)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 01:23:41--  (try:14)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 01:35:48--  (try:15)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 01:47:55--  (try:16)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 02:00:02--  (try:17)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 02:10:27--  (try:18)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 02:20:57--  (try:19)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Retrying.
+
+--2020-08-29 02:31:21--  (try:20)  https://www.nseindia.com/api/corporates-pit?index=equities
+Connecting to www.nseindia.com (www.nseindia.com)|106.51.145.183|:443... connected.
+HTTP request sent, awaiting response... Read error (Success.) in headers.
+Giving up.
+

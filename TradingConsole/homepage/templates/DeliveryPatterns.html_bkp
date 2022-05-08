@@ -1,0 +1,503 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="row card-body">
+
+<h3 class="col-md-8" ><strong>Sheet generated using data from : {{date}} </strong></h3>
+
+
+<div id="context" class="col-md-4">
+  <button type="button" span class="hvr-fade float-left">NIFTY </span>
+</div>
+				
+<div id="dates" class="col-md-4 float-right">
+
+
+{% for x in dateArray %}
+<button type="button" span class="hvr-fade float-right dates button ">{{x}}</span>
+{% endfor %}
+
+
+
+</div>
+
+</div>
+
+
+<style>
+			[class^="hvr-fade"] {
+				/*display: inline-block;*/
+				/*vertical-align: middle;*/
+				background: #ffffff;
+				color: #666;
+				cursor: pointer;
+				line-height: 1.2em;
+				margin: .4em;
+				padding: 1em;
+				text-decoration: none;
+				/* Prevent highlight colour when element is tapped */
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				-webkit-text-stroke-width: medium;
+			}
+
+			[class^="hvr-fade-clicked"] {
+				/*display: inline-block;*/
+				/*vertical-align: middle;*/
+				
+				background-color: #2098D1;
+  				color: white;
+
+				cursor: pointer;
+				line-height: 1.2em;
+				margin: .4em;
+				padding: 1em;
+				text-decoration: none;
+				/* Prevent highlight colour when element is tapped */
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				-webkit-text-stroke-width: medium;
+			}
+
+		</style>
+
+
+
+
+<!-- 
+
+<table id ="table_id" >
+
+
+<thead>
+    <tr style="background-color: #ebebeb;">
+
+{% for x in colNames %}
+<th > {{x}} </th>
+{% endfor %}
+</tr>
+</thead>
+
+
+<tbody>
+
+{% for x in colContent %}
+
+{% if x|length > 0 %}
+<tr>
+{% for colInfo in x %}
+    <td>{{colInfo}}</td>
+{% endfor %}
+</tr>
+{%endif%}
+
+{% endfor %}
+
+</tbody></table>
+
+<br><br>
+
+<h2><strong>Equity with Lowest Deliveires</strong> </h2>
+
+<table id ="table_id1" >
+
+
+<thead>
+    <tr style="background-color: #ebebeb;">
+
+{% for x in colNames %}
+<th > {{x}} </th>
+{% endfor %}
+</tr>
+</thead>
+
+
+<tbody>
+
+{% for x in colContent_lowest %}
+
+{% if x|length > 0 %}
+<tr>
+{% for colInfo in x %}
+    <td id={{colInfo}} >{{colInfo}}</td>
+{% endfor %}
+
+</tr>
+{%endif%}
+
+{% endfor %}
+
+</tbody></table>
+
+-->
+
+
+<div id= "showresults">
+
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="{% static "/js/jquery.dataTables.js" %}" defer></script>
+
+
+<script>
+
+
+
+//x  = document.getElementById("table_id").rows[1].cells[3];
+var refreshTimer1;
+var refreshTimer2;
+
+
+//this is used to save the current state of the user input WRT to the date and CONTEXT being  requested for.
+
+var currentDate = "{{date}}";
+var currentContext = "";
+
+var dtable;
+
+ 
+
+
+//gets the current time of the day in minutes past 00:00
+
+function timeInMins() {
+  
+  var d = new Date();
+  var h = 10;
+  var m = 28;
+      h = d.getHours(),
+      m = d.getMinutes();
+      
+  
+  return h*60+m;
+}
+
+//Gets the minute divider to get the vol per minute.
+
+function timeDivider() {
+  
+  var d = new Date();
+  var h = 10;
+  var m = 28;
+      h = d.getHours(),
+      m = d.getMinutes();
+      
+      //hour check
+      if(h>=9 && h<=16){
+        if(h==9 && m<16){
+          divider = 0;
+        }
+        else{
+          if(h==15 && m>30){
+            divider = 380;
+          }
+          else{
+            if(h!=15)
+              divider = (h-9)*60 + m - 15;
+            else
+              if (m<31)
+                divider = (h-9)*60 + m - 15;
+              else
+                divider = (h-9)*60 + 30 - 15;
+          }
+        }
+      }
+  else{
+    divider = 380;
+  }
+  
+  
+  return divider;
+}
+
+
+
+function fade(element, startcolor, endcolor, time_elapsed) {
+
+var currentcolor = startcolor;
+var stepcount = 0;
+var steps = 30;
+
+var timer = setInterval(function(){
+
+var red_change = (startcolor[0] - endcolor[0]) / steps;
+var green_change = (startcolor[1] - endcolor[1]) / steps;
+var blue_change = (startcolor[2] - endcolor[2]) / steps;
+
+
+    currentcolor[0] = parseInt(currentcolor[0] - red_change);
+    currentcolor[1] = parseInt(currentcolor[1] - green_change);
+    currentcolor[2] = parseInt(currentcolor[2] - blue_change);
+    element.style.backgroundColor = 'rgb(' + currentcolor.toString() + ')';
+    stepcount += 1;
+    if (stepcount >= steps) {
+        element.style.backgroundColor = 'rgb(' + endcolor.toString() + ')';
+        clearInterval(timer);
+    }
+}, 50);
+}
+
+
+function fetchPastAnalysis(symbol,elem,rowNo,currentStockData) {
+   //console.log("CALLED");
+  $.ajax(
+    {
+        type:"GET",
+        url: "../fetchAnalysis/",
+        data:{
+                 SYMBOL: symbol
+        },
+        success: function( data ) 
+        {
+            //console.log(symbol);
+            //console.log(currentStockData.totalTradedVolume);
+            //console.log(timeDivider());
+
+
+            var avv3 = data.avv3;
+
+            //elem[3].innerHTML = obj;
+
+            var currentVolPerMin = parseInt(parseInt(currentStockData.totalTradedVolume)/timeDivider());
+            var past3daysVolPerMin = parseInt(avv3/380);
+
+            var power = parseFloat(currentVolPerMin/past3daysVolPerMin).toFixed(2);
+
+
+
+            if(parseFloat(currentVolPerMin/past3daysVolPerMin)>1){
+              elem[5].innerHTML = "<strong>"+currentVolPerMin+"</strong>";
+              elem[6].innerHTML = "<strong>"+past3daysVolPerMin+" / "+power+"</strong>";
+            }
+            else{
+              elem[5].innerHTML = currentVolPerMin;
+              elem[6].innerHTML = past3daysVolPerMin + " / "+power;
+            }
+
+
+
+            //fade(elem[3], [255,0,0], [255,255,255], 750);
+            fade(elem[5], [255,0,0], [255,255,255], 750);
+
+            var dtable = $('#table_id').DataTable();
+
+            var tr = $('#table_id tbody tr:eq(0)');
+ 
+           // tr.find('td:eq(0)').html( symbol );
+
+            dtable.rows().invalidate().draw();
+
+            dtable = $('#table_id1').DataTable();
+
+            tr = $('#table_id1 tbody tr:eq(0)');
+            dtable.rows().invalidate().draw();
+
+            currentTime = timeInMins();
+            console.log(currentTime);
+            
+
+            //$('#table_id').dataTable()
+            //$('#table_id').dataTable().fnUpdate(obj,elem,3);
+        }
+     })
+}
+
+function openInNewTab() {
+  var win = window.open("https://in.investing.com/search/?q=JMFINANCIL", '_blank');
+  win.focus();
+}
+
+
+function demo(symbol,elem,rowNo) {
+   //console.log("CALLED");
+	$.ajax(
+    {
+        type:"GET",
+        url: "../fetchPriceInfo",
+        data:{
+                 SYMBOL: symbol
+        },
+        success: function( data ) 
+        {
+            var obj = data.lastPrice;
+
+            elem[3].innerHTML = obj;
+            elem[4].innerHTML = data.pChange
+            fade(elem[3], [255,0,0], [255,255,255], 750);
+            fade(elem[4], [255,0,0], [255,255,255], 750);
+
+            fetchPastAnalysis(symbol,elem,rowNo,data);
+
+            var dtable = $('#table_id').DataTable();
+
+            var tr = $('#table_id tbody tr:eq(0)');
+ 
+           // tr.find('td:eq(0)').html( symbol );
+
+            dtable.rows().invalidate().draw();
+
+            dtable = $('#table_id1').DataTable();
+
+            tr = $('#table_id1 tbody tr:eq(0)');
+            dtable.rows().invalidate().draw();
+
+            //$('#table_id').dataTable()
+            //$('#table_id').dataTable().fnUpdate(obj,elem,3);
+        }
+     })
+}
+
+var i;
+
+function update_all_rows(){
+var table = document.getElementById("table_id");
+
+for (var i = 1, row; row = table.rows[i]; i++) {
+
+    var time1 = 100000 + parseInt(500000*Math.random());
+    //console.log(time1);
+    demo(row.cells[0].innerHTML,row.cells,i);
+    refreshTimer1 = setInterval(demo,time1,row.cells[0].innerHTML,row.cells,i);
+}
+
+table = document.getElementById("table_id1");
+
+for (var i = 1, row; row = table.rows[i]; i++) {
+   
+    var time2 = 100000 + parseInt(500000*Math.random());
+    //console.log(time2);
+    demo(row.cells[0].innerHTML,row.cells,i);
+    refreshTimer2 = setInterval(demo(row.cells[0].innerHTML,row.cells,i),time2);
+}
+}
+
+//update_all_rows();
+
+
+
+function getStockPicksFromServer(date) {
+     $.ajax({
+     url: "../table_deliverable_low_high",
+     type: "GET",
+     data:{
+                 DATE: date.trim()
+        },
+     dataType : "html",
+     success: function (data){
+            $('#showresults').html(data);
+
+    $(document).ready( function () {
+    var dtable = $('#table_id').DataTable( {
+    "iDisplayLength": 50,
+    "bSortClasses": false
+  } );
+} );
+
+ $(document).ready( function () {
+    var dtable = $('#table_id1').DataTable( {
+    "iDisplayLength": 50,
+    "bSortClasses": false
+  } );
+} );
+
+            update_all_rows();
+         // similar to $(data).find('#showresults')
+     },
+})}
+
+
+
+/*
+legacy working
+
+$(document).ready(function() {
+     $.ajax({
+     url: "../table_deliverable_low_high1",
+     type: "GET",
+     dataType : "html",
+     success: function (data){
+            $('#showresults').html(data);
+
+    $(document).ready( function () {
+    var dtable = $('#table_id').DataTable( {
+    "iDisplayLength": 50,
+    "bSortClasses": false
+  } );
+} );
+
+ $(document).ready( function () {
+    var dtable = $('#table_id1').DataTable( {
+    "iDisplayLength": 50,
+    "bSortClasses": false
+  } );
+} );
+
+            update_all_rows();
+         // similar to $(data).find('#showresults')
+     },
+})});*/
+
+$(document).ready(getStockPicksFromServer);
+
+
+
+
+//create dates button
+ 
+$(document).ready(function() {
+    $('.dates').each(function() {
+    console.log( this.innerHTML);
+
+    this.addEventListener("click", function() {
+  		console.log("CLICKED "+this.innerHTML);
+  		handleDatesButtonClick(this,this.innerHTML);
+	});
+
+});
+});
+
+
+//button object to create the clicked button CSS and buttonDate to call the relevant
+function handleDatesButtonClick(buttonObject,buttonDate){
+
+	allDates = $('.dates');
+	//console.log("RECV "+buttonDate);
+
+	for(i =0;i<allDates.length;i++){
+		//console.log(">>>"+allDates[i].innerHTML);
+		elementData = allDates[i].innerHTML;
+		if(elementData == buttonDate){
+			console.log("CLICKED "+allDates[i].innerHTML);
+			allDates[i].className = "hvr-fade-clicked float-right dates button";
+			getStockPicksFromServer(allDates[i].innerHTML);
+
+		}
+		else{
+			console.log("REFRESH "+allDates[i].innerHTML);
+			allDates[i].className = "hvr-fade float-right dates button";
+		}
+	}
+	//console.log(buttonObject.constructor);
+}
+
+
+
+//keyhandler for R for refresh.
+$(document).keypress(function (e) {
+                if (e.which == 82 || event.keyCode == 82) {
+                    update_all_rows();
+                }
+});
+
+
+//var myVar = setInterval(demo, 1000);
+
+</script>
+{% endblock content %}

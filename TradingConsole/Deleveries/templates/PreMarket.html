@@ -1,0 +1,389 @@
+<html  lang="en-us">
+{% load static %}
+
+<h1>&nbsp;STOCKS TO TRADE&nbsp; &nbsp;&nbsp;</h1>
+
+<style>
+h1 {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.35);;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+    h2 {
+  height: 30px;
+  width: 100%;
+  background-color: rgba(255, 200, 0, 0.15);;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+    display: inline;
+    height: 25px;
+    padding: 2;
+    margin: 10;
+    width: 25px;
+}
+    
+</style>
+
+<h3><strong>Sheet generated using data from : {{date}} </strong></h3>
+
+<h2><strong>Equity with Highest Deliveires</strong></h2>
+
+
+<table id ="table_id" class="display">
+
+
+<thead>
+    <tr style="background-color: #ebebeb;">
+
+{% for x in colNames %}
+<th class="header"> {{x}} </th>
+{% endfor %}
+</tr>
+</thead>
+
+
+<tbody>
+
+{% for x in colContent %}
+
+{% if x|length > 0 %}
+<tr>
+{% for colInfo in x %}
+    <td>{{colInfo}}</td>
+{% endfor %}
+<td>0</td>
+
+</tr>
+{%endif%}
+
+{% endfor %}
+
+</tbody></table>
+
+<br><br>
+
+<h2><strong>Equity with Lowest Deliveires</strong> </h2>
+
+<table id ="table_id1" class="display">
+
+
+<thead>
+    <tr style="background-color: #ebebeb;">
+
+{% for x in colNames %}
+<th class="header"> {{x}} </th>
+{% endfor %}
+</tr>
+</thead>
+
+
+<tbody>
+
+{% for x in colContent_lowest %}
+
+{% if x|length > 0 %}
+<tr>
+{% for colInfo in x %}
+    <td>{{colInfo}}</td>
+{% endfor %}
+<td>0</td>
+
+</tr>
+{%endif%}
+
+{% endfor %}
+
+</tbody></table>
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="{% static "/js/jquery.dataTables.js" %}"></script>
+
+
+<script>
+
+x  = document.getElementById("table_id").rows[1].cells[3];
+
+var dtable;
+
+ $(document).ready( function () {
+    var dtable = $('#table_id').DataTable( {
+    "iDisplayLength": 50,
+    "bSortClasses": false
+  } );
+} );
+
+ $(document).ready( function () {
+    var dtable = $('#table_id1').DataTable( {
+    "iDisplayLength": 50,
+    "bSortClasses": false
+  } );
+} );
+
+
+function fade(element, startcolor, endcolor, time_elapsed) {
+
+var currentcolor = startcolor;
+var stepcount = 0;
+var steps = 30;
+
+var timer = setInterval(function(){
+
+var red_change = (startcolor[0] - endcolor[0]) / steps;
+var green_change = (startcolor[1] - endcolor[1]) / steps;
+var blue_change = (startcolor[2] - endcolor[2]) / steps;
+
+
+    currentcolor[0] = parseInt(currentcolor[0] - red_change);
+    currentcolor[1] = parseInt(currentcolor[1] - green_change);
+    currentcolor[2] = parseInt(currentcolor[2] - blue_change);
+    element.style.backgroundColor = 'rgb(' + currentcolor.toString() + ')';
+    stepcount += 1;
+    if (stepcount >= steps) {
+        element.style.backgroundColor = 'rgb(' + endcolor.toString() + ')';
+        clearInterval(timer);
+    }
+}, 50);
+}
+
+
+function fetchPastAnalysis(symbol,elem,rowNo,currentStockData) {
+   //console.log("CALLED");
+  $.ajax(
+    {
+        type:"GET",
+        url: "../fetchAnalysis/",
+        data:{
+                 SYMBOL: symbol
+        },
+        success: function( data ) 
+        {
+            //console.log(symbol);
+            //console.log(currentStockData.totalTradedVolume);
+            //console.log(timeDivider());
+
+
+            var avv3 = data.avv3;
+
+            var past3daysVolPerMin = parseInt(avv3/385);
+            elem[7].innerHTML = past3daysVolPerMin;
+
+
+            //fade(elem[3], [255,0,0], [255,255,255], 750);
+            fade(elem[7], [255,0,0], [255,255,255], 750);
+
+            var dtable = $('#table_id').DataTable();
+
+            var tr = $('#table_id tbody tr:eq(0)');
+ 
+           // tr.find('td:eq(0)').html( symbol );
+
+            dtable.rows().invalidate().draw();
+
+            dtable = $('#table_id1').DataTable();
+
+            tr = $('#table_id1 tbody tr:eq(0)');
+            dtable.rows().invalidate().draw();
+
+            //$('#table_id').dataTable()
+            //$('#table_id').dataTable().fnUpdate(obj,elem,3);
+        }
+     })
+}
+
+
+var json;
+
+function fetchData(){
+$.ajax(
+    {
+        type:"GET",
+        url: "../fetchPriceInfo",
+        data:{
+                 PREMARKET: "Yes"
+        },
+        success: function( data ) 
+        {
+            callBackForData(data);
+        }
+     });
+}
+
+function callBackForData(json){
+    update_all_rows(json);
+}
+
+fetchData();
+
+/*function demo(symbol,elem,rowNo) {
+   console.log("CALLED");
+	$.ajax(
+    {
+        type:"GET",
+        url: "../fetchPriceInfo",
+        data:{
+                 SYMBOL: symbol
+        },
+        success: function( data ) 
+        {
+            var obj = data.lastPrice;
+
+            elem[3].innerHTML = obj;
+            elem[4].innerHTML = data.pChange
+            fade(elem[3], [255,0,0], [255,255,255], 750);
+            fade(elem[4], [255,0,0], [255,255,255], 750);
+
+            var dtable = $('#table_id').DataTable();
+
+            var tr = $('#table_id tbody tr:eq(0)');
+ 
+           // tr.find('td:eq(0)').html( symbol );
+
+            dtable.rows().invalidate().draw();
+
+            dtable = $('#table_id1').DataTable();
+
+            tr = $('#table_id1 tbody tr:eq(0)');
+            dtable.rows().invalidate().draw();
+
+            //$('#table_id').dataTable()
+            //$('#table_id').dataTable().fnUpdate(obj,elem,3);
+        }
+     })
+}*/
+
+var i;
+
+function update_all_rows(json){
+var table = document.getElementById("table_id");
+
+for (var i = 1, row; row = table.rows[i]; i++) {
+
+    //demo(symbol,elem,rowNo)
+    //demo(row.cells[0].innerHTML,row.cells,i);
+
+    data = json[row.cells[0].innerHTML]
+
+    
+    fetchPastAnalysis(row.cells[0].innerHTML,row.cells,null,null);
+    row.cells[3].innerHTML = data.lastPrice;
+    row.cells[4].innerHTML = data.pChange;
+    row.cells[5].innerHTML = data.totalTradedVolume;
+    row.cells[6].innerHTML = data.totalBuyQuantity+" / "+data.totalSellQuantity;
+
+    fade(row.cells[3], [255,0,0], [255,255,255], 750);
+    fade(row.cells[4], [255,0,0], [255,255,255], 750);
+
+    var dtable = $('#table_id').DataTable();
+
+    var tr = $('#table_id tbody tr:eq(0)');
+
+   // tr.find('td:eq(0)').html( symbol );
+
+    dtable.rows().invalidate().draw();
+
+    dtable = $('#table_id1').DataTable();
+
+    tr = $('#table_id1 tbody tr:eq(0)');
+    dtable.rows().invalidate().draw();
+
+    //setInterval(demo,time1,row.cells[0].innerHTML,row.cells,i);
+}
+
+table = document.getElementById("table_id1");
+
+for (var i = 1, row; row = table.rows[i]; i++) {
+
+    //demo(symbol,elem,rowNo)
+    //demo(row.cells[0].innerHTML,row.cells,i);
+
+    data = json[row.cells[0].innerHTML]
+
+
+    fetchPastAnalysis(row.cells[0].innerHTML,row.cells,null,null);
+    row.cells[3].innerHTML = data.lastPrice;
+    row.cells[4].innerHTML = data.pChange;
+    row.cells[5].innerHTML = data.totalTradedVolume;
+    row.cells[6].innerHTML = data.totalBuyQuantity+" / "+data.totalSellQuantity;
+
+    fade(row.cells[3], [255,0,0], [255,255,255], 750);
+    fade(row.cells[4], [255,0,0], [255,255,255], 750);
+
+    var dtable = $('#table_id').DataTable();
+
+    var tr = $('#table_id tbody tr:eq(0)');
+
+   // tr.find('td:eq(0)').html( symbol );
+
+    dtable.rows().invalidate().draw();
+
+    dtable = $('#table_id1').DataTable();
+
+    tr = $('#table_id1 tbody tr:eq(0)');
+    dtable.rows().invalidate().draw();
+
+    //setInterval(demo,time1,row.cells[0].innerHTML,row.cells,i);
+}
+
+}
+
+
+//keyhandler for R for refresh.
+$(document).keypress(function (e) {
+                if (e.which == 82 || event.keyCode == 82) {
+                    fetchData();
+                }
+});
+
+
+function checkTime() {
+    var d = new Date(); // current time
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var day = d.getDay();
+
+    return hours == 9 
+        && mins >= 15 && mins<=17;
+}
+
+var myVar = setInterval(fetchData, 35000);
+var checkMarketOpenTime = setInterval(checkIfMarketTimeStarted,3000)
+
+function checkIfMarketTimeStarted(){
+   if(checkTime()){
+     if (confirm('Market is now open to trade. Go to main window ?')) {
+          location.reload();
+        
+      } else {
+        
+        clearInterval(checkMarketOpenTime)
+        clearInterval(myVar);
+        }
+
+   }
+}
+
+
+
+
+
+
+
+</script>
+
+</html>

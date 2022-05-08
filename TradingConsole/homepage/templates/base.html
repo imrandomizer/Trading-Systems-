@@ -1,0 +1,667 @@
+<!doctype html>
+{% load static %}
+
+<html class="fixed sidebar-left-collapsed">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="UTF-8">
+
+		<title>Trading Console</title>
+		
+		<meta name="description" content="Trading Console">
+		<meta name="author" content="Internet">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="{% static "vendor/bootstrap/css/bootstrap.css" %}" />
+		<link rel="stylesheet" href="{% static "vendor/animate/animate.css" %}"/>
+
+		<link rel="stylesheet" href="{% static "vendor/font-awesome/css/all.min.css" %}" />
+		<link rel="stylesheet" href="{% static "vendor/magnific-popup/magnific-popup.css" %}" />
+		<link rel="stylesheet" href="{% static "vendor/hover/hover.css" %}"/>
+		<link rel="stylesheet" href="{% static "vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" %}" />
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="{% static "vendor/owl.carousel/assets/owl.carousel.css" %}" />
+		<link rel="stylesheet" href="{% static "vendor/owl.carousel/assets/owl.theme.default.css" %}" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="{% static "css/theme.css" %}" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="{% static "css/skins/default.css" %}" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="{% static "css/custom.css" %}">
+
+		<!-- Head Libs -->
+		<script src="{% static "vendor/modernizr/modernizr.js" %}"></script>
+
+	</head>
+	<body>
+		<script src="{% static "vendor/jquery/jquery.js" %}"></script>
+		<section class="body">
+
+			<!-- start: header -->
+			<header class="header">
+				<div class="logo-container">
+					<a href="../2.2.0" class="logo">
+					</a>
+					<div class="d-md-none toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+						<i class="fas fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+			
+				<!-- start: search & user box -->
+				<div class="header-right">
+			
+					<form action="pages-search-results.html" class="search nav-form">
+						<div class="input-group">
+							<input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+							<span class="input-group-append">
+								<button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+			
+					<span class="separator"></span>
+			
+					<ul class="notifications">
+						
+						
+						<li>
+							<a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
+								<i class="fas fa-bell"></i>
+								<span class="badge">3</span>
+							</a>
+			
+							<div class="dropdown-menu notification-menu">
+								<div class="notification-title">
+									<span class="float-right badge badge-default">3</span>
+									Alerts
+								</div>
+			
+								<div class="content">
+									<ul>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fas fa-thumbs-down bg-danger text-light"></i>
+												</div>
+												<span class="title">Server is Down!</span>
+												<span class="message">Just now</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fas fa-lock bg-warning text-light"></i>
+												</div>
+												<span class="title">User Locked</span>
+												<span class="message">15 minutes ago</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="clearfix">
+												<div class="image">
+													<i class="fas fa-signal bg-success text-light"></i>
+												</div>
+												<span class="title">Connection Restaured</span>
+												<span class="message">10/10/2017</span>
+											</a>
+										</li>
+									</ul>
+			
+									<hr />
+			
+									<div class="text-right">
+										<a href="#" class="view-more">View All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+			
+					<span class="separator"></span>
+			
+					
+				</div>
+				<!-- end: search & user box -->
+			</header>
+			<!-- end: header -->
+
+			<div class="inner-wrapper">
+				<!-- start: sidebar -->
+				<aside id="sidebar-left" class="sidebar-left">
+				
+				    <div class="sidebar-header">
+				        <div class="sidebar-title">
+				            Navigation
+				        </div>
+				        <div class="sidebar-toggle d-none d-md-block" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+				            <i class="fas fa-bars" aria-label="Toggle sidebar"></i>
+				        </div>
+				    </div>
+				
+				    <div class="nano">
+				        <div class="nano-content">
+				            <nav id="menu" class="nav-main" role="navigation">
+				            
+				                <ul class="nav nav-main">
+
+				                	<li class="nav-active">
+				                        <a class="nav-link" href="./">
+				                            <i class="fas fa-home" aria-hidden="true"></i>
+				                            <span>Dashboard</span>
+				                        </a>                        
+				                    </li>
+
+				                	{% for key, values in sidebars_Elems.items %}
+				                	<li class="nav-parent">
+				                        <a class="nav-link" href="#">
+				                            <i class="fas fa-columns" aria-hidden="true"></i>
+				                            <span>{{key}}</span>
+				                        </a>
+				                        <ul class="nav nav-children">
+
+				                        {% for elems_key, elems_values in values.items %}
+				                        	<li>
+				                                <a class="nav-link" href="{{elems_values.0}}">
+				                                	{{elems_key}}
+				                                </a>
+				                            </li>
+
+				                        {% endfor %}
+				                        </ul>
+				                	
+				                	{% endfor %}
+
+				                
+				
+				                </ul>
+				            </nav>
+				
+				
+				            <hr class="separator" />
+				
+				            <div class="sidebar-widget widget-stats">
+				                <div class="widget-header">
+				                    <h6>Market Barometer</h6>
+				                    <div class="widget-toggle">+</div>
+				                </div>
+				                <div class="widget-content">
+				                    <ul>
+				                        <li>
+				                            <span class="stats-title">Stat 1</span>
+				                            <span class="stats-complete">85%</span>
+				                            <div class="progress">
+				                                <div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+				                                    <span class="sr-only">85% Complete</span>
+				                                </div>
+				                            </div>
+				                        </li>
+				                        <li>
+				                            <span class="stats-title">Stat 2</span>
+				                            <span class="stats-complete">70%</span>
+				                            <div class="progress">
+				                                <div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+				                                    <span class="sr-only">70% Complete</span>
+				                                </div>
+				                            </div>
+				                        </li>
+				                        <li>
+				                            <span class="stats-title">Stat 3</span>
+				                            <span class="stats-complete">2%</span>
+				                            <div class="progress">
+				                                <div class="progress-bar progress-bar-primary progress-without-number" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+				                                    <span class="sr-only">2% Complete</span>
+				                                </div>
+				                            </div>
+				                        </li>
+				                    </ul>
+				                </div>
+				            </div>
+				        </div>
+				
+				        <script>
+				            // Maintain Scroll Position
+				            if (typeof localStorage !== 'undefined') {
+				                if (localStorage.getItem('sidebar-left-position') !== null) {
+				                    var initialPosition = localStorage.getItem('sidebar-left-position'),
+				                        sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+				                    
+				                    sidebarLeft.scrollTop = initialPosition;
+				                }
+				            }
+				        </script>
+				        
+				
+				    </div>
+				
+				</aside>
+				<!-- end: sidebar -->
+
+				<section role="main" class="content-body pb-0">
+					<header class="page-header">
+						<h2>{{PageName}}</h2>
+					
+						<div class="right-wrapper text-right">
+							<ol class="breadcrumbs">
+								<li>
+									<a href="./">
+										<i class="fas fa-home"></i>
+									</a>
+								</li>
+								<li><span>{{PageName}}</span></li>
+							</ol>
+					
+							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fas fa-chevron-left"></i></a>
+						</div>
+					</header>
+
+					
+					<section class="section">
+						<div class="container container-with-sidebar">
+							<div class="row center">
+								<div class="col-md-12 mb-4">
+									<h2 class="text-dark mb-1 font-weight-light mt-5 pt-2"><strong>Trading Console</strong></h2>
+									<p class="lead">Time Is your friend, Impulse Is your enemy</span></p>
+					
+									<a class="btn btn-3d btn-xl mt-4 mb-5" href="https://in.investing.com/portfolio/?portfolioID=YmYwYjNhN2JiMG9iM2MyNg%3D%3D" target="_blank"  style="background-color: #383f48; border-color: #383f48 #383f48 #22262b; color: #fff;">PORTFOLIO OVERVIEW <i class="ml-4 fas fa-long-arrow-alt-right"></i></a>
+								</div>
+							</div>
+							<div class="row sample-item-list sample-item-list-loaded">
+								
+<!-- COMMENTED OUT THESE ARE THE APPS LISTING WILL ADD LATER USING THIS AS A BASE TEMPLATE
+
+
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-default.html">
+												<img src="{% static "img/previews/preview-default.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Default</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-dark-header.html">
+												<img src="{% static "img/previews/preview-dark-header.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Dark Header</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-dark.html">
+												<img src="{% static "img/previews/preview-dark.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Dark</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-boxed.html">
+												<img src="{% static "img/previews/preview-boxed-static-header.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Boxed with Static Header</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-boxed-fixed-header.html">
+												<img src="{% static "img/previews/preview-boxed-fixed-header.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Boxed with Fixed Header</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-header-menu.html">
+												<img src="{% static "img/previews/preview-horizontal-menu-pills.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Horizontal Menu - Pills</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-header-menu-stripe.html">
+												<img src="{% static "img/previews/preview-horizontal-menu-stripe.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Horizontal Menu - Stripe</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-header-menu-top-line.html">
+												<img src="{% static "img/previews/preview-horizontal-menu-top-line.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Horizontal Menu - Top Line</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-light-sidebar.html">
+												<img src="{% static "img/previews/preview-light-sidebar.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Light Sidebar</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-left-sidebar-scroll.html">
+												<img src="{% static "img/previews/preview-sidebar-scroll.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Left Sidebar Scroll</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-left-sidebar-big-icons.html">
+												<img src="{% static "img/previews/preview-big-icons.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Left Sidebar Big Icons Dark</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-left-sidebar-big-icons-light.html">
+												<img src="{% static "img/previews/preview-big-icons-light.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Left Sidebar Big Icons Light</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-left-sidebar-panel.html">
+												<img src="{% static "img/previews/preview-sidebar-panel-dark.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Left Sidebar Panel Dark</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-left-sidebar-panel-light.html">
+												<img src="{% static "img/previews/preview-sidebar-panel-light.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Left Sidebar Panel Light</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-tab-navigation.html">
+												<img src="{% static "img/previews/preview-tab-navigation-light.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Tab Navigation Light</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-tab-navigation-dark.html">
+												<img src="{% static "img/previews/preview-tab-navigation-dark.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Tab Navigation Dark</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-tab-navigation-boxed.html">
+												<img src="{% static "img/previews/preview-tab-navigation-boxed.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Tab Navigation Boxed</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-two-navigations.html">
+												<img src="{% static "img/previews/preview-two-navigations.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Two Navigations</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-square-borders.html">
+												<img src="{% static "img/previews/preview-square-borders.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Square Borders</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-sidebar-sizes-sm.html">
+												<img src="{% static "img/previews/preview-sidebar-sm.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Left Sidebar Size SM</h5>
+									</div>
+								</div>
+					
+								<div class="isotope-item col-sm-6 col-md-4">
+									<div class="mb-5">
+										<div class="thumb-preview shadow-style-1">
+											<a class="thumb-image" href="layouts-sidebar-sizes-xs.html">
+												<img src="{% static "img/previews/preview-sidebar-xs.jpg" %}" class="img-fluid" alt="">
+											</a>
+										</div>
+										<h5 class="pt-3 mg-title font-weight-semibold text-dark center text-uppercase">Left Sidebar Size XS</h5>
+									</div>
+								</div>
+							-->
+							</div>
+						</div>
+					</section>
+					
+					<section class="section custom-padding">
+						<div class="container container-with-sidebar">
+							<div class="row justify-content-center">
+							
+							</div>
+						</div>
+					</section>
+					
+					{% block content %}
+					
+					{% endblock content %}
+
+					<!-- 
+
+					IMAGE PLACEHOLDER
+
+					<section class="section section-padding section-full-width-bg-light">
+						<section class="container-fluid no-padding"> 
+							<div class="row">
+								<div class="col-md-12">
+									<div class="">
+										<figure class="image">
+											<img src="{%static "img/1304036.jpg" %}" alt="" class="img-responsive" style="width: -webkit-fill-available;height: 800px;filter: blur(8px);
+  -webkit-filter: blur(8px);opacity: 0.6;" />
+										</figure>
+									</div>
+								</div>
+							</div>
+                        </section>
+						
+					</section>
+					-->
+
+					<section class="call-to-action call-to-action-grey pb-4">
+						<div class="container container-with-sidebar">
+							
+								<div class="col-xl-9 mx-auto">
+									<div class="call-to-action-content mx-auto" align="center">
+										<h2 class="mb-2" align="center"> <strong>MARKET NEVER SLEEPS</strong></h2>
+									</div>
+								</div>
+							
+						</div>
+					</section>
+					
+					<!-- end: page -->
+				</section>
+			</div>
+
+			<aside id="sidebar-right" class="sidebar-right">
+				<div class="nano">
+					<div class="nano-content">
+						<a href="#" class="mobile-close d-md-none">
+							Collapse <i class="fas fa-chevron-right"></i>
+						</a>
+			
+						<div class="sidebar-right-wrapper">
+			
+							<div class="sidebar-widget widget-calendar">
+								<h6>Upcoming Tasks</h6>
+								<div data-plugin-datepicker data-plugin-skin="dark"></div>
+			
+								<ul>
+									<li>
+										<time datetime="2017-04-19T00:00+00:00">04/19/2017</time>
+										<span>Company Meeting</span>
+									</li>
+								</ul>
+							</div>
+			
+							<div class="sidebar-widget widget-friends">
+								<h6>Friends</h6>
+								<ul>
+									<li class="status-online">
+										<figure class="profile-picture">
+											<img src="{% static "img/!sample-user.jpg" %}" alt="Joseph Doe" class="rounded-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-online">
+										<figure class="profile-picture">
+											<img src="{% static "img/!sample-user.jpg" %}" alt="Joseph Doe" class="rounded-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-offline">
+										<figure class="profile-picture">
+											<img src="{% static "img/!sample-user.jpg" %}" alt="Joseph Doe" class="rounded-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+									<li class="status-offline">
+										<figure class="profile-picture">
+											<img src="{% static "img/!sample-user.jpg" %}" alt="Joseph Doe" class="rounded-circle">
+										</figure>
+										<div class="profile-info">
+											<span class="name">Joseph Doe Junior</span>
+											<span class="title">Hey, how are you?</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+			
+						</div>
+					</div>
+				</div>
+			</aside>
+		</section>
+
+		<!-- Vendor -->
+		
+		<script src="{% static "vendor/jquery-browser-mobile/jquery.browser.mobile.js" %}"></script>
+		<script src="{% static "vendor/popper/umd/popper.min.js" %}"></script>
+		<script src="{% static "vendor/bootstrap/js/bootstrap.js" %}"></script>
+		<script src="{% static "vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" %}"></script>
+		<script src="{% static "vendor/common/common.js" %}"></script>
+		<script src="{% static "vendor/nanoscroller/nanoscroller.js" %}"></script>
+		<script src="{% static "vendor/magnific-popup/jquery.magnific-popup.js" %}"></script>
+		<script src="{% static "vendor/jquery-placeholder/jquery.placeholder.js" %}"></script>
+		
+		<!-- Specific Page Vendor -->
+		<script src="{% static "vendor/jquery-appear/jquery.appear.js" %}"></script>
+		<script src="{% static "vendor/owl.carousel/owl.carousel.js" %}"></script>
+		<script src="{% static "vendor/isotope/isotope.js" %}"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="{% static "js/theme.js" %}"></script>
+		
+		<!-- Theme Custom -->
+		<script src="{% static "js/custom.js" %}"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="{% static "js/theme.init.js" %}"></script>
+
+		<!-- Examples -->
+		<script src="{% static "js/examples/examples.landing.dashboard.js" %}"></script>
+	</body>
+</html>

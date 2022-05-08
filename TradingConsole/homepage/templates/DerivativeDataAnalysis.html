@@ -1,0 +1,903 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+[class^="call-to-action"] {
+				/*display: inline-block;*/
+				/*vertical-align: middle;*/
+				display: none
+			}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+</style>
+
+
+		<link rel="stylesheet" type="text/css" href="./static/vendor/jquery-ui/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="./static/vendor/jquery-ui/jquery-ui.theme.css" />
+		<link rel="stylesheet" type="text/css" href="./static/vendor/select2/css/select2.css" />
+		<link rel="stylesheet" type="text/css" href="./static/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="./static/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" />
+
+		<script src="./static/vendor/jquery/jquery.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+		<script src="https://raw.githubusercontent.com/chartjs/Chart.js/master/docs/scripts/utils.js"></script>
+		<script src="https://moment.github.io/luxon/global/luxon.js"></script>
+
+
+<section class="card">
+								<header class="card-header">
+									<div class="card-actions">
+										<a href="#" class="card-action card-action-toggle" data-card-toggle=""></a>
+										<a href="#" class="card-action card-action-dismiss" data-card-dismiss=""></a>
+									</div>
+
+									
+									<form class="form-horizontal form-bordered col-lg-6" action="#" data-select2-id="16">
+											<div class="form-group row">
+												<label class="col-lg-2  float-left"><h2>Symbol</h2></label>
+												<div class="col-lg-6 ">
+													<select data-plugin-selectTwo class="form-control symbolSelect">
+
+														<optgroup label="INDEX">
+														{% for values in symbolList.INDEX %}
+															<option value=" {{values}} "> {{values}} </option>
+														{% endfor %}
+														</optgroup>
+														<optgroup label="EQUITY">
+														{% for values in symbolList.EQUITY %}
+															<option value=" {{values}} "> {{values}} </option>
+														{% endfor %}
+														</optgroup>
+														
+													</select>
+												</div>
+											</div>
+						
+									</form>
+								</header>
+
+
+<div class="card-body" style="display: block;">									
+	<div class="card-body">
+
+							<section class="card card-transparent">
+								
+								<div class="card-body row pt-2">
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="LastPrice">488</div>
+											<p class="text-3 text-muted mb-0">Last Price</p>
+											
+										</div>
+										
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="pChange">488</div>
+											<p class="text-3 text-muted mb-0">% Change</p>
+											
+										</div>
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="pChangeInOI">2.1</div>
+											<p class="text-3 text-muted mb-0">% Change in OI(Consolidated)</p>
+											
+										</div>
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="lotSize">488</div>
+											<p class="text-3 text-muted mb-0">Lot Size</p>
+											
+										</div>
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="currentTimeStamp">20-Nov-2020 15:30:00</div>
+											<p class="text-3 text-muted mb-0">Current Time Stamp</p>
+											
+										</div>
+
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="lastCollectedTimeStamp">20-Nov-2020 15:30:00</div>
+											<p class="text-3 text-muted mb-0">Last DataPoint Time Stamp</p>
+											
+										</div>
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="S1">S1 : 1</div>
+											<div class="h4 font-weight-bold mb-0" id="S2">S2 : 1</div>
+											<div class="h4 font-weight-bold mb-0" id="S3">S3 : 1</div>
+											<p class="text-3 text-muted mb-0">Supports</p>
+											
+										</div>
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="R1">R1 : 1</div>
+											<div class="h4 font-weight-bold mb-0" id="R2">R2 : 1</div>
+											<div class="h4 font-weight-bold mb-0" id="R3">R3 : 1</div>
+											<p class="text-3 text-muted mb-0">Resistance</p>
+											
+										</div>
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="nS1">S1 : 1</div>
+											<div class="h4 font-weight-bold mb-0" id="nS2">S2 : 1</div>
+											<div class="h4 font-weight-bold mb-0" id="nS3">S3 : 1</div>
+											<p class="text-3 text-muted mb-0">Newly Added Support</p>
+										</div>
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="nR1">R1 : 1</div>
+											<div class="h4 font-weight-bold mb-0" id="nR2">R2 : 1</div>
+											<div class="h4 font-weight-bold mb-0" id="nR3">R3 : 1</div>
+											<p class="text-3 text-muted mb-0">Newly Added Resistance</p>
+										</div>
+
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="mxTradedCalls1">12500</div>
+											<div class="h4 font-weight-bold mb-0" id="mxTradedCalls2">12500</div>
+											<div class="h4 font-weight-bold mb-0" id="mxTradedCalls3">12500</div>
+											<p class="text-3 text-muted mb-0">Max Traded Calls</p>
+											
+										</div>
+										<div class="card-body col-md-2">
+											<div class="h4 font-weight-bold mb-0" id="mxTradedPuts1">12500</div>
+											<div class="h4 font-weight-bold mb-0" id="mxTradedPuts2">12500</div>
+											<div class="h4 font-weight-bold mb-0" id="mxTradedPuts3">12500</div>
+											<p class="text-3 text-muted mb-0">Max Traded Puts</p>
+											
+										</div>
+										
+								</div>
+							</section>
+
+		<canvas id="Price" width="102" height="20"></canvas>
+		<hr/>
+		<canvas id="ChangeInOI" width="102" height="20"></canvas>
+		<hr/>
+		<canvas id="ChangeInOI_ITM" width="102" height="20"></canvas>
+		<hr/>
+		<canvas id="PCR_OI" width="102" height="20"></canvas>
+		<hr/>
+		<canvas id="PCR_VO" width="102" height="20"></canvas>
+		<hr/>
+		<canvas id="totalOI" width="102" height="20"></canvas>
+		<hr/>
+		<canvas id="OLHC" width="102" height="20"></canvas>
+		<hr/>
+		<canvas id="ChaneInOI_CURR_SERIES" width="102" height="20"></canvas>
+		<hr/>
+	</div>
+</div>
+
+									
+								
+</section>
+
+
+
+
+<script>
+
+selectedSymbol = "NIFTY";
+
+function timeConverter(UNIX_timestamp){
+  var a = new Date(UNIX_timestamp * 1000);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  var hour = a.getHours();
+  var min = a.getMinutes();
+  var sec = a.getSeconds();
+  var time = date + ' @  ' + hour + ':' + min + ':' + sec ;
+  return time;
+}
+
+
+
+var Price = document.getElementById('Price').getContext('2d');
+var ChangeInOI = document.getElementById('ChangeInOI').getContext('2d');
+var ChangeInOI_ITM = document.getElementById('ChangeInOI_ITM').getContext('2d');
+var PCR_OI = document.getElementById('PCR_OI').getContext('2d');
+var OLHC = document.getElementById('OLHC').getContext('2d');
+var totalOI = document.getElementById('totalOI').getContext('2d');
+var PCR_VO = document.getElementById('PCR_VO').getContext('2d');
+var ChaneInOI_CURR_SERIES = document.getElementById('ChaneInOI_CURR_SERIES').getContext('2d');
+
+var myChart_PRICE =  null;
+var myChart_ChanceInOI = null;
+var myChart_ChangeInOI_ITM =  null;
+var myChart_PCR_OI = null;
+var myChart_PCR_VO =  null;
+var myChart_totalOI = null;
+var myChart_ChaneInOI_CURR_SERIES = null;
+
+
+
+function fetchSymbolData(symbol) {
+
+
+	symbol = symbol.trim();
+
+if(myChart_PRICE != null){
+	myChart_PRICE.destroy();
+}
+if(myChart_ChanceInOI != null){
+	myChart_ChanceInOI.destroy();
+}
+if(myChart_ChangeInOI_ITM != null){
+	myChart_ChangeInOI_ITM.destroy();
+}
+if(myChart_PCR_OI != null){
+	myChart_PCR_OI.destroy();
+}
+if(myChart_PCR_VO != null){
+	myChart_PCR_VO.destroy();
+}
+if(myChart_totalOI != null){
+	myChart_totalOI.destroy();
+}
+if(myChart_ChaneInOI_CURR_SERIES != null){
+	myChart_ChaneInOI_CURR_SERIES.destroy();
+}
+
+
+   //log("CALLED");
+	$.ajax(
+    {
+        type:"GET",
+        url: "/fetchSymbolDerivativeData",
+        data:{
+                 SYMBOL: symbol
+        },
+        success: function( data ) 
+        {	
+        	refreshEssentials(data);
+        	showGraph(data);
+        }
+    });
+}
+
+fetchSymbolData(selectedSymbol);
+
+
+function refreshEssentials(data){
+
+	var LastPrice = document.getElementById('LastPrice')
+	var pChange = document.getElementById('pChange')
+	var pChangeInOI = document.getElementById('pChangeInOI')
+	var lotSize = document.getElementById('lotSize')
+	var currentTimeStamp = document.getElementById('currentTimeStamp')
+	var lastCollectedTimeStamp = document.getElementById('lastCollectedTimeStamp')
+	var S1 = document.getElementById('S1')
+	var S2 = document.getElementById('S2')
+	var S3 = document.getElementById('S3')
+	var R1 = document.getElementById('R1')
+	var R2 = document.getElementById('R2')
+	var R3 = document.getElementById('R3')
+	var nS1 = document.getElementById('nS1')
+	var nS2 = document.getElementById('nS2')
+	var nS3 = document.getElementById('nS3')
+	var nR1 = document.getElementById('nR1')
+	var nR2 = document.getElementById('nR2')
+	var nR3 = document.getElementById('nR3')
+	var mxTradedCalls1 = document.getElementById('mxTradedCalls1')
+	var mxTradedCalls2 = document.getElementById('mxTradedCalls2')
+	var mxTradedCalls3 = document.getElementById('mxTradedCalls3')
+	var mxTradedPuts1 = document.getElementById('mxTradedPuts1')
+	var mxTradedPuts2 = document.getElementById('mxTradedPuts2')
+	var mxTradedPuts3 = document.getElementById('mxTradedPuts3')
+
+
+	lastTimeStamp = undefined;
+
+	for(var key in data){
+	   lastTimeStamp = key;
+	}
+
+	
+
+LastPrice.innerText = data[lastTimeStamp]["currentPrice"];
+pChange.innerText = data[lastTimeStamp]["pChange"];
+pChangeInOI.innerText = data[lastTimeStamp]["pChangeInOI"];
+lotSize.innerText = data[lastTimeStamp]["lotSize"];
+currentTimeStamp.innerText = luxon.DateTime.local().toLocaleString(luxon.DateTime.TIME_SIMPLE);
+lastCollectedTimeStamp.innerText = data[lastTimeStamp]["date"];
+S1.innerText = data[lastTimeStamp]["supports"]["S1"];
+S2.innerText = data[lastTimeStamp]["supports"]["S2"];
+S3.innerText = data[lastTimeStamp]["supports"]["S3"];
+R1.innerText = data[lastTimeStamp]["resistance"]["R1"];
+R2.innerText = data[lastTimeStamp]["resistance"]["R2"];
+R3.innerText = data[lastTimeStamp]["resistance"]["R3"];
+nS1.innerText = data[lastTimeStamp]["newlyAddedCOISupport"]["1"];
+nS2.innerText = data[lastTimeStamp]["newlyAddedCOISupport"]["2"];
+nS3.innerText = data[lastTimeStamp]["newlyAddedCOISupport"]["3"];
+nR1.innerText = data[lastTimeStamp]["newlyAddedCOIResistance"]["1"];
+nR2.innerText = data[lastTimeStamp]["newlyAddedCOIResistance"]["2"];
+nR3.innerText = data[lastTimeStamp]["newlyAddedCOIResistance"]["3"];
+mxTradedCalls1.innerText = data[lastTimeStamp]["maxTradedStrike_CALL"]["1"];
+mxTradedCalls2.innerText = data[lastTimeStamp]["maxTradedStrike_CALL"]["2"];
+mxTradedCalls3.innerText = data[lastTimeStamp]["maxTradedStrike_CALL"]["3"];
+mxTradedPuts1.innerText = data[lastTimeStamp]["maxTradedStrike_PUT"]["1"];
+mxTradedPuts2.innerText = data[lastTimeStamp]["maxTradedStrike_PUT"]["2"];
+mxTradedPuts3.innerText = data[lastTimeStamp]["maxTradedStrike_PUT"]["3"];
+
+}
+
+
+
+function showGraph(data){
+
+dataSetFromEndpoint  = data;
+
+COI_PUT  = [];
+COI_CALL = [];
+
+ITM_COI_PUT = [];
+ITM_COI_CALL= [];
+
+MAX_PAIN1 = [];
+MAX_PAIN2 = [];
+CURR_PRICE = [];
+
+PCR_OI_data = [];
+PCR_VO_data = [];
+
+totalOI_data = [];
+
+ChaneInOI_CURR_SERIES_data = [];
+
+xAxis  	  = [];
+
+//log(dataSetFromEndpoint);
+
+for(var key in dataSetFromEndpoint){
+	//log(key);
+	elem = dataSetFromEndpoint[key]["PCR_COI"]["PUT COI"];
+	COI_PUT.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["PCR_COI"]["CALL COI"];
+	COI_CALL.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["ITM_PCR_COI"]["ITM PUT COI"];
+	ITM_COI_PUT.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["ITM_PCR_COI"]["ITM CALL COI"];
+	ITM_COI_CALL.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["MAX_PAIN"];
+	MAX_PAIN1.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["MAX_PAIN2"];
+	MAX_PAIN2.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["currentPrice"];
+	CURR_PRICE.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["PCR_OI"];
+	PCR_OI_data.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["PCR_VO"];
+	PCR_VO_data.push({x:parseInt(key),y:elem});
+
+	elem = dataSetFromEndpoint[key]["totalOI"];
+	totalOI_data.push({x:parseInt(key),y:elem});
+
+
+	elem  = 0;
+	if(dataSetFromEndpoint[key]["ChaneInOI_CURR_SERIES"] == undefined){
+		elem = 0;
+	}
+	else{
+		elem = dataSetFromEndpoint[key]["ChaneInOI_CURR_SERIES"];
+	}
+	ChaneInOI_CURR_SERIES_data.push({x:parseInt(key),y:elem});
+
+
+	console.log(parseInt(key));
+	console.log(timeConverter(parseInt(key)));
+	xAxis.push(timeConverter(parseInt(key)));
+}
+
+
+Chart.defaults.global.animation.duration = 2000;
+ 
+myChart_PRICE = new Chart(Price, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "PRICE",
+        //backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        //hoverBackgroundColor: window.chartColors.blue,
+        borderColor: 'rgba(200, 0, 0, 1)',
+        pointRadius : 3,
+        data: CURR_PRICE,
+        fill : false
+      },
+      {
+      	label: "MAX-PAIN 1",
+      	backgroundColor: 'rgba(255, 0, 0, 0.02)',
+      	borderColor: 'rgba(255, 0, 0, 0.10)',
+      	//hoverBackgroundColor: window.chartColors.blue,
+      	pointRadius : 3,
+      	data: MAX_PAIN1
+      },
+      {
+      	label: "MAX-PAIN 2",
+      	backgroundColor: 'rgba(0, 0, 255, 0.02)',
+      	borderColor: 'rgba(200, 0, 0, 0.10)',
+      	//hoverBackgroundColor: window.chartColors.blue,
+      	pointRadius : 3,
+      	data: MAX_PAIN2
+      }
+    ]
+
+  	},
+  	options: {
+  				
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Price'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Price'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+myChart_ChanceInOI = new Chart(ChangeInOI, {
+
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "COI PUT",
+        backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        hoverBackgroundColor: 'rgba(0, 0, 255, 1)',
+        pointRadius : 3,
+        data: COI_PUT
+      },
+      {
+      	label: "COI CALL",
+      	backgroundColor: 'rgba(255, 0, 0, 0.3)',
+      	hoverBackgroundColor: 'rgba(0, 0, 255, 1)',
+      	pointRadius : 3,
+      	data: COI_CALL
+      }
+    ]
+
+  	},
+  	options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Change In Open Interest'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Open Interest'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+
+
+myChart_ChangeInOI_ITM = new Chart(ChangeInOI_ITM, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "ITM COI PUT",
+        backgroundColor: 'rgba(0, 255, 0, 0.3)',
+        hoverBackgroundColor: 'rgba(0, 0, 255, 1)',
+        pointRadius : 3,
+        data: ITM_COI_PUT
+      },
+      {
+      	label: "ITM COI CALL",
+      	backgroundColor: 'rgba(255, 0, 0, 0.3)',
+      	hoverBackgroundColor: 'rgba(0, 0, 255, 1)',
+      	pointRadius : 3,
+      	data: ITM_COI_CALL
+      }
+    ]
+
+  	},
+  	options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'In The Money Open Interest Change'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Open Interest'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+
+myChart_PCR_OI = new Chart(PCR_OI, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        label: "PCR OI",
+        backgroundColor: 'rgba(255, 0, 0, 1)',
+        hoverBackgroundColor: 'rgba(0, 0, 255, 1)',
+        pointRadius : 3,
+        data: PCR_OI_data,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'PCR OI'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'RATIO'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+myChart_PCR_VO = new Chart(PCR_VO, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        backgroundColor: 'rgba(255, 0, 0, 1)',
+        hoverBackgroundColor: 'rgba(0, 0, 255, 1)',
+        pointRadius : 3,
+        data: PCR_VO_data,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'PCR Volume'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'RATIO'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+
+
+myChart_totalOI = new Chart(totalOI, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        backgroundColor: 'rgba(255, 0, 0, 1)',
+        hoverBackgroundColor: 'rgba(0, 0, 255, 1)',
+        pointRadius : 3,
+        data: totalOI_data,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Total OI'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'OI'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}]
+				}
+			}
+  	
+
+});
+
+myChart_ChaneInOI_CURR_SERIES = new Chart(ChaneInOI_CURR_SERIES, {
+    type: 'line',
+    data: {
+    labels: xAxis,
+    datasets: [
+      {
+        backgroundColor: 'rgba(255, 0, 0, 1)',
+        hoverBackgroundColor: 'rgba(0, 0, 255, 1)',
+        pointRadius : 3,
+        data: ChaneInOI_CURR_SERIES_data,
+        fill : false
+      }
+    ]
+
+  	},
+  	options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Change in OI Current Series'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Time'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'OI'
+						},
+						gridLines: {
+                			color: "rgba(255, 0, 0, 0.025)",
+            			}
+
+					}]
+				}
+			}
+  	
+
+});
+
+
+
+
+}
+
+
+//setInterval(fetchSymbolData,600000,selectedSymbol);
+
+setInterval(fetchSymbolData,600*1000,selectedSymbol);
+
+
+
+</script>
+
+<style>
+
+.select2-container--bootstrap .select2-selection--single{
+	min-height:52px;
+	font-size: x-large;
+}
+
+.select2-container--bootstrap.select2-container--focus .select2-selection, .select2-container--bootstrap.select2-container--open .select2-selection{
+	min-height:52px;
+	}
+
+h1, .h1, h2, .h2, h3, .h3 {
+     margin-top: 5px; 
+     margin-bottom: 5px; 
+}
+
+
+</style>>
+
+<script src="./static/vendor/jquery/jquery.js"></script>
+<script src="./static/vendor/jquery-ui/jquery-ui.js"></script>
+<script src="./static/vendor/select2/js/select2.js"></script>
+<script src="./static/js/theme.js"></script>
+<script src="./static/js/theme.init.js"></script>
+
+
+<script>
+	
+var $eventSelect = $(".symbolSelect");
+
+$eventSelect.select2();
+
+$eventSelect.on("select2:select", function (e) { selector("select2:select", e); });
+
+function selector (name, evt) {
+  if (!evt) {
+    var args = "{}";
+  } else {
+  	console.log("SELECTED "+evt.params.data.text);
+  	fetchSymbolData(evt.params.data.text);
+  }
+  //console.log(name);
+  //console.log(args);
+}
+
+</script>>
+
+{% endblock content %}
